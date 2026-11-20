@@ -1,0 +1,2 @@
+rootProject.name = 'batch-chunk-recovery-lab'
+include 'lab-core', 'app-jobrunr', 'app-batch'

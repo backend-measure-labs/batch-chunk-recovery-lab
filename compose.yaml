@@ -1,0 +1,56 @@
+name: bcrl
+
+services:
+  mysql:
+    image: mysql:8.0.46
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports: ["3306:3306"]
+    volumes:
+      - ./infra/mysql/my.cnf:/etc/mysql/conf.d/lab.cnf:ro
+      - ./infra/mysql/01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./infra/mysql/02-spring-batch-schema-mysql.sql:/docker-entrypoint-initdb.d/02-spring-batch-schema-mysql.sql:ro
+      - mysqldata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-uroot", "-proot", "--silent"]
+      interval: 5s
+      retries: 30
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=30d
+    ports: ["9090:9090"]
+    volumes:
+      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - promdata:/prometheus
+
+  # 상한 모드 · ① · ④ 재시작 시험용. 측정 모드는 호스트 JVM 에서 같은 jar 를 돌린다(docs/details.md 부록 C).
+  app:
+    image: eclipse-temurin:17-jre-jammy
+    profiles: ["app"]
+    mem_limit: ${APP_MEM:-1g}
+    cpus: ${APP_CPUS:-1}
+    stop_grace_period: ${GRACE:-60s}
+    ports: ["8080:8080"]
+    environment:
+      DB_HOST: mysql
+      LAB_PROMETHEUS_URL: http://prometheus:9090
+      LAB_SERIES: ${LAB_SERIES:-224}
+      LAB_DIGITS: ${LAB_DIGITS:-long}
+      LAB_MODE: ${LAB_MODE:-full}
+      LAB_WINDOW_HOURS: ${LAB_WINDOW_HOURS:-24}
+      LAB_T0: ${LAB_T0:-1794700800}
+      LAB_CHECKPOINTS: ${LAB_CHECKPOINTS:-false}
+      LAB_OUT_DIR: /out
+      JAVA_OPTS: ${JAVA_OPTS:-}
+    volumes:
+      - ./${APP_JAR:-app-jobrunr/build/libs/app-jobrunr.jar}:/app/app.jar:ro
+      - ${OUT_DIR:-./reports/tmp}:/out
+    entrypoint: ["sh", "-c", "exec java $$JAVA_OPTS -jar /app/app.jar"]
+
+volumes:
+  mysqldata:
+  promdata:
