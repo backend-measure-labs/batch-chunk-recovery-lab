@@ -1,0 +1,8 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    implementation project(':lab-core')
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+}
+
+bootJar { archiveFileName = 'app-batch.jar' }

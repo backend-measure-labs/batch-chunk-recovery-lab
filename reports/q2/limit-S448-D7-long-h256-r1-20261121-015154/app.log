@@ -1,0 +1,170 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.9)
+
+2026-11-20T16:51:56.501Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : Starting JobrunrLabApp v0.1.0 using Java 17.0.21 with PID 1 (/app/app.jar started by root in /)
+2026-11-20T16:51:56.503Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : No active profile set, falling back to 1 default profile: "default"
+2026-11-20T16:51:57.670Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-20T16:51:57.680Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2026-11-20T16:51:58.274Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-20T16:51:58.281Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-20T16:51:58.282Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-11-20T16:51:58.387Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-20T16:51:58.388Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1815 ms
+2026-11-20T16:51:58.903Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: source]
+2026-11-20T16:51:58.976Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-11-20T16:51:58.998Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-20T16:51:59.371Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-20T16:51:59.387Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Starting...
+2026-11-20T16:51:59.781Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : source - Added connection com.mysql.cj.jdbc.ConnectionImpl@282c5075
+2026-11-20T16:51:59.783Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Start completed.
+2026-11-20T16:51:59.879Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (source)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-20T16:52:00.785Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-20T16:52:00.787Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'source'
+2026-11-20T16:52:01.006Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Starting...
+2026-11-20T16:52:01.065Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : primary - Added connection com.mysql.cj.jdbc.ConnectionImpl@701996e9
+2026-11-20T16:52:01.065Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Start completed.
+2026-11-20T16:52:01.890Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-20T16:52:01.911Z  INFO 1 --- [           main] .j.s.t.PlatformThreadPoolJobRunrExecutor : ThreadManager of type 'ScheduledThreadPool' started
+2026-11-20T16:52:01.980Z  INFO 1 --- [pool-2-thread-1] org.jobrunr.server.BackgroundJobServer   : JobRunr BackgroundJobServer (24770797-e075-4aae-8358-55dd78d12cb9) using MySqlStorageProvider and 8 BackgroundJobPerformers started successfully
+2026-11-20T16:52:01.995Z  INFO 1 --- [pool-2-thread-1] org.jobrunr.server.ServerZooKeeper       : Server 24770797-e075-4aae-8358-55dd78d12cb9 is master (this BackgroundJobServer)
+2026-11-20T16:52:02.002Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-20T16:52:02.061Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : Started JobrunrLabApp in 6.161 seconds (process running for 6.64)
+2026-11-20T16:52:02.758Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-20T16:52:02.759Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-20T16:52:02.760Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-20T16:52:02.977Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=448 digits=long start=1794096000 end=1794700800
+Exception in thread "http-nio-8080-Poller" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Collections$UnmodifiableCollection.iterator(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint$Poller.timeout(NioEndpoint.java:1011)
+	at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:812)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-11-20T16:52:08.006Z ERROR 1 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_END status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=5035
+
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.StringUTF16.compress(Unknown Source) ~[na:na]
+	at java.base/java.lang.String.<init>(Unknown Source) ~[na:na]
+	at java.base/java.lang.String.<init>(Unknown Source) ~[na:na]
+	at com.fasterxml.jackson.core.util.TextBuffer.setCurrentAndReturn(TextBuffer.java:996) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2512) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:294) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerNR._deserializeNR(UntypedObjectDeserializerNR.java:295) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerNR.deserialize(UntypedObjectDeserializerNR.java:78) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeNoNullChecks(CollectionDeserializer.java:501) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:358) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeNoNullChecks(CollectionDeserializer.java:501) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:358) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+
+2026-11-20T16:52:08.025Z  WARN 1 --- [pool-3-thread-1] o.jobrunr.server.BackgroundJobPerformer  : Job(id=01a1f9df-4aae-718b-bee7-4313a22126e6, jobName='gpu usage collect') processing failed: An exception occurred during the performance of the job
+
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner.run(AbstractBackgroundJobRunner.java:21) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.runActualJob(BackgroundJobPerformer.java:95) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.performJob(BackgroundJobPerformer.java:68) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.run(BackgroundJobPerformer.java:46) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.StringUTF16.compress(Unknown Source) ~[na:na]
+	at java.base/java.lang.String.<init>(Unknown Source) ~[na:na]
+	at java.base/java.lang.String.<init>(Unknown Source) ~[na:na]
+	at com.fasterxml.jackson.core.util.TextBuffer.setCurrentAndReturn(TextBuffer.java:996) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2512) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:294) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerNR._deserializeNR(UntypedObjectDeserializerNR.java:295) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerNR.deserialize(UntypedObjectDeserializerNR.java:78) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeNoNullChecks(CollectionDeserializer.java:501) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:358) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeNoNullChecks(CollectionDeserializer.java:501) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:358) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+
+2026-11-20T16:52:32.997Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=448 digits=long start=1794096000 end=1794700800
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "HttpClient-1-SelectorManager"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "mysql-cj-abandoned-connection-cleanup"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "backgroundjob-zookeeper-pool-2-thread-1"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Catalina-utility-1"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Catalina-utility-2"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "source:housekeeper"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "primary:housekeeper"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "backgroundjob-zookeeper-pool-2-thread-2"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "backgroundjob-zookeeper-pool-2-thread-3"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "backgroundjob-zookeeper-pool-2-thread-5"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "backgroundjob-zookeeper-pool-2-thread-4"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "HttpClient-1-Worker-1"
+OpenJDK 64-Bit Server VM warning: Exception java.lang.OutOfMemoryError occurred dispatching signal SIGTERM to handler- the VM may need to be forcibly terminated
+[Kapp-1 exited with code 137

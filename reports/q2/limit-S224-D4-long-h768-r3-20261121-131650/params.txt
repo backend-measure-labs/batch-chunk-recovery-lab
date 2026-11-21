@@ -1,0 +1,1 @@
+kind=limit series=224 days=4 digits=long rep=3 heap=768 save=0 mode=full window_h=24 app=jobrunr t0=1794700800

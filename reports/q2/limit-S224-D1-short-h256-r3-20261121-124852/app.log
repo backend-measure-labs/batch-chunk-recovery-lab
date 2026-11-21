@@ -1,0 +1,219 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.9)
+
+2026-11-21T03:46:29.139Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : Starting JobrunrLabApp v0.1.0 using Java 17.0.21 with PID 1 (/app/app.jar started by root in /)
+2026-11-21T03:46:29.140Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : No active profile set, falling back to 1 default profile: "default"
+2026-11-21T03:46:30.433Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-21T03:46:30.451Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-11-21T03:46:31.254Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-21T03:46:31.267Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-21T03:46:31.267Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-11-21T03:46:31.420Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-21T03:46:31.421Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2260 ms
+2026-11-21T03:46:31.847Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: source]
+2026-11-21T03:46:31.933Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-11-21T03:46:31.952Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-21T03:46:32.361Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-21T03:46:32.428Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Starting...
+2026-11-21T03:46:32.765Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : source - Added connection com.mysql.cj.jdbc.ConnectionImpl@10f10230
+2026-11-21T03:46:32.766Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Start completed.
+2026-11-21T03:46:32.868Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (source)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-21T03:46:33.839Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-21T03:46:33.840Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'source'
+2026-11-21T03:46:34.058Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Starting...
+2026-11-21T03:46:34.068Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : primary - Added connection com.mysql.cj.jdbc.ConnectionImpl@25291901
+2026-11-21T03:46:34.068Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Start completed.
+2026-11-21T03:46:34.931Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-21T03:46:34.942Z  INFO 1 --- [           main] .j.s.t.PlatformThreadPoolJobRunrExecutor : ThreadManager of type 'ScheduledThreadPool' started
+2026-11-21T03:46:34.963Z  INFO 1 --- [pool-2-thread-1] org.jobrunr.server.BackgroundJobServer   : JobRunr BackgroundJobServer (00d05f29-d9e6-47b5-9ac0-1c9227c4b330) using MySqlStorageProvider and 8 BackgroundJobPerformers started successfully
+2026-11-21T03:46:35.025Z  INFO 1 --- [pool-2-thread-1] org.jobrunr.server.ServerZooKeeper       : Server 00d05f29-d9e6-47b5-9ac0-1c9227c4b330 is master (this BackgroundJobServer)
+2026-11-21T03:46:35.043Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-21T03:46:35.066Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : Started JobrunrLabApp in 6.445 seconds (process running for 7.049)
+2026-11-21T03:46:35.306Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-21T03:46:35.319Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-21T03:46:35.319Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-21T03:46:35.997Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=224 digits=short start=1794614400 end=1794700800
+2026-11-21T03:46:36.526Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=5818662 ms=528
+2026-11-21T03:46:36.848Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=6160286 ms=321
+2026-11-21T03:46:37.046Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=5805222 ms=198
+2026-11-21T03:46:37.087Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794614400 end=1794700800 step=600s series=224 points=32480 bytes=579550 ms=41
+2026-11-21T03:46:37.125Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794614400 end=1794700800 step=600s series=224 points=32480 bytes=871870 ms=38
+2026-11-21T03:46:40.371Z ERROR 1 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_END status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=4381
+
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Double.valueOf(Unknown Source) ~[na:na]
+	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na]
+	at lab.core.CollectService.run(CollectService.java:75) ~[lab-core-0.1.0.jar!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$1932/0x0000006001a43a00.proceedWithInvocation(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.15.jar!/:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at lab.core.CollectService$$SpringCGLIB$$0.run(<generated>) ~[lab-core-0.1.0.jar!/:na]
+	at lab.jobrunr.CollectJob.run(CollectJob.java:22) ~[!/:0.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner.run(AbstractBackgroundJobRunner.java:21) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.runActualJob(BackgroundJobPerformer.java:95) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.performJob(BackgroundJobPerformer.java:68) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.run(BackgroundJobPerformer.java:46) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+
+2026-11-21T03:46:40.430Z  WARN 1 --- [pool-3-thread-1] o.jobrunr.server.BackgroundJobPerformer  : Job(id=01a1fc36-8b21-74bd-9d5f-aff406f12ada, jobName='gpu usage collect') processing failed: An exception occurred during the performance of the job
+
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner.run(AbstractBackgroundJobRunner.java:21) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.runActualJob(BackgroundJobPerformer.java:95) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.performJob(BackgroundJobPerformer.java:68) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.run(BackgroundJobPerformer.java:46) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Double.valueOf(Unknown Source) ~[na:na]
+	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na]
+	at lab.core.CollectService.run(CollectService.java:75) ~[lab-core-0.1.0.jar!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$1932/0x0000006001a43a00.proceedWithInvocation(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.15.jar!/:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at lab.core.CollectService$$SpringCGLIB$$0.run(<generated>) ~[lab-core-0.1.0.jar!/:na]
+	at lab.jobrunr.CollectJob.run(CollectJob.java:22) ~[!/:0.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner.run(AbstractBackgroundJobRunner.java:21) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.runActualJob(BackgroundJobPerformer.java:95) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.performJob(BackgroundJobPerformer.java:68) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.run(BackgroundJobPerformer.java:46) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+
+2026-11-21T03:47:06.017Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=224 digits=short start=1794614400 end=1794700800
+2026-11-21T03:47:06.258Z  INFO 1 --- [pool-3-thread-2] lab.core.Collector                       : QUERY name=gpu start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=5818662 ms=241
+2026-11-21T03:47:06.438Z  INFO 1 --- [pool-3-thread-2] lab.core.Collector                       : QUERY name=cpu start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=6160286 ms=178
+2026-11-21T03:47:06.641Z  INFO 1 --- [pool-3-thread-2] lab.core.Collector                       : QUERY name=mem start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=5805222 ms=203
+2026-11-21T03:47:06.672Z  INFO 1 --- [pool-3-thread-2] lab.core.Collector                       : QUERY name=status start=1794614400 end=1794700800 step=600s series=224 points=32480 bytes=579550 ms=29
+2026-11-21T03:47:06.712Z  INFO 1 --- [pool-3-thread-2] lab.core.Collector                       : QUERY name=created start=1794614400 end=1794700800 step=600s series=224 points=32480 bytes=871870 ms=40
+2026-11-21T03:47:17.465Z ERROR 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_END status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=11450
+
+java.lang.OutOfMemoryError: Java heap space
+
+Exception in thread "http-nio-8080-Poller" java.lang.OutOfMemoryError: Java heap space
+2026-11-21T03:47:17.476Z  WARN 1 --- [pool-3-thread-2] o.jobrunr.server.BackgroundJobPerformer  : Job(id=01a1fc36-8b21-74bd-9d5f-aff406f12ada, jobName='gpu usage collect') processing failed: An exception occurred during the performance of the job
+
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner.run(AbstractBackgroundJobRunner.java:21) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.runActualJob(BackgroundJobPerformer.java:95) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.performJob(BackgroundJobPerformer.java:68) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.run(BackgroundJobPerformer.java:46) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+2026-11-21T03:47:36.040Z  INFO 1 --- [pool-3-thread-3] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=224 digits=short start=1794614400 end=1794700800
+2026-11-21T03:47:36.221Z  INFO 1 --- [pool-3-thread-3] lab.core.Collector                       : QUERY name=gpu start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=5818662 ms=139
+2026-11-21T03:47:36.434Z  INFO 1 --- [pool-3-thread-3] lab.core.Collector                       : QUERY name=cpu start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=6160286 ms=213
+2026-11-21T03:47:36.630Z  INFO 1 --- [pool-3-thread-3] lab.core.Collector                       : QUERY name=mem start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=5805222 ms=196
+2026-11-21T03:47:36.661Z  INFO 1 --- [pool-3-thread-3] lab.core.Collector                       : QUERY name=status start=1794614400 end=1794700800 step=600s series=224 points=32480 bytes=579550 ms=31
+2026-11-21T03:47:36.706Z  INFO 1 --- [pool-3-thread-3] lab.core.Collector                       : QUERY name=created start=1794614400 end=1794700800 step=600s series=224 points=32480 bytes=871870 ms=44
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Catalina-utility-1"
+2026-11-21T03:47:45.559Z ERROR 1 --- [pool-3-thread-3] lab.core.CollectService                  : RUN_END status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects ms=9520
+
+java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
+
+2026-11-21T03:47:45.567Z ERROR 1 --- [pool-3-thread-3] o.jobrunr.server.BackgroundJobPerformer  : Job(id=01a1fc36-8b21-74bd-9d5f-aff406f12ada, jobName='gpu usage collect') processing failed: An exception occurred during the performance of the job
+
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner.run(AbstractBackgroundJobRunner.java:21) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.runActualJob(BackgroundJobPerformer.java:95) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.performJob(BackgroundJobPerformer.java:68) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.run(BackgroundJobPerformer.java:46) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
+
+2026-11-21T03:47:47.926Z  INFO 1 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-21T03:47:47.929Z  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-11-21T03:47:49.045Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer - stopping (may take about PT40S)
+2026-11-21T03:47:49.045Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobPerformers - stopping (waiting at most PT40S for jobs to finish)
+2026-11-21T03:47:49.058Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer and BackgroundJobPerformers stopped
+2026-11-21T03:47:49.063Z  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'source'
+2026-11-21T03:47:49.066Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : source - Shutdown initiated...
+2026-11-21T03:47:49.075Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : source - Shutdown completed.
+2026-11-21T03:47:49.075Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : primary - Shutdown initiated...
+2026-11-21T03:47:49.082Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : primary - Shutdown completed.
+[Kapp-1 exited with code 143

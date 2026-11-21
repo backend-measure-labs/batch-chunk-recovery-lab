@@ -1,0 +1,46 @@
+[2026-11-21T00:53:17.669+0900][0.003s] Using G1
+[2026-11-21T00:53:17.775+0900][0.109s] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 15M->5M(264M) 0.702ms
+[2026-11-21T00:53:17.865+0900][0.200s] GC(1) Pause Young (Normal) (G1 Evacuation Pause) 29M->6M(264M) 0.818ms
+[2026-11-21T00:53:18.262+0900][0.597s] GC(2) Pause Young (Normal) (G1 Evacuation Pause) 154M->12M(264M) 3.819ms
+[2026-11-21T00:53:18.387+0900][0.721s] GC(3) Pause Young (Concurrent Start) (Metadata GC Threshold) 50M->13M(264M) 3.227ms
+[2026-11-21T00:53:18.387+0900][0.721s] GC(4) Concurrent Mark Cycle
+[2026-11-21T00:53:18.392+0900][0.726s] GC(4) Pause Remark 16M->16M(80M) 0.848ms
+[2026-11-21T00:53:18.392+0900][0.727s] GC(4) Pause Cleanup 16M->16M(80M) 0.002ms
+[2026-11-21T00:53:18.392+0900][0.727s] GC(4) Concurrent Mark Cycle 5.698ms
+[2026-11-21T00:53:18.575+0900][0.910s] GC(5) Pause Young (Normal) (G1 Preventive Collection) 57M->15M(80M) 4.323ms
+[2026-11-21T00:53:18.715+0900][1.049s] GC(6) Pause Young (Normal) (G1 Evacuation Pause) 51M->18M(80M) 5.110ms
+[2026-11-21T00:53:18.836+0900][1.171s] GC(7) Pause Young (Normal) (G1 Evacuation Pause) 54M->19M(80M) 2.755ms
+[2026-11-21T00:53:18.946+0900][1.280s] GC(8) Pause Young (Normal) (G1 Evacuation Pause) 55M->20M(80M) 2.498ms
+[2026-11-21T00:53:18.953+0900][1.287s] GC(9) Pause Young (Concurrent Start) (Metadata GC Threshold) 23M->20M(100M) 1.895ms
+[2026-11-21T00:53:18.953+0900][1.287s] GC(10) Concurrent Mark Cycle
+[2026-11-21T00:53:18.966+0900][1.301s] GC(10) Pause Remark 25M->25M(100M) 1.004ms
+[2026-11-21T00:53:18.973+0900][1.308s] GC(10) Pause Cleanup 26M->26M(100M) 0.026ms
+[2026-11-21T00:53:18.973+0900][1.308s] GC(10) Concurrent Mark Cycle 20.554ms
+[2026-11-21T00:53:19.102+0900][1.436s] GC(11) Pause Young (Prepare Mixed) (G1 Evacuation Pause) 72M->21M(100M) 2.045ms
+[2026-11-21T00:53:19.134+0900][1.468s] GC(12) Pause Young (Mixed) (G1 Evacuation Pause) 25M->21M(100M) 2.843ms
+[2026-11-21T00:53:19.393+0900][1.727s] GC(13) Pause Young (Concurrent Start) (G1 Evacuation Pause) 73M->23M(100M) 2.013ms
+[2026-11-21T00:53:19.393+0900][1.727s] GC(14) Concurrent Mark Cycle
+[2026-11-21T00:53:19.410+0900][1.745s] GC(14) Pause Remark 28M->28M(100M) 1.362ms
+[2026-11-21T00:53:19.419+0900][1.753s] GC(14) Pause Cleanup 28M->28M(100M) 0.032ms
+[2026-11-21T00:53:19.419+0900][1.754s] GC(14) Concurrent Mark Cycle 26.136ms
+[2026-11-21T00:53:19.554+0900][1.888s] GC(15) Pause Young (Normal) (G1 Evacuation Pause) 71M->24M(100M) 2.103ms
+[2026-11-21T00:53:19.760+0900][2.094s] GC(16) Pause Young (Normal) (G1 Evacuation Pause) 72M->27M(100M) 3.006ms
+[2026-11-21T00:53:19.999+0900][2.334s] GC(17) Pause Young (Normal) (G1 Evacuation Pause) 71M->30M(132M) 3.639ms
+[2026-11-21T00:53:20.803+0900][3.137s] GC(18) Pause Young (Normal) (G1 Evacuation Pause) 94M->32M(132M) 4.103ms
+[2026-11-21T00:53:21.125+0900][3.460s] GC(19) Pause Full (System.gc()) 45M->29M(120M) 29.081ms
+[2026-11-21T00:53:21.149+0900][3.483s] GC(20) Pause Full (Heap Inspection Initiated GC) 30M->29M(120M) 19.977ms
+[2026-11-21T00:53:21.368+0900][3.702s] GC(21) Pause Young (Normal) (G1 Evacuation Pause) 89M->64M(132M) 7.989ms
+[2026-11-21T00:53:21.423+0900][3.757s] GC(22) Pause Young (Concurrent Start) (G1 Evacuation Pause) 84M->80M(132M) 3.854ms
+[2026-11-21T00:53:21.423+0900][3.757s] GC(23) Concurrent Mark Cycle
+[2026-11-21T00:53:21.430+0900][3.765s] GC(24) Pause Young (Normal) (G1 Evacuation Pause) 88M->87M(368M) 1.975ms
+[2026-11-21T00:53:21.502+0900][3.836s] GC(25) Pause Full (System.gc()) 118M->102M(368M) 31.049ms
+[2026-11-21T00:53:21.502+0900][3.836s] GC(23) Concurrent Mark Cycle 79.175ms
+[2026-11-21T00:53:21.528+0900][3.862s] GC(26) Pause Full (Heap Inspection Initiated GC) 104M->102M(368M) 25.333ms
+[2026-11-21T00:53:21.679+0900][4.014s] GC(27) Pause Young (Normal) (G1 Evacuation Pause) 206M->126M(368M) 10.683ms
+[2026-11-21T00:53:21.725+0900][4.059s] GC(28) Pause Young (Normal) (G1 Evacuation Pause) 222M->150M(368M) 10.592ms
+[2026-11-21T00:53:21.781+0900][4.115s] GC(29) Pause Full (System.gc()) 192M->159M(368M) 42.302ms
+[2026-11-21T00:53:21.819+0900][4.154s] GC(30) Pause Full (Heap Inspection Initiated GC) 161M->159M(368M) 37.734ms
+[2026-11-21T00:53:21.914+0900][4.248s] GC(31) Pause Full (System.gc()) 177M->98M(368M) 46.463ms
+[2026-11-21T00:53:21.959+0900][4.294s] GC(32) Pause Full (Heap Inspection Initiated GC) 100M->98M(368M) 44.769ms
+[2026-11-21T00:53:22.070+0900][4.405s] GC(33) Pause Full (System.gc()) 100M->89M(336M) 35.381ms
+[2026-11-21T00:53:22.100+0900][4.434s] GC(34) Pause Full (Heap Inspection Initiated GC) 91M->89M(336M) 28.635ms

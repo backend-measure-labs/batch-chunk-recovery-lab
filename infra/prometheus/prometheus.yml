@@ -1,0 +1,4 @@
+# 수집 대상 없음. 백필한 블록만 조회한다.
+global:
+  scrape_interval: 1m
+scrape_configs: []

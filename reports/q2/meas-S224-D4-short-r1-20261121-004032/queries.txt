@@ -1,0 +1,5 @@
+name=gpu start=1794355200 end=1794700800 step=60s series=224 points=1290464 bytes=23140134 ms=595
+name=cpu start=1794355200 end=1794700800 step=60s series=224 points=1290464 bytes=24546206 ms=482
+name=mem start=1794355200 end=1794700800 step=60s series=224 points=1290464 bytes=23126696 ms=347
+name=status start=1794355200 end=1794700800 step=600s series=224 points=129248 bytes=2224606 ms=89
+name=created start=1794355200 end=1794700800 step=600s series=224 points=129248 bytes=3387838 ms=88

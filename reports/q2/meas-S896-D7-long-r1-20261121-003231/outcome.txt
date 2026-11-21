@@ -1,0 +1,11 @@
+exit=host
+elapsed_s=302
+run_start=1
+run_end_ok=0
+run_end_list_complete=0
+run_end_error=1
+oome_lines=0
+first_error=status=error phase=fetch error=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:9090/api/v1/query_range": Request was interrupted: null ms=204266
+oome_top_frames=
+lab_frame=
+run_end_line=status=error phase=fetch error=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:9090/api/v1/query_range": Request was interrupted: null ms=204266
