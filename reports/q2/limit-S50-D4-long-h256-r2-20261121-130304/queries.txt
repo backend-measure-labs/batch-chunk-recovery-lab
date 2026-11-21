@@ -1,0 +1,15 @@
+name=gpu start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9567157 ms=584
+name=cpu start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9799862 ms=324
+name=mem start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9564342 ms=217
+name=status start=1794355200 end=1794700800 step=600s series=50 points=28850 bytes=496612 ms=71
+name=created start=1794355200 end=1794700800 step=600s series=50 points=28850 bytes=756262 ms=27
+name=gpu start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9567157 ms=186
+name=cpu start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9799862 ms=276
+name=mem start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9564342 ms=148
+name=status start=1794355200 end=1794700800 step=600s series=50 points=28850 bytes=496612 ms=58
+name=created start=1794355200 end=1794700800 step=600s series=50 points=28850 bytes=756262 ms=29
+name=gpu start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9567157 ms=244
+name=cpu start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9799862 ms=207
+name=mem start=1794355200 end=1794700800 step=60s series=50 points=288050 bytes=9564342 ms=204
+name=status start=1794355200 end=1794700800 step=600s series=50 points=28850 bytes=496612 ms=30
+name=created start=1794355200 end=1794700800 step=600s series=50 points=28850 bytes=756262 ms=63

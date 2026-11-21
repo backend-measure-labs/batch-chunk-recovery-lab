@@ -75,6 +75,11 @@ public class CollectService {
                 List<AuditedRow> list = collector.collect(start, now);
                 phase.set("save");
                 rows = list.size();
+                if (!props.isSave()) {
+                    log.info("RUN_END status=list_complete rows={} ms={}", rows, System.currentTimeMillis() - t);
+                    phase.set("idle");
+                    return;
+                }
                 chunks = saver.saveAll(list);
             }
             watermark.markSuccess();

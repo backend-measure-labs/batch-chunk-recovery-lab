@@ -25,6 +25,8 @@ public class LabProperties {
     private int chunkRows = 500;
     /** 측정 모드 체크포인트 */
     private boolean checkpoints = false;
+    /** false 면 행 목록 완성(c3) 뒤 저장을 건너뛴다 (② 축소, README 1.4) */
+    private boolean save = true;
     /** 체크포인트 · 히스토그램 출력 디렉터리 */
     private String outDir = "./out";
 
@@ -48,6 +50,8 @@ public class LabProperties {
     public void setChunkRows(int v) { chunkRows = v; }
     public boolean isCheckpoints() { return checkpoints; }
     public void setCheckpoints(boolean v) { checkpoints = v; }
+    public boolean isSave() { return save; }
+    public void setSave(boolean v) { save = v; }
     public String getOutDir() { return outDir; }
     public void setOutDir(String v) { outDir = v; }
 }

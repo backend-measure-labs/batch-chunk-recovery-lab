@@ -1,0 +1,2 @@
+timeout=1
+timeout_note=VM 가용 메모리 고갈(앱 948MiB + Prometheus + MySQL + k3s)로 VM 정지, 2시간 뒤 정리

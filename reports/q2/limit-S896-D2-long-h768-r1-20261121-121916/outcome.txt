@@ -1,0 +1,11 @@
+exit=running 0 false
+elapsed_s=332
+run_start=1
+run_end_ok=0
+run_end_list_complete=0
+run_end_error=1
+oome_lines=10
+first_error=status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=67676
+oome_top_frames=
+lab_frame=
+run_end_line=status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=67676

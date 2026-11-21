@@ -1,0 +1,6 @@
+name=gpu start=1794614400 end=1794700800 step=60s series=448 points=645568 bytes=21503107 ms=689
+name=cpu start=1794614400 end=1794700800 step=60s series=448 points=645568 bytes=22004030 ms=496
+name=gpu start=1794614400 end=1794700800 step=60s series=448 points=645568 bytes=21503107 ms=363
+name=cpu start=1794614400 end=1794700800 step=60s series=448 points=645568 bytes=22004030 ms=451
+name=gpu start=1794614400 end=1794700800 step=60s series=448 points=645568 bytes=21503107 ms=394
+name=cpu start=1794614400 end=1794700800 step=60s series=448 points=645568 bytes=22004030 ms=420

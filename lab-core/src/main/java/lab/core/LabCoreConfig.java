@@ -88,7 +88,7 @@ public class LabCoreConfig {
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean sourceEntityManagerFactory(
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(
             @Qualifier("sourceDataSource") DataSource ds) {
         LocalContainerEntityManagerFactoryBean f = new LocalContainerEntityManagerFactoryBean();
         f.setDataSource(ds);
@@ -106,7 +106,7 @@ public class LabCoreConfig {
 
     @Bean
     public PlatformTransactionManager sourceTransactionManager(
-            @Qualifier("sourceEntityManagerFactory") EntityManagerFactory emf) {
+            @Qualifier("entityManagerFactory") EntityManagerFactory emf) {
         return new JpaTransactionManager(emf);
     }
 }

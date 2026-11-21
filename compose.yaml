@@ -3,6 +3,7 @@ name: bcrl
 services:
   mysql:
     image: mysql:8.0.46
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports: ["3306:3306"]
@@ -18,6 +19,7 @@ services:
 
   prometheus:
     image: prom/prometheus:v3.5.0
+    restart: unless-stopped
     command:
       - --config.file=/etc/prometheus/prometheus.yml
       - --storage.tsdb.path=/prometheus
@@ -44,6 +46,7 @@ services:
       LAB_WINDOW_HOURS: ${LAB_WINDOW_HOURS:-24}
       LAB_T0: ${LAB_T0:-1794700800}
       LAB_CHECKPOINTS: ${LAB_CHECKPOINTS:-false}
+      LAB_SAVE: ${LAB_SAVE:-true}
       LAB_OUT_DIR: /out
       JAVA_OPTS: ${JAVA_OPTS:-}
     volumes:

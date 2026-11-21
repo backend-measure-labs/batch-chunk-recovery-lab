@@ -1,0 +1,71 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.9)
+
+2026-11-20T16:00:20.000Z  INFO 61166 --- [           main] lab.jobrunr.JobrunrLabApp                : Starting JobrunrLabApp v0.1.0 using Java 17.0.15 with PID 61166 (~/git-project/idean3885/batch-chunk-recovery-lab/app-jobrunr/build/libs/app-jobrunr.jar started by user in ~/git-project/idean3885/batch-chunk-recovery-lab)
+2026-11-20T16:00:20.001Z  INFO 61166 --- [           main] lab.jobrunr.JobrunrLabApp                : No active profile set, falling back to 1 default profile: "default"
+2026-11-20T16:00:20.417Z  INFO 61166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-20T16:00:20.426Z  INFO 61166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2026-11-20T16:00:20.661Z  INFO 61166 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-20T16:00:20.669Z  INFO 61166 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-20T16:00:20.669Z  INFO 61166 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-11-20T16:00:20.683Z  INFO 61166 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-20T16:00:20.683Z  INFO 61166 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 655 ms
+2026-11-20T16:00:20.786Z  INFO 61166 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: source]
+2026-11-20T16:00:20.808Z  INFO 61166 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-11-20T16:00:20.822Z  INFO 61166 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-20T16:00:20.989Z  INFO 61166 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-20T16:00:21.002Z  INFO 61166 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Starting...
+2026-11-20T16:00:21.163Z  INFO 61166 --- [           main] com.zaxxer.hikari.pool.HikariPool        : source - Added connection com.mysql.cj.jdbc.ConnectionImpl@6879e983
+2026-11-20T16:00:21.164Z  INFO 61166 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Start completed.
+2026-11-20T16:00:21.203Z  INFO 61166 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (source)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-20T16:00:21.518Z  INFO 61166 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-20T16:00:21.519Z  INFO 61166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'source'
+2026-11-20T16:00:21.613Z  INFO 61166 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Starting...
+2026-11-20T16:00:21.622Z  INFO 61166 --- [           main] com.zaxxer.hikari.pool.HikariPool        : primary - Added connection com.mysql.cj.jdbc.ConnectionImpl@600a1270
+2026-11-20T16:00:21.622Z  INFO 61166 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Start completed.
+2026-11-20T16:00:21.964Z  INFO 61166 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-20T16:00:21.983Z  INFO 61166 --- [           main] .j.s.t.PlatformThreadPoolJobRunrExecutor : ThreadManager of type 'ScheduledThreadPool' started
+2026-11-20T16:00:21.999Z  INFO 61166 --- [pool-2-thread-1] org.jobrunr.server.BackgroundJobServer   : JobRunr BackgroundJobServer (0373f95e-421a-4f0f-9200-0c789f2d13e6) using MySqlStorageProvider and 96 BackgroundJobPerformers started successfully
+2026-11-20T16:00:22.001Z  INFO 61166 --- [pool-2-thread-1] org.jobrunr.server.ServerZooKeeper       : Server 0373f95e-421a-4f0f-9200-0c789f2d13e6 is master (this BackgroundJobServer)
+2026-11-20T16:00:22.005Z  INFO 61166 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-20T16:00:22.017Z  INFO 61166 --- [           main] lab.jobrunr.JobrunrLabApp                : Started JobrunrLabApp in 2.245 seconds (process running for 2.5)
+2026-11-20T16:00:22.621Z  INFO 61166 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-20T16:00:22.622Z  INFO 61166 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-20T16:00:22.622Z  INFO 61166 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-20T16:00:23.040Z  INFO 61166 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=224 digits=short start=1794614400 end=1794700800
+2026-11-20T16:00:23.072Z  INFO 61166 --- [pool-3-thread-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c0 rows=0 heapUsed=30823104 heapCommitted=100663296
+2026-11-20T16:00:23.279Z  INFO 61166 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=5818662 ms=170
+2026-11-20T16:00:23.391Z  INFO 61166 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=6160286 ms=110
+2026-11-20T16:00:23.488Z  INFO 61166 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794614400 end=1794700800 step=60s series=224 points=322784 bytes=5805222 ms=97
+2026-11-20T16:00:23.512Z  INFO 61166 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794614400 end=1794700800 step=600s series=224 points=32480 bytes=579550 ms=23
+2026-11-20T16:00:23.535Z  INFO 61166 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794614400 end=1794700800 step=600s series=224 points=32480 bytes=871870 ms=22
+2026-11-20T16:00:23.585Z  INFO 61166 --- [pool-3-thread-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c2 rows=0 heapUsed=186491504 heapCommitted=331350016
+2026-11-20T16:00:23.897Z  INFO 61166 --- [pool-3-thread-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c2b rows=321343 heapUsed=322649008 heapCommitted=994050048
+2026-11-20T16:00:24.121Z  INFO 61166 --- [pool-3-thread-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c3a rows=322783 heapUsed=192735688 heapCommitted=687865856
+2026-11-20T16:00:24.347Z  INFO 61166 --- [pool-3-thread-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c3 rows=322784 heapUsed=192737480 heapCommitted=687865856
+2026-11-20T16:00:24.427Z  INFO 61166 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794614400 end=1794700800 rows=322784
+2026-11-20T16:00:24.427Z  INFO 61166 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_END status=list_complete rows=322784 ms=1394
+2026-11-20T16:00:26.798Z  INFO 61166 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-20T16:00:28.820Z  INFO 61166 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-11-20T16:00:28.830Z  INFO 61166 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer - stopping (may take about PT40S)
+2026-11-20T16:00:28.831Z  INFO 61166 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobPerformers - stopping (waiting at most PT40S for jobs to finish)
+2026-11-20T16:00:28.853Z  INFO 61166 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer and BackgroundJobPerformers stopped
+2026-11-20T16:00:28.855Z  INFO 61166 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'source'
+2026-11-20T16:00:28.857Z  INFO 61166 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : source - Shutdown initiated...
+2026-11-20T16:00:28.862Z  INFO 61166 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : source - Shutdown completed.
+2026-11-20T16:00:28.862Z  INFO 61166 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : primary - Shutdown initiated...
+2026-11-20T16:00:28.866Z  INFO 61166 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : primary - Shutdown completed.

@@ -60,7 +60,12 @@ public class Collector {
         phase.set("convert");
         ZoneId zone = clock.getZone();
         List<UsageRow> rows = new ArrayList<>();
+        int seriesIdx = 0;
         for (GenericResult g : gpu.values()) {
+            if (++seriesIdx == gpu.size()) {
+                // 응답과 행 목록이 함께 살아 있는 마지막 순간 (응답은 이 루프가 끝나면 죽을 수 있다)
+                cp.mark("c2b", rows.size());
+            }
             Map<String, String> m = g.metric();
             String podKey = m.get("namespace") + "/" + m.get("pod");
             Cursor cpuC = new Cursor(cpu.get(podKey));
@@ -87,8 +92,12 @@ public class Collector {
         }
         ZonedDateTime now = ZonedDateTime.now(clock);
         List<AuditedRow> audited = new ArrayList<>();
-        for (UsageRow r : rows) {
-            audited.add(AuditedRow.of(r, now, "gpu-usage-collector"));
+        for (int i = 0; i < rows.size(); i++) {
+            if (i == rows.size() - 1) {
+                // 행 목록과 복사 목록이 함께 살아 있는 마지막 순간
+                cp.mark("c3a", audited.size());
+            }
+            audited.add(AuditedRow.of(rows.get(i), now, "gpu-usage-collector"));
         }
         audited.sort(Comparator.comparing(AuditedRow::collectedAt));
         cp.mark("c3", audited.size());

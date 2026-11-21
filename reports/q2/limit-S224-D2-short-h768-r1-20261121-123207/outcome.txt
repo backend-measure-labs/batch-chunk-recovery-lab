@@ -1,0 +1,11 @@
+exit=running 0 false
+elapsed_s=42
+run_start=3
+run_end_ok=0
+run_end_list_complete=2
+run_end_error=1
+oome_lines=3
+first_error=status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=15043
+oome_top_frames=	at java.base/java.time.zone.ZoneRules.of(Unknown Source) ~[na:na]|	at java.base/java.time.ZoneOffset.getRules(Unknown Source) ~[na:na]|	at java.base/java.time.ZonedDateTime.create(Unknown Source) ~[na:na]|	at java.base/java.time.ZonedDateTime.ofInstant(Unknown Source) ~[na:na]|	at java.base/java.time.Instant.atZone(Unknown Source) ~[na:na]|	at lab.core.Collector.collect(Collector.java:90) ~[lab-core-0.1.0.jar!/:na]|
+lab_frame=	at lab.core.Collector.collect(Collector.java:90) ~[lab-core-0.1.0.jar!/:na]
+run_end_line=status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=15043

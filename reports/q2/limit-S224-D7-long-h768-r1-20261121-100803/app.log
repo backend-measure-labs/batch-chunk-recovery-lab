@@ -1,0 +1,311 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.9)
+
+2026-11-21T01:05:40.535Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : Starting JobrunrLabApp v0.1.0 using Java 17.0.21 with PID 1 (/app/app.jar started by root in /)
+2026-11-21T01:05:40.586Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : No active profile set, falling back to 1 default profile: "default"
+2026-11-21T01:05:41.802Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-21T01:05:41.814Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-11-21T01:05:42.418Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-21T01:05:42.429Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-21T01:05:42.429Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-11-21T01:05:42.537Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-21T01:05:42.537Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1911 ms
+2026-11-21T01:05:43.008Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: source]
+2026-11-21T01:05:43.087Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-11-21T01:05:43.108Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-21T01:05:43.521Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-21T01:05:43.537Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Starting...
+2026-11-21T01:05:43.935Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : source - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dec769
+2026-11-21T01:05:43.935Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Start completed.
+2026-11-21T01:05:44.037Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (source)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-21T01:05:44.917Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-21T01:05:44.920Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'source'
+2026-11-21T01:05:45.219Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Starting...
+2026-11-21T01:05:45.229Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : primary - Added connection com.mysql.cj.jdbc.ConnectionImpl@a6d4547
+2026-11-21T01:05:45.229Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Start completed.
+2026-11-21T01:05:46.225Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-21T01:05:46.285Z  INFO 1 --- [           main] .j.s.t.PlatformThreadPoolJobRunrExecutor : ThreadManager of type 'ScheduledThreadPool' started
+2026-11-21T01:05:46.308Z  INFO 1 --- [pool-2-thread-1] org.jobrunr.server.BackgroundJobServer   : JobRunr BackgroundJobServer (551db5e8-f424-4407-8bea-eec8e291c55c) using MySqlStorageProvider and 8 BackgroundJobPerformers started successfully
+2026-11-21T01:05:46.315Z  INFO 1 --- [pool-2-thread-1] org.jobrunr.server.ServerZooKeeper       : Server 551db5e8-f424-4407-8bea-eec8e291c55c is master (this BackgroundJobServer)
+2026-11-21T01:05:46.336Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-21T01:05:46.407Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : Started JobrunrLabApp in 6.371 seconds (process running for 6.925)
+2026-11-21T01:05:46.829Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-21T01:05:46.830Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-21T01:05:46.832Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-21T01:05:47.275Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=224 digits=long start=1794096000 end=1794700800
+2026-11-21T01:05:49.710Z  INFO 1 --- [pool-3-thread-2] lab.core.Collector                       : QUERY name=gpu start=1794096000 end=1794700800 step=60s series=224 points=2258144 bytes=74971612 ms=2432
+2026-11-21T01:05:52.200Z  INFO 1 --- [pool-3-thread-2] lab.core.Collector                       : QUERY name=cpu start=1794096000 end=1794700800 step=60s series=224 points=2258144 bytes=76804286 ms=2488
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "http-nio-8080-Poller"
+
+Exception: java.lang.OutOfMemoryError thrown from the UncaughtExceptionHandler in thread "Catalina-utility-1"
+Exception in thread "backgroundjob-zookeeper-pool-2-thread-2" Exception in thread "source:housekeeper" Exception in thread "HttpClient-1-Worker-1" Exception in thread "backgroundjob-zookeeper-pool-2-thread-4" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+2026-11-21T01:06:45.893Z ERROR 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_END status=error phase=fetch error=org.springframework.web.client.RestClientException: Error while extracting response for type [lab.core.prom.PromResponse] and content type [application/json] ms=58626
+
+org.springframework.web.client.RestClientException: Error while extracting response for type [lab.core.prom.PromResponse] and content type [application/json]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:262) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:826) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$1(DefaultRestClient.java:765) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:586) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:540) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:821) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:765) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.support.RestClientAdapter.exchangeForBody(RestClientAdapter.java:75) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.service.invoker.HttpServiceMethod$ExchangeResponseFunction.lambda$create$4(HttpServiceMethod.java:425) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.service.invoker.HttpServiceMethod$ExchangeResponseFunction.execute(HttpServiceMethod.java:382) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.service.invoker.HttpServiceMethod.invoke(HttpServiceMethod.java:133) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.service.invoker.HttpServiceProxyFactory$HttpServiceMethodInterceptor.invoke(HttpServiceProxyFactory.java:243) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at jdk.proxy2/jdk.proxy2.$Proxy127.queryRange(Unknown Source) ~[na:na]
+	at lab.core.Collector.fetch(Collector.java:111) ~[lab-core-0.1.0.jar!/:na]
+	at lab.core.Collector.collect(Collector.java:55) ~[lab-core-0.1.0.jar!/:na]
+	at lab.core.CollectService.run(CollectService.java:75) ~[lab-core-0.1.0.jar!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.15.jar!/:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at lab.core.CollectService$$SpringCGLIB$$0.run(<generated>) ~[lab-core-0.1.0.jar!/:na]
+	at lab.jobrunr.CollectJob.run(CollectJob.java:22) ~[!/:0.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner.run(AbstractBackgroundJobRunner.java:21) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.runActualJob(BackgroundJobPerformer.java:95) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.performJob(BackgroundJobPerformer.java:68) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.run(BackgroundJobPerformer.java:46) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: closed
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:408) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:356) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:229) ~[spring-web-6.2.15.jar!/:6.2.15]
+	... 47 common frames omitted
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: closed (through reference chain: lab.core.prom.PromResponse["data"]->lab.core.prom.PromResponse$Data["result"]->java.util.ArrayList[19]->lab.core.prom.PromResponse$GenericResult["values"]->java.util.ArrayList[7521])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:400) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:371) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:383) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeNoNullChecks(CollectionDeserializer.java:501) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:358) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2130) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1500) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:397) ~[spring-web-6.2.15.jar!/:6.2.15]
+	... 49 common frames omitted
+Caused by: java.io.IOException: closed
+	at java.net.http/jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream.current(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream.read(Unknown Source) ~[java.net.http:na]
+	at java.base/java.io.FilterInputStream.read(Unknown Source) ~[na:na]
+	at java.base/java.io.FilterInputStream.read(Unknown Source) ~[na:na]
+	at lab.core.prom.BodyByteCounter$1$1.read(BodyByteCounter.java:41) ~[lab-core-0.1.0.jar!/:na]
+	at java.base/java.io.FilterInputStream.read(Unknown Source) ~[na:na]
+	at java.base/java.io.PushbackInputStream.read(Unknown Source) ~[na:na]
+	at java.base/java.io.FilterInputStream.read(Unknown Source) ~[na:na]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._loadMore(UTF8StreamJsonParser.java:220) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._loadMoreGuaranteed(UTF8StreamJsonParser.java:2457) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2540) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2520) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:294) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerNR._deserializeNR(UntypedObjectDeserializerNR.java:295) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerNR.deserialize(UntypedObjectDeserializerNR.java:78) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeNoNullChecks(CollectionDeserializer.java:501) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:358) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	... 77 common frames omitted
+Caused by: java.io.IOException: selector manager closed
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.selectorClosedException(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(Unknown Source) ~[java.net.http:na]
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+2026-11-21T01:06:46.095Z  WARN 1 --- [pool-3-thread-2] o.jobrunr.server.BackgroundJobPerformer  : Job(id=01a1fba3-51e8-7170-98e7-03a0e18662e8, jobName='gpu usage collect') processing failed: An exception occurred during the performance of the job
+
+org.springframework.web.client.RestClientException: Error while extracting response for type [lab.core.prom.PromResponse] and content type [application/json]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:262) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:826) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$1(DefaultRestClient.java:765) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:586) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:540) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:821) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.body(DefaultRestClient.java:765) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.support.RestClientAdapter.exchangeForBody(RestClientAdapter.java:75) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.service.invoker.HttpServiceMethod$ExchangeResponseFunction.lambda$create$4(HttpServiceMethod.java:425) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.service.invoker.HttpServiceMethod$ExchangeResponseFunction.execute(HttpServiceMethod.java:382) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.service.invoker.HttpServiceMethod.invoke(HttpServiceMethod.java:133) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.service.invoker.HttpServiceProxyFactory$HttpServiceMethodInterceptor.invoke(HttpServiceProxyFactory.java:243) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at jdk.proxy2/jdk.proxy2.$Proxy127.queryRange(Unknown Source) ~[na:na]
+	at lab.core.Collector.fetch(Collector.java:111) ~[lab-core-0.1.0.jar!/:na]
+	at lab.core.Collector.collect(Collector.java:55) ~[lab-core-0.1.0.jar!/:na]
+	at lab.core.CollectService.run(CollectService.java:75) ~[lab-core-0.1.0.jar!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.15.jar!/:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.15.jar!/:6.2.15]
+	at lab.core.CollectService$$SpringCGLIB$$0.run(<generated>) ~[lab-core-0.1.0.jar!/:na]
+	at lab.jobrunr.CollectJob.run(CollectJob.java:22) ~[!/:0.1.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.runner.AbstractBackgroundJobRunner.run(AbstractBackgroundJobRunner.java:21) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.runActualJob(BackgroundJobPerformer.java:95) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.performJob(BackgroundJobPerformer.java:68) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at org.jobrunr.server.BackgroundJobPerformer.run(BackgroundJobPerformer.java:46) ~[jobrunr-7.5.1.jar!/:7.5.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: closed
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:408) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:356) ~[spring-web-6.2.15.jar!/:6.2.15]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:229) ~[spring-web-6.2.15.jar!/:6.2.15]
+	... 47 common frames omitted
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: closed (through reference chain: lab.core.prom.PromResponse["data"]->lab.core.prom.PromResponse$Data["result"]->java.util.ArrayList[19]->lab.core.prom.PromResponse$GenericResult["values"]->java.util.ArrayList[7521])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:400) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:371) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:383) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeNoNullChecks(CollectionDeserializer.java:501) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:358) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:543) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:587) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:440) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1499) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:340) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2130) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1500) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:397) ~[spring-web-6.2.15.jar!/:6.2.15]
+	... 49 common frames omitted
+Caused by: java.io.IOException: closed
+	at java.net.http/jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream.current(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream.read(Unknown Source) ~[java.net.http:na]
+	at java.base/java.io.FilterInputStream.read(Unknown Source) ~[na:na]
+	at java.base/java.io.FilterInputStream.read(Unknown Source) ~[na:na]
+	at lab.core.prom.BodyByteCounter$1$1.read(BodyByteCounter.java:41) ~[lab-core-0.1.0.jar!/:na]
+	at java.base/java.io.FilterInputStream.read(Unknown Source) ~[na:na]
+	at java.base/java.io.PushbackInputStream.read(Unknown Source) ~[na:na]
+	at java.base/java.io.FilterInputStream.read(Unknown Source) ~[na:na]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._loadMore(UTF8StreamJsonParser.java:220) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._loadMoreGuaranteed(UTF8StreamJsonParser.java:2457) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishString2(UTF8StreamJsonParser.java:2540) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2520) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:294) ~[jackson-core-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerNR._deserializeNR(UntypedObjectDeserializerNR.java:295) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializerNR.deserialize(UntypedObjectDeserializerNR.java:78) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeNoNullChecks(CollectionDeserializer.java:501) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:358) ~[jackson-databind-2.19.4.jar!/:2.19.4]
+	... 77 common frames omitted
+Caused by: java.io.IOException: selector manager closed
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.selectorClosedException(Unknown Source) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(Unknown Source) ~[java.net.http:na]
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+2026-11-21T01:06:46.385Z ERROR 1 --- [alina-utility-3] o.a.coyote.http11.Http11NioProtocol      : Error processing async timeouts
+
+java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.concurrent.FutureTask.report(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.get(Unknown Source) ~[na:na]
+	at org.apache.coyote.AbstractProtocol.startAsyncTimeout(AbstractProtocol.java:658) ~[tomcat-embed-core-10.1.50.jar!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.50.jar!/:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+2026-11-21T01:11:13.269Z  INFO 1 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-21T01:11:13.284Z  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-11-21T01:11:14.417Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer - stopping (may take about PT40S)
+2026-11-21T01:11:14.417Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobPerformers - stopping (waiting at most PT40S for jobs to finish)
+2026-11-21T01:11:14.434Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer and BackgroundJobPerformers stopped
+2026-11-21T01:11:14.438Z  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'source'
+2026-11-21T01:11:14.440Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : source - Shutdown initiated...
+2026-11-21T01:11:14.453Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : source - Shutdown completed.
+2026-11-21T01:11:14.453Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : primary - Shutdown initiated...
+2026-11-21T01:11:14.460Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : primary - Shutdown completed.
+[Kapp-1 exited with code 143

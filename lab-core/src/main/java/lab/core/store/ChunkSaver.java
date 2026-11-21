@@ -76,6 +76,7 @@ public class ChunkSaver {
             }
             from = to;
         }
+        cp.mark("c5", sorted.size());
         return ends.size();
     }
 }
