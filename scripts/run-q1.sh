@@ -16,16 +16,16 @@ mkdir -p "$OUT"
 echo "$OUT" > "$LAB_ROOT/build/current-run.txt"
 JAR_REL="app-$APP/build/libs/app-$APP.jar"
 export LAB_SERIES=$S LAB_DIGITS=long LAB_MODE=$MODE LAB_WINDOW_HOURS=$WIN LAB_SAVE=true LAB_CHECKPOINTS=false
-echo "signal=$SIG phase=$PHASE rep=$REP app=$APP mode=$MODE window_h=$WIN series=$S days=$D grace=60" > "$OUT/params.txt"
+echo "signal=$SIG phase=$PHASE rep=$REP app=$APP mode=$MODE window_h=$WIN series=$S days=$D grace=60 mem=${Q1_MEM:-1g}" > "$OUT/params.txt"
 reset_db "$D"
 
 (docker events --filter container=bcrl-app-1 --format '{{.Time}},{{.Action}},{{index .Actor.Attributes "exitCode"}}' > "$OUT/events.csv" 2>/dev/null &)
-EVPID=$!
+EVPID=${!:-}   # 서브셸로 띄워 $! 가 비어 있을 수 있다(set -u). 끝에서 pkill 로 정리한다
 ms() { python3 -c 'import time;print(int(time.time()*1000))'; }
 log_t() { echo "$(ms),$1" >> "$OUT/timeline.csv"; }
 echo "epoch_ms,event" > "$OUT/timeline.csv"
 
-GRACE=60s APP_MEM=1g APP_CPUS=1 start_container_app "$JAR_REL" "$OUT" "-XX:MaxRAMPercentage=75"
+GRACE=60s APP_MEM=${Q1_MEM:-1g} APP_CPUS=1 start_container_app "$JAR_REL" "$OUT" "-XX:MaxRAMPercentage=75"
 wait_health || { echo "health timeout" > "$OUT/outcome.txt"; exit 1; }
 log_t started
 trigger > "$OUT/trigger.txt"; log_t triggered
@@ -102,7 +102,7 @@ stop_container_app
 kill "$EVPID" 2>/dev/null || pkill -f "docker events --filter container=bcrl-app-1" || true
 
 {
-  grep -h -E "RUN_START|READER_OPEN|RUN_END|SKIP_RUNNING|LAUNCH_|Orphan|stopped|interrupt" "$OUT/app.log" "$OUT/app-restart.log" 2>/dev/null | cut -c1-260
+  grep -h -E "RUN_START|READER_OPEN|RUN_END|SKIP_RUNNING|LAUNCH_|Orphan|stopped|interrupt" "$OUT/app.log" "$OUT/app-restart.log" 2>/dev/null | grep -v "interrupted=false" | cut -c1-260
 } > "$OUT/key-lines.txt"
 grep -h CHUNK_COMMIT "$OUT/app.log" 2>/dev/null | tail -3 | cut -c1-220 > "$OUT/last-chunks-before.txt"
 grep -h "interrupted=true" "$OUT/app.log" 2>/dev/null | wc -l | tr -d ' ' > "$OUT/interrupted-commits.count"
