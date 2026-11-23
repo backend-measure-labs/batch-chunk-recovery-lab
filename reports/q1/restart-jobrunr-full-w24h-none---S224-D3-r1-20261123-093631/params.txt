@@ -1,0 +1,1 @@
+signal=none phase=- rep=1 app=jobrunr mode=full window_h=24 series=224 days=3 grace=60 mem=2g

@@ -1,0 +1,33 @@
+server:
+  port: ${SERVER_PORT:8080}
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/jobrunr?characterEncoding=UTF-8&serverTimezone=UTC
+    username: lab
+    password: ${DB_PASSWORD:lab}
+  jpa:
+    open-in-view: false
+lab:
+  source:
+    datasource:
+      url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/source?characterEncoding=UTF-8&serverTimezone=UTC
+      username: lab
+      password: ${DB_PASSWORD:lab}
+org:
+  jobrunr:
+    database:
+      skip-create: false
+    background-job-server:
+      enabled: true
+      poll-interval-in-seconds: 15
+      interrupt-jobs-await-duration-on-stop: 40s
+    jobs:
+      default-number-of-retries: 2
+      retry-back-off-time-seed: 3
+    dashboard:
+      enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health

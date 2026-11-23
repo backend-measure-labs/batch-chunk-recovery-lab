@@ -1,0 +1,110 @@
+run,kind,series,days,digits,rep,heap,save,mode,window_h,app,outcome,rows,c0_mb,peak_mb,peak_point,c3_mb,c5_mb,peak_per_row_b,c5_minus_c3_per_row_b,run_ms,gc_pause_ratio,docker_mem_max_mb,exit,duplicates,missing,lab_frame,error
+limit-S224-D1-long-h256-r1-20261121-012628,limit,224,1,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,6228,0.740,465,running 0 false,,,	at lab.core.Collector.collect(Collector.java:85) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=6228
+limit-S224-D1-long-h256-r2-20261121-124355,limit,224,1,long,2,256,0,full,24,jobrunr,OOME,,,,,,,,,5681,0.683,492,running 0 false,,,	at lab.core.Collector.collect(Collector.java:86) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=5681
+limit-S224-D1-long-h256-r3-20261121-124614,limit,224,1,long,3,256,0,full,24,jobrunr,OOME,,,,,,,,,6179,0.731,446,running 0 false,,,	at lab.core.Collector.collect(Collector.java:88) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=6179
+limit-S224-D1-long-h768-r1-20261121-100554,limit,224,1,long,1,768,0,full,24,jobrunr,list_complete,322784,,,,,,,,3028,0.149,716,running 0 false,,,,
+limit-S224-D1-long-h768-save-r1-20261121-202747,limit,224,1,long,1,768,1,full,24,jobrunr,ok,322784,,,,,,,,26579,0.027,831,running 0 false,0,0,,
+limit-S224-D1-short-h256-r1-20261121-095211,limit,224,1,short,1,256,0,full,24,jobrunr,OOME,,,,,,,,,4577,0.680,530,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=4577
+limit-S224-D1-short-h256-r2-20261121-124733,limit,224,1,short,2,256,0,full,24,jobrunr,OOME,,,,,,,,,4687,0.706,444,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=4687
+limit-S224-D1-short-h256-r3-20261121-124852,limit,224,1,short,3,256,0,full,24,jobrunr,OOME,,,,,,,,,4381,0.694,448,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=4381
+limit-S224-D1-short-h768-r1-20261121-123151,limit,224,1,short,1,768,0,full,24,jobrunr,list_complete,322784,,,,,,,,2181,0.117,723,running 0 false,,,,
+limit-S224-D1-short-h768-r2-20261121-131825,limit,224,1,short,2,768,0,full,24,jobrunr,list_complete,322784,,,,,,,,1781,0.094,634,running 0 false,,,,
+limit-S224-D1-short-h768-r3-20261121-131854,limit,224,1,short,3,768,0,full,24,jobrunr,list_complete,322784,,,,,,,,1991,0.223,700,running 0 false,,,,
+limit-S224-D2-long-h256-r1-20261121-012740,limit,224,2,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,4668,0.713,434,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4668
+limit-S224-D2-long-h768-r1-20261121-100624,limit,224,2,long,1,768,0,full,24,jobrunr,list_complete,645344,,,,,,,,4471,0.224,986,running 0 false,,,,
+limit-S224-D2-long-h768-r2-20261121-131354,limit,224,2,long,2,768,0,full,24,jobrunr,list_complete,645344,,,,,,,,4024,0.219,968,running 0 false,,,,
+limit-S224-D2-long-h768-r3-20261121-131410,limit,224,2,long,3,768,0,full,24,jobrunr,list_complete,645344,,,,,,,,3760,0.240,983,running 0 false,,,,
+limit-S224-D2-short-h256-r1-20261121-095441,limit,224,2,short,1,256,0,full,24,jobrunr,OOME,,,,,,,,,,,436,running 0 false,,,,
+limit-S224-D2-short-h768-r1-20261121-123207,limit,224,2,short,1,768,0,full,24,jobrunr,OOME+retry_ok,,,,,,,,,15043,0.836,976,running 0 false,,,	at lab.core.Collector.collect(Collector.java:90) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=15043
+limit-S224-D2-short-h768-r2-20261121-131924,limit,224,2,short,2,768,0,full,24,jobrunr,list_complete,645344,,,,,,,,3143,0.218,915,running 0 false,,,,
+limit-S224-D2-short-h768-r3-20261121-131940,limit,224,2,short,3,768,0,full,24,jobrunr,list_complete,645344,,,,,,,,3688,0.221,922,running 0 false,,,,
+limit-S224-D4-long-h256-r1-20261121-013355,limit,224,4,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,4707,0.634,452,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4707
+limit-S224-D4-long-h768-r1-20261121-100641,limit,224,4,long,1,768,0,full,24,jobrunr,OOME,,,,,,,,,13486,0.687,1002,running 0 false,,,	at lab.core.Collector.collect(Collector.java:83) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=13486
+limit-S224-D4-long-h768-r2-20261121-131443,limit,224,4,long,2,768,0,full,24,jobrunr,OOME,,,,,,,,,9164,0.588,993,running 0 false,,,	at lab.core.Collector.collect(Collector.java:83) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=9164
+limit-S224-D4-long-h768-r3-20261121-131650,limit,224,4,long,3,768,0,full,24,jobrunr,OOME,,,,,,,,,10740,0.683,1001,running 0 false,,,	at lab.core.Collector.collect(Collector.java:83) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=10740
+limit-S224-D4-short-h256-r1-20261121-100103,limit,224,4,short,1,256,0,full,24,jobrunr,OOME,,,,,,,,,5008,0.672,441,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=5008
+limit-S224-D4-short-h768-r1-20261121-123252,limit,224,4,short,1,768,0,full,24,jobrunr,OOME,,,,,,,,,24990,0.874,984,running 0 false,,,,status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=24990
+limit-S224-D7-long-h256-r1-20261121-013555,limit,224,7,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,3778,0.600,440,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=3778
+limit-S224-D7-long-h768-r1-20261121-100803,limit,224,7,long,1,768,0,full,24,jobrunr,OOME,,,,,,,,,58626,0.928,987,running 0 false,,,	at lab.core.Collector.fetch(Collector.java:111) ~[lab-core-0.1.0.jar!/:na],status=error phase=fetch error=org.springframework.web.client.RestClientException: Error while extracting response for t
+limit-S224-D7-short-h256-r1-20261121-100305,limit,224,7,short,1,256,0,full,24,jobrunr,OOME,,,,,,,,,4795,0.660,438,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4795
+limit-S224-D7-short-h768-r1-20261121-123537,limit,224,7,short,1,768,0,full,24,jobrunr,OOME,,,,,,,,,11653,0.721,990,running 0 false,,,	at lab.core.Collector.fetch(Collector.java:111) ~[lab-core-0.1.0.jar!/:na],status=error phase=fetch error=org.springframework.web.client.RestClientException: Error while extracting response for t
+limit-S448-D1-long-h256-r1-20261121-013724,limit,448,1,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,4356,0.728,453,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4356
+limit-S448-D1-long-h256-r2-20261121-125015,limit,448,1,long,2,256,0,full,24,jobrunr,OOME,,,,,,,,,4474,0.693,442,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4474
+limit-S448-D1-long-h256-r3-20261121-125623,limit,448,1,long,3,256,0,full,24,jobrunr,OOME,,,,,,,,,,,436,running 0 false,,,,
+limit-S448-D1-long-h768-r1-20261121-101356,limit,448,1,long,1,768,0,full,24,jobrunr,list_complete,645568,,,,,,,,5163,0.208,973,running 0 false,,,,
+limit-S448-D1-long-h768-r2-20261121-132013,limit,448,1,long,2,768,0,full,24,jobrunr,list_complete,645568,,,,,,,,4361,0.230,966,running 0 false,,,,
+limit-S448-D1-long-h768-r3-20261121-132031,limit,448,1,long,3,768,0,full,24,jobrunr,list_complete,645568,,,,,,,,3740,0.196,961,running 0 false,,,,
+limit-S448-D2-long-h256-r1-20261121-014341,limit,448,2,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,4290,0.570,450,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4290
+limit-S448-D2-long-h768-r1-20261121-101415,limit,448,2,long,1,768,0,full,24,jobrunr,OOME,,,,,,,,,20013,0.781,999,running 0 false,,,	at lab.core.Collector.collect(Collector.java:89) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=20013
+limit-S448-D2-long-h768-r2-20261121-132047,limit,448,2,long,2,768,0,full,24,jobrunr,OOME,,,,,,,,,27256,0.869,982,running 0 false,,,,status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced obj
+limit-S448-D2-long-h768-r3-20261121-132627,limit,448,2,long,3,768,0,full,24,jobrunr,OOME,,,,,,,,,16884,0.780,1002,running 0 false,,,	at lab.core.Collector.collect(Collector.java:89) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=16884
+limit-S448-D4-long-h256-r1-20261121-014543,limit,448,4,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,,,432,running 0 false,,,,
+limit-S448-D4-long-h768-r1-20261121-123728,limit,448,4,long,1,768,0,full,24,jobrunr,OOME,,,,,,,,,13590,0.698,987,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=13590
+limit-S448-D7-long-h256-r1-20261121-015154,limit,448,7,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,5035,0.586,456,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=5035
+limit-S448-D7-long-h768-r1-20261121-102401,limit,448,7,long,1,768,0,full,24,jobrunr,timeout,,,,,,,,,,,953,,,,,
+limit-S50-D1-long-h256-r1-20261121-011343,limit,50,1,long,1,256,0,full,24,jobrunr,list_complete,72050,,,,,,,,1095,0.071,330,running 0 false,,,,
+limit-S50-D1-long-h768-r1-20261121-100438,limit,50,1,long,1,768,0,full,24,jobrunr,list_complete,72050,,,,,,,,1215,0.090,362,running 0 false,,,,
+limit-S50-D2-long-h256-r1-20261121-011356,limit,50,2,long,1,256,0,full,24,jobrunr,list_complete,144050,,,,,,,,1639,0.136,428,running 0 false,,,,
+limit-S50-D2-long-h256-r2-20261121-130236,limit,50,2,long,2,256,0,full,24,jobrunr,list_complete,144050,,,,,,,,1539,0.123,424,running 0 false,,,,
+limit-S50-D2-long-h256-r3-20261121-130250,limit,50,2,long,3,256,0,full,24,jobrunr,list_complete,144050,,,,,,,,1588,0.147,398,running 0 false,,,,
+limit-S50-D2-long-h768-r1-20261121-100508,limit,50,2,long,1,768,0,full,24,jobrunr,list_complete,144050,,,,,,,,1890,0.132,509,running 0 false,,,,
+limit-S50-D4-long-h256-r1-20261121-011409,limit,50,4,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,6776,0.774,446,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=6776
+limit-S50-D4-long-h256-r2-20261121-130304,limit,50,4,long,2,256,0,full,24,jobrunr,OOME,,,,,,,,,6616,0.733,449,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=6616
+limit-S50-D4-long-h256-r3-20261121-130438,limit,50,4,long,3,256,0,full,24,jobrunr,OOME,,,,,,,,,6271,0.739,448,running 0 false,,,	at lab.core.Collector.collect(Collector.java:86) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=6271
+limit-S50-D4-long-h768-r1-20261121-100522,limit,50,4,long,1,768,0,full,24,jobrunr,list_complete,288050,,,,,,,,2894,0.187,732,running 0 false,,,,
+limit-S50-D7-long-h256-r1-20261121-011542,limit,50,7,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,601040,0.008,446,running 0 false,,,	at lab.core.Collector.fetch(Collector.java:111) ~[lab-core-0.1.0.jar!/:na],status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=601040
+limit-S50-D7-long-h768-r1-20261121-100538,limit,50,7,long,1,768,0,full,24,jobrunr,list_complete,504050,,,,,,,,4036,0.230,956,running 0 false,,,,
+limit-S50-D7-long-h768-r2-20261121-132825,limit,50,7,long,2,768,0,full,24,jobrunr,list_complete,504050,,,,,,,,3668,0.167,883,running 0 false,,,,
+limit-S50-D7-long-h768-r3-20261121-132841,limit,50,7,long,3,768,0,full,24,jobrunr,list_complete,504050,,,,,,,,3104,0.153,880,running 0 false,,,,
+limit-S896-D1-long-h256-r1-20261121-015810,limit,896,1,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,4239,0.618,492,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4239
+limit-S896-D1-long-h256-r2-20261121-130619,limit,896,1,long,2,256,0,full,24,jobrunr,OOME,,,,,,,,,4281,0.601,453,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4281
+limit-S896-D1-long-h256-r3-20261121-130736,limit,896,1,long,3,256,0,full,24,jobrunr,OOME,,,,,,,,,4318,0.547,444,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=4318
+limit-S896-D1-long-h768-r1-20261121-121618,limit,896,1,long,1,768,0,full,24,jobrunr,OOME,,,,,,,,,17775,0.752,1011,running 0 false,,,	at lab.core.Collector.collect(Collector.java:90) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=17775
+limit-S896-D1-long-h768-r2-20261121-132857,limit,896,1,long,2,768,0,full,24,jobrunr,OOME,,,,,,,,,17863,0.788,993,running 0 false,,,	at lab.core.Collector.collect(Collector.java:85) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=17863
+limit-S896-D1-long-h768-r3-20261121-133429,limit,896,1,long,3,768,0,full,24,jobrunr,OOME,,,,,,,,,22779,0.840,999,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=22779
+limit-S896-D2-long-h256-r1-20261121-020441,limit,896,2,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,3801,0.545,461,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=3801
+limit-S896-D2-long-h768-r1-20261121-121916,limit,896,2,long,1,768,0,full,24,jobrunr,OOME,,,,,,,,,67676,0.934,998,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=67676
+limit-S896-D4-long-h256-r1-20261121-021056,limit,896,4,long,1,256,0,full,24,jobrunr,OOME,,,,,,,,,5048,0.496,451,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=5048
+limit-S896-D4-long-h768-r1-20261121-122450,limit,896,4,long,1,768,0,full,24,jobrunr,OOME,,,,,,,,,,,973,running 0 false,,,,
+meas-S224-D1-long-r1-20261121-002858,meas,224,1,long,1,256,0,full,24,jobrunr,list_complete,322784,29.4,322.2,c2b,183.8,,951,,1655,0.391,,host,,,,
+meas-S224-D1-long-r2-20261121-005351,meas,224,1,long,2,256,0,full,24,jobrunr,list_complete,322784,29.4,322.1,c2b,183.8,,951,,1587,0.400,,host,,,,
+meas-S224-D1-short-r1-20261121-003733,meas,224,1,short,1,256,0,full,24,jobrunr,list_complete,322784,29.4,308.0,c2b,183.8,,905,,1469,0.428,,host,,,,
+meas-S224-D1-short-r2-20261121-010019,meas,224,1,short,2,256,0,full,24,jobrunr,list_complete,322784,29.4,307.7,c2b,183.8,,904,,1394,0.437,,host,,,,
+meas-S224-D2-long-r1-20261121-002909,meas,224,2,long,1,256,0,full,24,jobrunr,list_complete,645344,29.6,616.1,c2b,340.3,,953,,2928,0.416,,host,,,,
+meas-S224-D2-long-r2-20261121-005401,meas,224,2,long,2,256,0,full,24,jobrunr,list_complete,645344,29.4,615.9,c2b,340.3,,953,,2793,0.401,,host,,,,
+meas-S224-D2-short-r1-20261121-004020,meas,224,2,short,1,256,0,full,24,jobrunr,list_complete,645344,29.6,587.7,c2b,340.4,,907,,2551,0.433,,host,,,,
+meas-S224-D2-short-r2-20261121-010029,meas,224,2,short,2,256,0,full,24,jobrunr,list_complete,645344,29.4,587.2,c2b,340.3,,906,,2454,0.456,,host,,,,
+meas-S224-D4-long-r1-20261121-002922,meas,224,4,long,1,256,0,full,24,jobrunr,list_complete,1290464,29.6,1195.9,c2b,650.7,,948,,5603,0.429,,host,,,,
+meas-S224-D4-long-r2-20261121-005413,meas,224,4,long,2,256,0,full,24,jobrunr,list_complete,1290464,29.4,1195.6,c2b,650.6,,948,,5479,0.421,,host,,,,
+meas-S224-D4-short-r1-20261121-004032,meas,224,4,short,1,256,0,full,24,jobrunr,list_complete,1290464,29.4,1138.0,c2b,650.5,,901,,4685,0.433,,host,,,,
+meas-S224-D4-short-r2-20261121-010041,meas,224,4,short,2,256,0,full,24,jobrunr,list_complete,1290464,29.4,1138.6,c2b,650.4,,901,,4495,0.435,,host,,,,
+meas-S224-D7-long-r1-20261121-002937,meas,224,7,long,1,256,0,full,24,jobrunr,list_complete,2258144,29.4,2079.1,c2b,1111.8,,952,,11154,0.500,,host,,,,
+meas-S224-D7-long-r2-20261121-005428,meas,224,7,long,2,256,0,full,24,jobrunr,list_complete,2258144,29.4,2078.8,c2b,1112.0,,952,,9388,0.439,,host,,,,
+meas-S224-D7-long-save-r1-20261121-004105,meas,224,7,long,1,256,1,full,24,jobrunr,ok,2258144,29.3,2078.3,c2b,1111.7,964.4,951,-68.4,698636,0.009,,host,0,0,,
+meas-S224-D7-long-save-r2-20261121-010113,meas,224,7,long,2,256,1,full,24,jobrunr,ok,2258144,29.6,2074.9,c2b,1112.1,964.1,950,-68.7,696080,0.009,,host,0,0,,
+meas-S224-D7-short-r1-20261121-004046,meas,224,7,short,1,256,0,full,24,jobrunr,list_complete,2258144,29.4,1974.9,c2b,1111.9,,903,,8215,0.448,,host,,,,
+meas-S224-D7-short-r2-20261121-010055,meas,224,7,short,2,256,0,full,24,jobrunr,list_complete,2258144,29.4,1978.6,c2b,1111.8,,905,,8197,0.488,,host,,,,
+meas-S448-D1-long-r1-20261121-002959,meas,448,1,long,1,256,0,full,24,jobrunr,list_complete,645568,29.4,616.2,c2b,340.4,,953,,2996,0.402,,host,,,,
+meas-S448-D1-long-r2-20261121-005447,meas,448,1,long,2,256,0,full,24,jobrunr,list_complete,645568,29.4,616.3,c2b,340.5,,953,,2773,0.398,,host,,,,
+meas-S448-D2-long-r1-20261121-003012,meas,448,2,long,1,256,0,full,24,jobrunr,list_complete,1290688,29.4,1207.1,c2b,650.7,,957,,5766,0.441,,host,,,,
+meas-S448-D2-long-r2-20261121-005501,meas,448,2,long,2,256,0,full,24,jobrunr,list_complete,1290688,29.7,1203.0,c2b,650.9,,953,,5237,0.414,,host,,,,
+meas-S448-D4-long-r1-20261121-003027,meas,448,4,long,1,256,0,full,24,jobrunr,list_complete,2580928,29.4,2363.8,c2b,1263.6,,948,,12892,0.486,,host,,,,
+meas-S448-D4-long-r2-20261121-005516,meas,448,4,long,2,256,0,full,24,jobrunr,list_complete,2580928,29.4,2359.2,c2b,1263.0,,947,,11153,0.458,,host,,,,
+meas-S448-D7-long-r1-20261121-003049,meas,448,7,long,1,256,0,full,24,jobrunr,list_complete,4516288,29.4,4127.9,c2b,2193.7,,952,,25556,0.495,,host,,,,
+meas-S448-D7-long-r2-20261121-005537,meas,448,7,long,2,256,0,full,24,jobrunr,list_complete,4516288,29.4,4127.6,c2b,2193.7,,952,,25812,0.507,,host,,,,
+meas-S50-D1-long-r1-20261121-002814,meas,50,1,long,1,256,0,full,24,jobrunr,list_complete,72050,29.4,94.6,c2b,59.6,,949,,772,0.393,,host,,,,
+meas-S50-D1-long-r2-20261121-005307,meas,50,1,long,2,256,0,full,24,jobrunr,list_complete,72050,29.4,94.7,c2b,59.5,,951,,743,0.340,,host,,,,
+meas-S50-D2-long-r1-20261121-002825,meas,50,2,long,1,256,0,full,24,jobrunr,list_complete,144050,29.4,159.6,c2b,89.2,,948,,1015,0.384,,host,,,,
+meas-S50-D2-long-r2-20261121-005317,meas,50,2,long,2,256,0,full,24,jobrunr,list_complete,144050,29.6,159.6,c2b,89.7,,947,,1032,0.367,,host,,,,
+meas-S50-D4-long-r1-20261121-002836,meas,50,4,long,1,256,0,full,24,jobrunr,list_complete,288050,29.6,288.0,c2b,167.5,,941,,1551,0.373,,host,,,,
+meas-S50-D4-long-r2-20261121-005328,meas,50,4,long,2,256,0,full,24,jobrunr,list_complete,288050,29.4,287.9,c2b,167.5,,941,,1527,0.396,,host,,,,
+meas-S50-D7-long-r1-20261121-002847,meas,50,7,long,1,256,0,full,24,jobrunr,list_complete,504050,29.6,484.9,c2b,274.1,,947,,2368,0.400,,host,,,,
+meas-S50-D7-long-r2-20261121-005339,meas,50,7,long,2,256,0,full,24,jobrunr,list_complete,504050,29.5,484.6,c2b,274.1,,947,,2340,0.392,,host,,,,
+meas-S896-D1-long-r1-20261121-003125,meas,896,1,long,1,256,0,full,24,jobrunr,list_complete,1291136,29.5,1203.1,c2b,651.0,,953,,5171,0.389,,host,,,,
+meas-S896-D1-long-r2-20261121-005612,meas,896,1,long,2,256,0,full,24,jobrunr,list_complete,1291136,29.4,1203.1,c2b,651.0,,953,,5317,0.410,,host,,,,
+meas-S896-D2-long-r1-20261121-003140,meas,896,2,long,1,256,0,full,24,jobrunr,list_complete,2581376,29.4,2372.8,c2b,1267.5,,952,,9895,0.412,,host,,,,
+meas-S896-D2-long-r2-20261121-005627,meas,896,2,long,2,256,0,full,24,jobrunr,list_complete,2581376,29.6,2377.1,c2b,1263.8,,954,,9826,0.408,,host,,,,
+meas-S896-D4-long-r1-20261121-003159,meas,896,4,long,1,256,0,full,24,jobrunr,list_complete,5161856,29.5,4695.2,c2b,2496.8,,948,,22164,0.435,,host,,,,
+meas-S896-D4-long-r2-20261121-005646,meas,896,4,long,2,256,0,full,24,jobrunr,list_complete,5161856,29.6,4695.2,c2b,2500.5,,948,,28511,0.500,,host,,,,
+meas-S896-D7-long-r1-20261121-003231,meas,896,7,long,1,256,0,full,24,jobrunr,error,,29.4,29.4,c0,,,,,204266,0.002,,host,,,,"status=error phase=fetch error=org.springframework.web.client.ResourceAccessException: I/O error on GET request for ""htt"
+meas-S896-D7-long-r2-20261121-005725,meas,896,7,long,2,256,0,full,24,jobrunr,error,,29.4,29.4,c0,,,,,163634,0.005,,host,,,,status=error phase=fetch error=org.springframework.web.client.HttpServerErrorException$ServiceUnavailable: 503 Service U

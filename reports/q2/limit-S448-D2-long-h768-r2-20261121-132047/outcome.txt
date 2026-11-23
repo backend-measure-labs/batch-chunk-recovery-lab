@@ -1,0 +1,11 @@
+exit=running 0 false
+elapsed_s=338
+run_start=1
+run_end_ok=0
+run_end_list_complete=0
+run_end_error=1
+oome_lines=5
+first_error=status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects ms=27256
+oome_top_frames=	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]|	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]|	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]|	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]|	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.invokeJobMethod(AbstractBackgroundJobRunner.java:65) ~[jobrunr-7.5.1.jar!/:7.5.1]|	at org.jobrunr.server.runner.AbstractBackgroundJobRunner$BackgroundJobWorker.run(AbstractBackgroundJobRunner.java:39) ~[jobrunr-7.5.1.jar!/:7.5.1]|
+lab_frame=
+run_end_line=status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects ms=27256

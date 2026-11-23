@@ -1,0 +1,11 @@
+exit=running 0 false
+elapsed_s=335
+run_start=1
+run_end_ok=0
+run_end_list_complete=0
+run_end_error=1
+oome_lines=10
+first_error=status=error phase=fetch error=org.springframework.web.client.RestClientException: Error while extracting response for type [lab.core.prom.PromResponse] and content type [application/json] ms=58626
+oome_top_frames=	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:262) ~[spring-web-6.2.15.jar!/:6.2.15]|	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:826) ~[spring-web-6.2.15.jar!/:6.2.15]|	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$body$1(DefaultRestClient.java:765) ~[spring-web-6.2.15.jar!/:6.2.15]|
+lab_frame=	at lab.core.Collector.fetch(Collector.java:111) ~[lab-core-0.1.0.jar!/:na]
+run_end_line=status=error phase=fetch error=org.springframework.web.client.RestClientException: Error while extracting response for type [lab.core.prom.PromResponse] and content type [application/json] ms=58626

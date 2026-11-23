@@ -1,0 +1,2 @@
+run,app,mode,signal,phase,rep,hit,signal_trx,chunks_before,rows_beyond_last_commit,rows_within_committed,stopped_s,exit,restarted_s,failed_s,failed_reason,scheduled_s,rerun_start_s,rerun_from,manual_s,skip_running,done_s,interrupted_commits,clock_offset_s,expected,rows,duplicates,missing
+restart-batch-windowed-w1h-KILL-write-S224-D1-r2-20261123-091137,batch,windowed,KILL,write,2,1,open=1 mod=614,412,0,275520,0.2,exited_137_false,8.0,,,,771.0,1794687300,687.3,2,778.2,0,-0.1,322784,326368,3584,0

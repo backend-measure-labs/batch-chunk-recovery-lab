@@ -1,0 +1,11 @@
+exit=running 0 false
+elapsed_s=82
+run_start=3
+run_end_ok=0
+run_end_list_complete=0
+run_end_error=3
+oome_lines=9
+first_error=status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=13486
+oome_top_frames=	at java.base/java.util.Arrays.copyOf(Unknown Source) ~[na:na]|	at java.base/java.util.ArrayList.grow(Unknown Source) ~[na:na]|	at java.base/java.util.ArrayList.grow(Unknown Source) ~[na:na]|	at java.base/java.util.ArrayList.add(Unknown Source) ~[na:na]|	at java.base/java.util.ArrayList.add(Unknown Source) ~[na:na]|	at lab.core.Collector.collect(Collector.java:83) ~[lab-core-0.1.0.jar!/:na]|
+lab_frame=	at lab.core.Collector.collect(Collector.java:83) ~[lab-core-0.1.0.jar!/:na]
+run_end_line=status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=13486

@@ -1,0 +1,5 @@
+2026-11-23T00:36:58.094Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=224 digits=long start=1794441600 end=1794700800
+2026-11-23T00:39:51.818Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_END status=ok rows=967904 chunks=1441 ms=173777
+2026-11-23T00:40:00.073Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_START mode=full window_h=24 series=224 digits=long start=1794700800 end=1794700800
+2026-11-23T00:40:00.355Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_END status=ok rows=224 chunks=1 ms=304
+2026-11-23T00:40:03.590Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer and BackgroundJobPerformers stopped

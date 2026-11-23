@@ -1,0 +1,11 @@
+exit=running 0 false
+elapsed_s=85
+run_start=3
+run_end_ok=0
+run_end_list_complete=0
+run_end_error=3
+oome_lines=9
+first_error=status=error phase=fetch error=org.springframework.web.client.RestClientException: Error while extracting response for type [lab.core.prom.PromResponse] and content type [application/json] ms=11653
+oome_top_frames=	at java.base/java.nio.HeapByteBuffer.<init>(Unknown Source) ~[na:na]|	at java.base/java.nio.ByteBuffer.allocate(Unknown Source) ~[na:na]|	at java.net.http/jdk.internal.net.http.common.Utils.getBuffer(Unknown Source) ~[java.net.http:na]|	at java.net.http/jdk.internal.net.http.PlainHttpConnection$$Lambda$1979/0x0000003001a62250.get(Unknown Source) ~[na:na]|	at java.net.http/jdk.internal.net.http.SocketTube$SliceBufferSource.getBuffer(Unknown Source) ~[java.net.http:na]|	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(Unknown Source) ~[java.net.http:na]|
+lab_frame=	at lab.core.Collector.fetch(Collector.java:111) ~[lab-core-0.1.0.jar!/:na]
+run_end_line=status=error phase=fetch error=org.springframework.web.client.RestClientException: Error while extracting response for type [lab.core.prom.PromResponse] and content type [application/json] ms=11653

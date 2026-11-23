@@ -1,0 +1,44 @@
+run,kind,series,days,digits,rep,heap,save,mode,window_h,app,outcome,rows,c0_mb,peak_mb,peak_point,c3_mb,c5_mb,peak_per_row_b,c5_minus_c3_per_row_b,run_ms,gc_pause_ratio,docker_mem_max_mb,exit,duplicates,missing,lab_frame,error
+limit-w1h-S224-D1-long-h256-save-r1-20261121-203323,limit,224,1,long,1,256,1,windowed,1,jobrunr,ok,327936,,,,,,,,25767,0.023,372,running 0 false,0,0,,
+limit-w1h-S224-D7-long-h256-save-r1-20261121-210301,limit,224,7,long,1,256,1,windowed,1,jobrunr,ok,2295552,,,,,,,,160810,0.021,443,running 0 false,0,0,,
+limit-w1h-S896-D1-long-h256-save-r1-20261121-212307,limit,896,1,long,1,256,1,windowed,1,jobrunr,ok,1311744,,,,,,,,93500,0.023,487,running 0 false,0,0,,
+limit-w1h-S896-D7-long-h256-save-r1-20261121-190819,limit,896,7,long,1,256,1,windowed,1,jobrunr,ok,9182208,,,,,,,,643737,0.023,503,running 0 false,0,0,,
+limit-w24h-S224-D1-long-h256-save-r1-20261121-134115,limit,224,1,long,1,256,1,windowed,24,jobrunr,OOME,,,,,,,,,6763,0.719,471,running 0 false,,,	at lab.core.Collector.collect(Collector.java:88) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=6763
+limit-w24h-S224-D1-long-h768-save-r1-20261121-134247,limit,224,1,long,1,768,1,windowed,24,jobrunr,ok,322784,,,,,,,,26884,0.026,831,running 0 false,0,0,,
+limit-w24h-S224-D7-long-h256-save-r1-20261121-141256,limit,224,7,long,1,256,1,windowed,24,jobrunr,OOME,,,,,,,,,6430,0.722,449,running 0 false,,,	at lab.core.Collector.collect(Collector.java:85) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=6430
+limit-w24h-S224-D7-long-h768-save-r1-20261121-141415,limit,224,7,long,1,768,1,windowed,24,jobrunr,ok,2259488,,,,,,,,169754,0.025,1020,running 0 false,0,0,,
+limit-w24h-S896-D1-long-h256-save-r1-20261121-144115,limit,896,1,long,1,256,1,windowed,24,jobrunr,OOME,,,,,,,,,5133,0.606,446,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=5133
+limit-w24h-S896-D1-long-h768-save-r1-20261121-144747,limit,896,1,long,1,768,1,windowed,24,jobrunr,OOME,,,,,,,,,17014,0.760,990,running 0 false,,,	at lab.core.Collector.collect(Collector.java:86) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=17014
+limit-w24h-S896-D7-long-h256-save-r1-20261121-164844,limit,896,7,long,1,256,1,windowed,24,jobrunr,OOME,,,,,,,,,8465,0.733,470,running 0 false,,,,status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=8465
+limit-w24h-S896-D7-long-h768-save-r1-20261121-165505,limit,896,7,long,1,768,1,windowed,24,jobrunr,OOME,,,,,,,,,17280,0.766,998,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=17280
+limit-w6h-S224-D1-long-h256-save-r1-20261121-170225,limit,224,1,long,1,256,1,windowed,6,jobrunr,ok,323456,,,,,,,,26908,0.030,458,running 0 false,0,0,,
+limit-w6h-S224-D7-long-h256-save-r1-20261121-173231,limit,224,7,long,1,256,1,windowed,6,jobrunr,ok,2264192,,,,,,,,160114,0.031,488,running 0 false,0,0,,
+limit-w6h-S896-D1-long-h256-save-r1-20261121-175256,limit,896,1,long,1,256,1,windowed,6,jobrunr,OOME,,,,,,,,,7125,0.766,452,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=7125
+limit-w6h-S896-D1-long-h768-save-r1-20261121-175415,limit,896,1,long,1,768,1,windowed,6,jobrunr,ok,1293824,,,,,,,,94683,0.024,1021,running 0 false,0,0,,
+limit-w6h-S896-D7-long-h256-save-r1-20261121-175608,limit,896,7,long,1,256,1,windowed,6,jobrunr,OOME,,,,,,,,,6784,0.739,528,running 0 false,,,	at lab.core.Collector.collect(Collector.java:78) ~[lab-core-0.1.0.jar!/:na],status=error phase=convert error=java.lang.OutOfMemoryError: Java heap space ms=6784
+limit-w6h-S896-D7-long-h768-save-r1-20261121-175727,limit,896,7,long,1,768,1,windowed,6,jobrunr,ok,9056768,,,,,,,,638070,0.024,1023,running 0 false,0,0,,
+meas-w1h-S224-D1-long-save-r1-20261121-202854,meas,224,1,long,1,256,1,windowed,1,jobrunr,ok,13664,29.4,45.5,c3,45.5,37.4,1237,-627.5,121563,0.047,,host,0,0,,
+meas-w1h-S224-D1-long-save-r2-20261121-203109,meas,224,1,long,2,256,1,windowed,1,jobrunr,ok,13664,29.5,45.6,c3,45.6,37.3,1233,-636.7,120098,0.045,,host,0,0,,
+meas-w1h-S224-D7-long-save-r1-20261121-203403,meas,224,7,long,1,256,1,windowed,1,jobrunr,ok,13664,29.7,45.5,c3,45.5,37.4,1217,-627.7,838061,0.047,,host,0,0,,
+meas-w1h-S224-D7-long-save-r2-20261121-204827,meas,224,7,long,2,256,1,windowed,1,jobrunr,ok,13664,29.6,45.7,c3,45.7,37.6,1235,-624.6,847683,0.048,,host,0,0,,
+meas-w1h-S896-D1-long-save-r1-20261121-210609,meas,896,1,long,1,256,1,windowed,1,jobrunr,ok,54656,29.5,88.5,c3,88.5,54.4,1132,-653.1,489172,0.015,,host,0,0,,
+meas-w1h-S896-D1-long-save-r2-20261121-211436,meas,896,1,long,2,256,1,windowed,1,jobrunr,ok,54656,29.5,88.3,c3,88.3,54.4,1129,-650.1,493904,0.015,,host,0,0,,
+meas-w24h-S224-D1-long-save-r1-20261121-133635,meas,224,1,long,1,256,1,windowed,24,jobrunr,ok,322784,29.4,322.1,c2b,183.8,164.4,951,-62.9,126835,0.009,,host,0,0,,
+meas-w24h-S224-D1-long-save-r2-20261121-133856,meas,224,1,long,2,256,1,windowed,24,jobrunr,ok,322784,29.5,322.4,c2b,184.0,164.6,952,-63.3,125889,0.009,,host,0,0,,
+meas-w24h-S224-D7-long-save-r1-20261121-134327,meas,224,7,long,1,256,1,windowed,24,jobrunr,ok,322784,29.4,348.5,c3,348.5,164.9,1036,-596.5,843685,0.006,,host,0,0,,
+meas-w24h-S224-D7-long-save-r2-20261121-135757,meas,224,7,long,2,256,1,windowed,24,jobrunr,ok,322784,29.4,348.4,c3,348.4,164.9,1036,-596.1,872105,0.006,,host,0,0,,
+meas-w24h-S896-D1-long-save-r1-20261121-201827,meas,896,1,long,1,256,1,windowed,24,jobrunr,ok,1291136,29.5,1203.1,c2b,651.0,566.4,953,-68.7,542009,0.007,,host,0,0,,
+meas-w24h-S896-D1-long-save-r2-20261121-143225,meas,896,1,long,2,256,1,windowed,24,jobrunr,ok,1291136,29.4,1203.5,c2b,651.0,566.0,953,-69.0,511880,0.008,,host,0,0,,
+meas-w24h-S896-D7-long-save-r1-20261121-144955,meas,896,7,long,1,256,1,windowed,24,jobrunr,ok,1291136,29.6,1207.1,c2b,651.2,566.6,956,-68.7,3501153,0.005,,host,0,0,,
+meas-w24h-S896-D7-long-save-r2-20261121-154933,meas,896,7,long,2,256,1,windowed,24,jobrunr,ok,1291136,29.5,1205.9,c2b,651.2,566.5,955,-68.7,3484669,0.006,,host,0,0,,
+meas-w6h-S224-D1-long-save-r1-20261121-165754,meas,224,1,long,1,256,1,windowed,6,jobrunr,ok,80864,29.6,105.3,c2b,65.4,65.4,982,0.1,121889,0.012,,host,0,0,,
+meas-w6h-S224-D1-long-save-r2-20261121-170010,meas,224,1,long,2,256,1,windowed,6,jobrunr,ok,80864,29.5,105.2,c2b,65.0,65.1,982,0.4,122274,0.011,,host,0,0,,
+meas-w6h-S224-D7-long-save-r1-20261121-170308,meas,224,7,long,1,256,1,windowed,6,jobrunr,ok,80864,29.7,105.6,c2b,65.5,65.5,985,0.1,852653,0.010,,host,0,0,,
+meas-w6h-S224-D7-long-save-r2-20261121-171746,meas,224,7,long,2,256,1,windowed,6,jobrunr,ok,80864,29.4,105.4,c2b,65.2,65.2,985,0.1,859812,0.010,,host,0,0,,
+meas-w6h-S896-D1-long-save-r1-20261121-173553,meas,896,1,long,1,256,1,windowed,6,jobrunr,ok,323456,29.7,327.4,c2b,184.6,165.4,965,-62.2,503318,0.006,,host,0,0,,
+meas-w6h-S896-D1-long-save-r2-20261121-174435,meas,896,1,long,2,256,1,windowed,6,jobrunr,ok,323456,29.5,326.8,c2b,184.3,165.1,964,-62.2,483440,0.006,,host,0,0,,
+meas-w6h-S896-D7-long-save-r1-20261121-180926,meas,896,7,long,1,256,1,windowed,6,jobrunr,ok,323456,29.6,327.4,c2b,184.5,165.7,965,-60.8,3456835,0.006,,host,0,0,,
+meas-w6h-S896-D7-long-save-r2-20261121-192020,meas,896,7,long,2,256,1,windowed,6,jobrunr,ok,323456,29.5,327.3,c2b,184.4,165.7,966,-60.6,3424460,0.006,,host,0,0,,
+restart-jobrunr-windowed-w1h-KILL-write-S224-D1-r1-20261121-212655,,,,,,,,,,,none,,,,,,,,,,,,,0,0,,
+restart-jobrunr-windowed-w1h-KILL-write-S224-D1-r2-20261121-213239,,,,,,,,,,,none,,,,,,,,,,,,,0,0,,
+restart-jobrunr-windowed-w1h-KILL-write-S224-D1-r3-20261121-213737,,,,,,,,,,,none,,,,,,,,,,,,,0,0,,

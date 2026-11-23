@@ -1,0 +1,11 @@
+exit=running 0 false
+elapsed_s=391
+run_start=2
+run_end_ok=0
+run_end_list_complete=0
+run_end_error=1
+oome_lines=19
+first_error=status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=5133
+oome_top_frames=	at java.base/java.lang.StringUTF16.compress(Unknown Source) ~[na:na]|	at java.base/java.lang.String.<init>(Unknown Source) ~[na:na]|	at java.base/java.lang.String.<init>(Unknown Source) ~[na:na]|	at com.fasterxml.jackson.core.util.TextBuffer.setCurrentAndReturn(TextBuffer.java:996) ~[jackson-core-2.19.4.jar!/:2.19.4]|	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._finishAndReturnString(UTF8StreamJsonParser.java:2512) ~[jackson-core-2.19.4.jar!/:2.19.4]|	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.getText(UTF8StreamJsonParser.java:294) ~[jackson-core-2.19.4.jar!/:2.19.4]|
+lab_frame=
+run_end_line=status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=5133

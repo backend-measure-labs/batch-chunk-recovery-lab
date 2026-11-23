@@ -1,0 +1,3 @@
+signal=KILL phase=write rep=1 app=jobrunr mode=windowed window_h=1 series=224 days=1 grace=60 mem=1g
+total_chunks=480 target=240
+signal_line=1795263893330,1,290,2026-11-21 12:24:53 hit=1

@@ -1,0 +1,4 @@
+2026-11-21T12:30:22.493Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_START mode=windowed window_h=1 series=224 digits=long start=1794614400 end=1794700800
+2026-11-21T12:35:06.481Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_START mode=windowed window_h=1 series=224 digits=long start=1794700800 end=1794700800
+2026-11-21T12:35:06.484Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_END status=ok rows=0 chunks=0 ms=5
+2026-11-21T12:35:11.342Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer and BackgroundJobPerformers stopped

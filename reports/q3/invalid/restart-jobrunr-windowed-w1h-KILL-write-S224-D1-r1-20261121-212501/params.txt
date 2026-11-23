@@ -1,0 +1,1 @@
+signal=KILL phase=write rep=1 app=jobrunr mode=windowed window_h=1 series=224 days=1 grace=60 mem=1g
