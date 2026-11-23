@@ -1,0 +1,8 @@
+2026-11-23T06:42:17.120Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : READER_OPEN restart=false start=1794614400 end=1794700800
+2026-11-23T06:42:17.120Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : RUN_START mode=batch window_h=1 series=224 digits=long start=1794614400 end=1794700800
+2026-11-23T06:45:00.095Z  WARN 1 --- [   scheduling-1] lab.batch.Launcher                       : SKIP_RUNNING by=schedule executionId=16 status=STARTED start=2026-11-23T06:42:17.091936
+2026-11-23T06:50:00.040Z  WARN 1 --- [   scheduling-1] lab.batch.Launcher                       : SKIP_RUNNING by=schedule executionId=16 status=STARTED start=2026-11-23T06:42:17.091936
+2026-11-23T06:55:00.231Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : READER_OPEN restart=true start=1794681660 end=1794700800
+2026-11-23T06:55:00.231Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : RUN_START mode=batch window_h=1 series=224 digits=long start=1794681660 end=1794700800
+2026-11-23T06:55:08.359Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : RUN_END status=ok ms=8188
+2026-11-23T06:55:08.362Z  INFO 1 --- [   scheduling-1] lab.batch.Launcher                       : LAUNCH_DONE by=schedule executionId=17 status=COMPLETED

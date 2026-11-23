@@ -61,9 +61,17 @@ if [ "$SIG" != none ]; then
       if [ "$PHASE" = write ] && [ "${nmod:-0}" -gt 0 ]; then HIT=1; break; fi
       if [ "$PHASE" = between ] && [ "${ntrx:-1}" -eq 0 ]; then HIT=1; break; fi
     done
+    kill "$POLLER_PID" 2>/dev/null || true
+    if [ "$HIT" = 0 ] && [ "$PHASE" != fetch ]; then
+      # 신호 시점 조건을 못 잡았다: 신호를 보내지 않고 무효로 끝낸다 (#2, 이전 r1 무효 사유)
+      echo "signal_line=${line:-} hit=0 signal_not_sent" >> "$OUT/params.txt"
+      echo "invalid=no_hit" > "$OUT/outcome.txt"
+      stop_container_app
+      pkill -f "docker events --filter container=bcrl-app-1" || true
+      echo "$OUT"; exit 3
+    fi
     send_signal
     echo "signal_line=$line hit=$HIT" >> "$OUT/params.txt"
-    kill "$POLLER_PID" 2>/dev/null || true
   fi
   # 컨테이너가 멈출 때까지
   for _ in $(seq 1 120); do st=$(container_state); [ "${st%% *}" = running ] || break; sleep 1; done

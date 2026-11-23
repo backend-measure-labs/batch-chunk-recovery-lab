@@ -6,3 +6,9 @@ dependencies {
 }
 
 bootJar { archiveFileName = 'app-batch.jar' }
+
+dependencies {
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test { useJUnitPlatform() }

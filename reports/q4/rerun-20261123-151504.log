@@ -1,0 +1,29 @@
+15:15:04 start jdk=openjdk version "17.0.15" 2025-04-15 LTS
+container image sha256:57587209f7b7f291c66fe80c9779efa9dde4ec199160cbb5c38ec2fe27a78bc4
+docker ready after 2s
+15:15:06 load: { 9.54 12.92 10.44 }
+15:15:06 meas S224 D1 r1 try1
+~/git-project/idean3885/batch-chunk-recovery-lab/.claude/worktrees/fix-2/scripts/run-q2.sh: line 20: ~/git-project/idean3885/batch-chunk-recovery-lab/.claude/worktrees/fix-2/build/current-run.txt: No such file or directory
+~/git-project/idean3885/batch-chunk-recovery-lab/.claude/worktrees/fix-2/reports/q4/meas-batch-w1h-S224-D1-long-save-r1-20261123-151507
+15:17:05 ok meas-batch-w1h-S224-D1-long-save-r1-20261123-151507 322784,322784,322784,0,0,0
+docker ready after 2s
+15:17:06 load: { 8.85 11.62 10.25 }
+15:17:06 meas S224 D1 r2 try1
+~/git-project/idean3885/batch-chunk-recovery-lab/.claude/worktrees/fix-2/reports/q4/meas-batch-w1h-S224-D1-long-save-r2-20261123-151706
+15:19:00 ok meas-batch-w1h-S224-D1-long-save-r2-20261123-151706 322784,322784,322784,0,0,0
+docker ready after 2s
+15:19:01 load: { 6.85 10.12 9.84 }
+15:19:01 meas S224 D7 r1 try1
+~/git-project/idean3885/batch-chunk-recovery-lab/.claude/worktrees/fix-2/reports/q4/meas-batch-w1h-S224-D7-long-save-r1-20261123-151901
+15:32:05 ok meas-batch-w1h-S224-D7-long-save-r1-20261123-151901 2258144,2258144,2258144,0,0,0
+docker ready after 2s
+15:32:06 load: { 4.63 9.95 11.55 }
+15:32:06 meas S224 D7 r2 try1
+~/git-project/idean3885/batch-chunk-recovery-lab/.claude/worktrees/fix-2/reports/q4/meas-batch-w1h-S224-D7-long-save-r2-20261123-153206
+15:42:08 ok meas-batch-w1h-S224-D7-long-save-r2-20261123-153206 2258144,2258144,2258144,0,0,0
+docker ready after 2s
+15:42:09 load: { 3.29 5.42 8.64 }
+15:42:09 kill r3 try1
+~/git-project/idean3885/batch-chunk-recovery-lab/.claude/worktrees/fix-2/reports/q4/restart-batch-windowed-w1h-KILL-write-S224-D1-r3-20261123-154209
+15:55:14 ok restart-batch-windowed-w1h-KILL-write-S224-D1-r3-20261123-154209 322784,322784,322784,0,0,0
+15:55:14 all done
