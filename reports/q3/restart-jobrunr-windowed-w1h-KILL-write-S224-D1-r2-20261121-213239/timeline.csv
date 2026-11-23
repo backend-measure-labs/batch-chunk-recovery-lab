@@ -1,0 +1,8 @@
+epoch_ms,event
+1795264367234,started
+1795264367306,triggered
+1795264381470,target_reached
+1795264388282,signal_KILL
+1795264388441,stopped_exited_137_false
+1795264396298,restarted
+1795264651955,run_end_ok

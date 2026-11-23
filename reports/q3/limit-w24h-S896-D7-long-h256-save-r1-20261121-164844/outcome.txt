@@ -1,0 +1,11 @@
+exit=running 0 false
+elapsed_s=378
+run_start=2
+run_end_ok=0
+run_end_list_complete=0
+run_end_error=1
+oome_lines=18
+first_error=status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=8465
+oome_top_frames=	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]|	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]|	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]|
+lab_frame=
+run_end_line=status=error phase=fetch error=java.lang.OutOfMemoryError: Java heap space ms=8465

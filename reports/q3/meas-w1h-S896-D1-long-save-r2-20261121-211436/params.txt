@@ -1,0 +1,1 @@
+kind=meas series=896 days=1 digits=long rep=2 heap=256 save=1 mode=windowed window_h=1 app=jobrunr t0=1794700800

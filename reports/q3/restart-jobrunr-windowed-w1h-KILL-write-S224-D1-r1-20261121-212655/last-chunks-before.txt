@@ -1,0 +1,3 @@
+2026-11-21T12:24:59.737Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=386 of=21 from=1794680460 to=1794680580 rows=672 interrupted=false ms=41
+2026-11-21T12:24:59.779Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=387 of=21 from=1794680640 to=1794680760 rows=672 interrupted=false ms=42
+2026-11-21T12:24:59.826Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=388 of=21 from=1794680820 to=1794680940 rows=672 interrupted=false ms=47

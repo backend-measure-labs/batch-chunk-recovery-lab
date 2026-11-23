@@ -1,0 +1,13 @@
+2026-11-21T12:30:08.260Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_START mode=windowed window_h=1 series=224 digits=long start=1794700800 end=1794700800
+2026-11-21T12:30:08.262Z  INFO 1 --- [pool-3-thread-2] lab.core.CollectService                  : RUN_END status=ok rows=0 chunks=0 ms=6
+2026-11-21T12:30:12.968Z  INFO 1 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-21T12:30:12.973Z  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-11-21T12:30:12.986Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer - stopping (may take about PT40S)
+2026-11-21T12:30:12.986Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobPerformers - stopping (waiting at most PT40S for jobs to finish)
+2026-11-21T12:30:12.995Z  INFO 1 --- [ionShutdownHook] org.jobrunr.server.BackgroundJobServer   : BackgroundJobServer and BackgroundJobPerformers stopped
+2026-11-21T12:30:12.997Z  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'source'
+2026-11-21T12:30:12.999Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : source - Shutdown initiated...
+2026-11-21T12:30:13.012Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : source - Shutdown completed.
+2026-11-21T12:30:13.013Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : primary - Shutdown initiated...
+2026-11-21T12:30:13.016Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : primary - Shutdown completed.
+[Kapp-1 exited with code 143

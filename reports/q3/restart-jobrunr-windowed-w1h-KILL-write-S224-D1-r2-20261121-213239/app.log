@@ -1,0 +1,594 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.9)
+
+2026-11-21T12:30:15.873Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : Starting JobrunrLabApp v0.1.0 using Java 17.0.21 with PID 1 (/app/app.jar started by root in /)
+2026-11-21T12:30:15.874Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : No active profile set, falling back to 1 default profile: "default"
+2026-11-21T12:30:17.128Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-21T12:30:17.141Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-11-21T12:30:17.747Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-21T12:30:17.759Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-21T12:30:17.760Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-11-21T12:30:17.873Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-21T12:30:17.873Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1915 ms
+2026-11-21T12:30:18.343Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: source]
+2026-11-21T12:30:18.373Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-11-21T12:30:18.441Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-21T12:30:18.829Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-21T12:30:18.844Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Starting...
+2026-11-21T12:30:19.234Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : source - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dec769
+2026-11-21T12:30:19.236Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Start completed.
+2026-11-21T12:30:19.324Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (source)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-21T12:30:20.256Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-21T12:30:20.257Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'source'
+2026-11-21T12:30:20.465Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Starting...
+2026-11-21T12:30:20.478Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : primary - Added connection com.mysql.cj.jdbc.ConnectionImpl@701996e9
+2026-11-21T12:30:20.479Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : primary - Start completed.
+2026-11-21T12:30:21.446Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-21T12:30:21.464Z  INFO 1 --- [           main] .j.s.t.PlatformThreadPoolJobRunrExecutor : ThreadManager of type 'ScheduledThreadPool' started
+2026-11-21T12:30:21.531Z  INFO 1 --- [pool-2-thread-1] org.jobrunr.server.BackgroundJobServer   : JobRunr BackgroundJobServer (98dcda36-2733-4494-a1d9-303dc582675f) using MySqlStorageProvider and 8 BackgroundJobPerformers started successfully
+2026-11-21T12:30:21.540Z  INFO 1 --- [pool-2-thread-1] org.jobrunr.server.ServerZooKeeper       : Server 98dcda36-2733-4494-a1d9-303dc582675f is master (this BackgroundJobServer)
+2026-11-21T12:30:21.543Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-21T12:30:21.559Z  INFO 1 --- [           main] lab.jobrunr.JobrunrLabApp                : Started JobrunrLabApp in 6.219 seconds (process running for 6.76)
+2026-11-21T12:30:22.104Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-21T12:30:22.104Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-21T12:30:22.105Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-21T12:30:22.493Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : RUN_START mode=windowed window_h=1 series=224 digits=long start=1794614400 end=1794700800
+2026-11-21T12:30:22.493Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=1 start=1794614400 end=1794618000
+2026-11-21T12:30:22.640Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794614400 end=1794618000 step=60s series=224 points=13664 bytes=494138 ms=145
+2026-11-21T12:30:22.655Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794614400 end=1794618000 step=60s series=224 points=13664 bytes=491966 ms=15
+2026-11-21T12:30:22.670Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794614400 end=1794618000 step=60s series=224 points=13664 bytes=480809 ms=14
+2026-11-21T12:30:22.674Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794614400 end=1794618000 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-21T12:30:22.680Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794614400 end=1794618000 step=600s series=224 points=1568 bytes=68158 ms=6
+2026-11-21T12:30:22.828Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794614400 end=1794618000 rows=13664
+2026-11-21T12:30:23.645Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=1 of=21 from=1794614400 to=1794614520 rows=672 interrupted=false ms=813
+2026-11-21T12:30:23.835Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=2 of=21 from=1794614580 to=1794614700 rows=672 interrupted=false ms=190
+2026-11-21T12:30:23.965Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=3 of=21 from=1794614760 to=1794614880 rows=672 interrupted=false ms=130
+2026-11-21T12:30:24.098Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=4 of=21 from=1794614940 to=1794615060 rows=672 interrupted=false ms=133
+2026-11-21T12:30:24.176Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=5 of=21 from=1794615120 to=1794615240 rows=672 interrupted=false ms=77
+2026-11-21T12:30:24.269Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=6 of=21 from=1794615300 to=1794615420 rows=672 interrupted=false ms=93
+2026-11-21T12:30:24.352Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=7 of=21 from=1794615480 to=1794615600 rows=672 interrupted=false ms=83
+2026-11-21T12:30:24.435Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=8 of=21 from=1794615660 to=1794615780 rows=672 interrupted=false ms=83
+2026-11-21T12:30:24.481Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=9 of=21 from=1794615840 to=1794615960 rows=672 interrupted=false ms=46
+2026-11-21T12:30:24.562Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=10 of=21 from=1794616020 to=1794616140 rows=672 interrupted=false ms=81
+2026-11-21T12:30:24.637Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=11 of=21 from=1794616200 to=1794616320 rows=672 interrupted=false ms=75
+2026-11-21T12:30:24.690Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=12 of=21 from=1794616380 to=1794616500 rows=672 interrupted=false ms=53
+2026-11-21T12:30:24.768Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=13 of=21 from=1794616560 to=1794616680 rows=672 interrupted=false ms=78
+2026-11-21T12:30:24.848Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=14 of=21 from=1794616740 to=1794616860 rows=672 interrupted=false ms=80
+2026-11-21T12:30:24.946Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=15 of=21 from=1794616920 to=1794617040 rows=672 interrupted=false ms=98
+2026-11-21T12:30:25.029Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=16 of=21 from=1794617100 to=1794617220 rows=672 interrupted=false ms=83
+2026-11-21T12:30:25.122Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=17 of=21 from=1794617280 to=1794617400 rows=672 interrupted=false ms=93
+2026-11-21T12:30:25.171Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=18 of=21 from=1794617460 to=1794617580 rows=672 interrupted=false ms=49
+2026-11-21T12:30:25.247Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=19 of=21 from=1794617640 to=1794617760 rows=672 interrupted=false ms=76
+2026-11-21T12:30:25.291Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=20 of=21 from=1794617820 to=1794617940 rows=672 interrupted=false ms=43
+2026-11-21T12:30:25.335Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=21 of=21 from=1794618000 to=1794618000 rows=224 interrupted=false ms=43
+2026-11-21T12:30:25.336Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=1 committedMax=1794618000
+2026-11-21T12:30:25.336Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=2 start=1794618000 end=1794621600
+2026-11-21T12:30:25.353Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794618000 end=1794621600 step=60s series=224 points=13664 bytes=494269 ms=17
+2026-11-21T12:30:25.366Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794618000 end=1794621600 step=60s series=224 points=13664 bytes=491966 ms=12
+2026-11-21T12:30:25.376Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794618000 end=1794621600 step=60s series=224 points=13664 bytes=480722 ms=10
+2026-11-21T12:30:25.380Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794618000 end=1794621600 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-21T12:30:25.387Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794618000 end=1794621600 step=600s series=224 points=1568 bytes=68158 ms=7
+2026-11-21T12:30:25.447Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794618000 end=1794621600 rows=13664
+2026-11-21T12:30:25.535Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=22 of=21 from=1794618000 to=1794618120 rows=672 interrupted=false ms=85
+2026-11-21T12:30:25.576Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=23 of=21 from=1794618180 to=1794618300 rows=672 interrupted=false ms=41
+2026-11-21T12:30:25.647Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=24 of=21 from=1794618360 to=1794618480 rows=672 interrupted=false ms=70
+2026-11-21T12:30:25.692Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=25 of=21 from=1794618540 to=1794618660 rows=672 interrupted=false ms=44
+2026-11-21T12:30:25.750Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=26 of=21 from=1794618720 to=1794618840 rows=672 interrupted=false ms=57
+2026-11-21T12:30:25.788Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=27 of=21 from=1794618900 to=1794619020 rows=672 interrupted=false ms=38
+2026-11-21T12:30:25.851Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=28 of=21 from=1794619080 to=1794619200 rows=672 interrupted=false ms=62
+2026-11-21T12:30:25.891Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=29 of=21 from=1794619260 to=1794619380 rows=672 interrupted=false ms=40
+2026-11-21T12:30:25.954Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=30 of=21 from=1794619440 to=1794619560 rows=672 interrupted=false ms=63
+2026-11-21T12:30:26.030Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=31 of=21 from=1794619620 to=1794619740 rows=672 interrupted=false ms=76
+2026-11-21T12:30:26.123Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=32 of=21 from=1794619800 to=1794619920 rows=672 interrupted=false ms=93
+2026-11-21T12:30:26.167Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=33 of=21 from=1794619980 to=1794620100 rows=672 interrupted=false ms=44
+2026-11-21T12:30:26.232Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=34 of=21 from=1794620160 to=1794620280 rows=672 interrupted=false ms=65
+2026-11-21T12:30:26.271Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=35 of=21 from=1794620340 to=1794620460 rows=672 interrupted=false ms=39
+2026-11-21T12:30:26.339Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=36 of=21 from=1794620520 to=1794620640 rows=672 interrupted=false ms=67
+2026-11-21T12:30:26.378Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=37 of=21 from=1794620700 to=1794620820 rows=672 interrupted=false ms=39
+2026-11-21T12:30:26.446Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=38 of=21 from=1794620880 to=1794621000 rows=672 interrupted=false ms=68
+2026-11-21T12:30:26.484Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=39 of=21 from=1794621060 to=1794621180 rows=672 interrupted=false ms=38
+2026-11-21T12:30:26.553Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=40 of=21 from=1794621240 to=1794621360 rows=672 interrupted=false ms=69
+2026-11-21T12:30:26.590Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=41 of=21 from=1794621420 to=1794621540 rows=672 interrupted=false ms=36
+2026-11-21T12:30:26.630Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=42 of=21 from=1794621600 to=1794621600 rows=224 interrupted=false ms=40
+2026-11-21T12:30:26.630Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=2 committedMax=1794621600
+2026-11-21T12:30:26.630Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=3 start=1794621600 end=1794625200
+2026-11-21T12:30:26.643Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794621600 end=1794625200 step=60s series=224 points=13664 bytes=494291 ms=13
+2026-11-21T12:30:26.654Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794621600 end=1794625200 step=60s series=224 points=13664 bytes=491966 ms=11
+2026-11-21T12:30:26.664Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794621600 end=1794625200 step=60s series=224 points=13664 bytes=480766 ms=8
+2026-11-21T12:30:26.667Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794621600 end=1794625200 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-21T12:30:26.672Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794621600 end=1794625200 step=600s series=224 points=1568 bytes=68158 ms=5
+2026-11-21T12:30:26.733Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794621600 end=1794625200 rows=13664
+2026-11-21T12:30:26.781Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=43 of=21 from=1794621600 to=1794621720 rows=672 interrupted=false ms=46
+2026-11-21T12:30:26.855Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=44 of=21 from=1794621780 to=1794621900 rows=672 interrupted=false ms=73
+2026-11-21T12:30:26.890Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=45 of=21 from=1794621960 to=1794622080 rows=672 interrupted=false ms=35
+2026-11-21T12:30:26.958Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=46 of=21 from=1794622140 to=1794622260 rows=672 interrupted=false ms=68
+2026-11-21T12:30:26.996Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=47 of=21 from=1794622320 to=1794622440 rows=672 interrupted=false ms=38
+2026-11-21T12:30:27.069Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=48 of=21 from=1794622500 to=1794622620 rows=672 interrupted=false ms=73
+2026-11-21T12:30:27.118Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=49 of=21 from=1794622680 to=1794622800 rows=672 interrupted=false ms=48
+2026-11-21T12:30:27.157Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=50 of=21 from=1794622860 to=1794622980 rows=672 interrupted=false ms=39
+2026-11-21T12:30:27.191Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=51 of=21 from=1794623040 to=1794623160 rows=672 interrupted=false ms=34
+2026-11-21T12:30:27.238Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=52 of=21 from=1794623220 to=1794623340 rows=672 interrupted=false ms=47
+2026-11-21T12:30:27.281Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=53 of=21 from=1794623400 to=1794623520 rows=672 interrupted=false ms=43
+2026-11-21T12:30:27.318Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=54 of=21 from=1794623580 to=1794623700 rows=672 interrupted=false ms=37
+2026-11-21T12:30:27.355Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=55 of=21 from=1794623760 to=1794623880 rows=672 interrupted=false ms=37
+2026-11-21T12:30:27.391Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=56 of=21 from=1794623940 to=1794624060 rows=672 interrupted=false ms=36
+2026-11-21T12:30:27.425Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=57 of=21 from=1794624120 to=1794624240 rows=672 interrupted=false ms=34
+2026-11-21T12:30:27.469Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=58 of=21 from=1794624300 to=1794624420 rows=672 interrupted=false ms=44
+2026-11-21T12:30:27.509Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=59 of=21 from=1794624480 to=1794624600 rows=672 interrupted=false ms=40
+2026-11-21T12:30:27.550Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=60 of=21 from=1794624660 to=1794624780 rows=672 interrupted=false ms=41
+2026-11-21T12:30:27.593Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=61 of=21 from=1794624840 to=1794624960 rows=672 interrupted=false ms=43
+2026-11-21T12:30:27.636Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=62 of=21 from=1794625020 to=1794625140 rows=672 interrupted=false ms=43
+2026-11-21T12:30:27.651Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=63 of=21 from=1794625200 to=1794625200 rows=224 interrupted=false ms=15
+2026-11-21T12:30:27.651Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=3 committedMax=1794625200
+2026-11-21T12:30:27.651Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=4 start=1794625200 end=1794628800
+2026-11-21T12:30:27.662Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794625200 end=1794628800 step=60s series=224 points=13664 bytes=494077 ms=10
+2026-11-21T12:30:27.675Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794625200 end=1794628800 step=60s series=224 points=13664 bytes=491966 ms=13
+2026-11-21T12:30:27.693Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794625200 end=1794628800 step=60s series=224 points=13664 bytes=480812 ms=18
+2026-11-21T12:30:27.696Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794625200 end=1794628800 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-21T12:30:27.700Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794625200 end=1794628800 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-21T12:30:27.713Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794625200 end=1794628800 rows=13664
+2026-11-21T12:30:27.764Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=64 of=21 from=1794625200 to=1794625320 rows=672 interrupted=false ms=49
+2026-11-21T12:30:27.805Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=65 of=21 from=1794625380 to=1794625500 rows=672 interrupted=false ms=41
+2026-11-21T12:30:27.842Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=66 of=21 from=1794625560 to=1794625680 rows=672 interrupted=false ms=37
+2026-11-21T12:30:27.887Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=67 of=21 from=1794625740 to=1794625860 rows=672 interrupted=false ms=45
+2026-11-21T12:30:27.935Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=68 of=21 from=1794625920 to=1794626040 rows=672 interrupted=false ms=48
+2026-11-21T12:30:27.974Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=69 of=21 from=1794626100 to=1794626220 rows=672 interrupted=false ms=38
+2026-11-21T12:30:28.016Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=70 of=21 from=1794626280 to=1794626400 rows=672 interrupted=false ms=42
+2026-11-21T12:30:28.048Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=71 of=21 from=1794626460 to=1794626580 rows=672 interrupted=false ms=32
+2026-11-21T12:30:28.094Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=72 of=21 from=1794626640 to=1794626760 rows=672 interrupted=false ms=46
+2026-11-21T12:30:28.138Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=73 of=21 from=1794626820 to=1794626940 rows=672 interrupted=false ms=44
+2026-11-21T12:30:28.206Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=74 of=21 from=1794627000 to=1794627120 rows=672 interrupted=false ms=67
+2026-11-21T12:30:28.284Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=75 of=21 from=1794627180 to=1794627300 rows=672 interrupted=false ms=77
+2026-11-21T12:30:28.338Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=76 of=21 from=1794627360 to=1794627480 rows=672 interrupted=false ms=54
+2026-11-21T12:30:28.387Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=77 of=21 from=1794627540 to=1794627660 rows=672 interrupted=false ms=49
+2026-11-21T12:30:28.431Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=78 of=21 from=1794627720 to=1794627840 rows=672 interrupted=false ms=44
+2026-11-21T12:30:28.482Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=79 of=21 from=1794627900 to=1794628020 rows=672 interrupted=false ms=51
+2026-11-21T12:30:28.537Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=80 of=21 from=1794628080 to=1794628200 rows=672 interrupted=false ms=55
+2026-11-21T12:30:28.605Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=81 of=21 from=1794628260 to=1794628380 rows=672 interrupted=false ms=68
+2026-11-21T12:30:28.657Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=82 of=21 from=1794628440 to=1794628560 rows=672 interrupted=false ms=52
+2026-11-21T12:30:28.711Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=83 of=21 from=1794628620 to=1794628740 rows=672 interrupted=false ms=54
+2026-11-21T12:30:28.731Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=84 of=21 from=1794628800 to=1794628800 rows=224 interrupted=false ms=19
+2026-11-21T12:30:28.732Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=4 committedMax=1794628800
+2026-11-21T12:30:28.732Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=5 start=1794628800 end=1794632400
+2026-11-21T12:30:28.748Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794628800 end=1794632400 step=60s series=224 points=13664 bytes=494356 ms=16
+2026-11-21T12:30:28.758Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794628800 end=1794632400 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-21T12:30:28.765Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794628800 end=1794632400 step=60s series=224 points=13664 bytes=480786 ms=6
+2026-11-21T12:30:28.768Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794628800 end=1794632400 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-21T12:30:28.772Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794628800 end=1794632400 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-21T12:30:28.790Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794628800 end=1794632400 rows=13664
+2026-11-21T12:30:28.837Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=85 of=21 from=1794628800 to=1794628920 rows=672 interrupted=false ms=45
+2026-11-21T12:30:28.879Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=86 of=21 from=1794628980 to=1794629100 rows=672 interrupted=false ms=42
+2026-11-21T12:30:28.920Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=87 of=21 from=1794629160 to=1794629280 rows=672 interrupted=false ms=40
+2026-11-21T12:30:28.968Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=88 of=21 from=1794629340 to=1794629460 rows=672 interrupted=false ms=48
+2026-11-21T12:30:29.018Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=89 of=21 from=1794629520 to=1794629640 rows=672 interrupted=false ms=50
+2026-11-21T12:30:29.088Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=90 of=21 from=1794629700 to=1794629820 rows=672 interrupted=false ms=69
+2026-11-21T12:30:29.133Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=91 of=21 from=1794629880 to=1794630000 rows=672 interrupted=false ms=45
+2026-11-21T12:30:29.178Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=92 of=21 from=1794630060 to=1794630180 rows=672 interrupted=false ms=45
+2026-11-21T12:30:29.212Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=93 of=21 from=1794630240 to=1794630360 rows=672 interrupted=false ms=33
+2026-11-21T12:30:29.255Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=94 of=21 from=1794630420 to=1794630540 rows=672 interrupted=false ms=43
+2026-11-21T12:30:29.298Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=95 of=21 from=1794630600 to=1794630720 rows=672 interrupted=false ms=43
+2026-11-21T12:30:29.343Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=96 of=21 from=1794630780 to=1794630900 rows=672 interrupted=false ms=44
+2026-11-21T12:30:29.375Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=97 of=21 from=1794630960 to=1794631080 rows=672 interrupted=false ms=32
+2026-11-21T12:30:29.412Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=98 of=21 from=1794631140 to=1794631260 rows=672 interrupted=false ms=37
+2026-11-21T12:30:29.454Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=99 of=21 from=1794631320 to=1794631440 rows=672 interrupted=false ms=42
+2026-11-21T12:30:29.496Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=100 of=21 from=1794631500 to=1794631620 rows=672 interrupted=false ms=42
+2026-11-21T12:30:29.540Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=101 of=21 from=1794631680 to=1794631800 rows=672 interrupted=false ms=44
+2026-11-21T12:30:29.586Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=102 of=21 from=1794631860 to=1794631980 rows=672 interrupted=false ms=46
+2026-11-21T12:30:29.631Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=103 of=21 from=1794632040 to=1794632160 rows=672 interrupted=false ms=44
+2026-11-21T12:30:29.676Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=104 of=21 from=1794632220 to=1794632340 rows=672 interrupted=false ms=45
+2026-11-21T12:30:29.691Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=105 of=21 from=1794632400 to=1794632400 rows=224 interrupted=false ms=15
+2026-11-21T12:30:29.691Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=5 committedMax=1794632400
+2026-11-21T12:30:29.691Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=6 start=1794632400 end=1794636000
+2026-11-21T12:30:29.700Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794632400 end=1794636000 step=60s series=224 points=13664 bytes=494115 ms=9
+2026-11-21T12:30:29.712Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794632400 end=1794636000 step=60s series=224 points=13664 bytes=491966 ms=12
+2026-11-21T12:30:29.721Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794632400 end=1794636000 step=60s series=224 points=13664 bytes=480816 ms=9
+2026-11-21T12:30:29.725Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794632400 end=1794636000 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-21T12:30:29.728Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794632400 end=1794636000 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-21T12:30:29.739Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794632400 end=1794636000 rows=13664
+2026-11-21T12:30:29.776Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=106 of=21 from=1794632400 to=1794632520 rows=672 interrupted=false ms=36
+2026-11-21T12:30:29.866Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=107 of=21 from=1794632580 to=1794632700 rows=672 interrupted=false ms=90
+2026-11-21T12:30:29.978Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=108 of=21 from=1794632760 to=1794632880 rows=672 interrupted=false ms=112
+2026-11-21T12:30:30.057Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=109 of=21 from=1794632940 to=1794633060 rows=672 interrupted=false ms=79
+2026-11-21T12:30:30.093Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=110 of=21 from=1794633120 to=1794633240 rows=672 interrupted=false ms=36
+2026-11-21T12:30:30.144Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=111 of=21 from=1794633300 to=1794633420 rows=672 interrupted=false ms=51
+2026-11-21T12:30:30.183Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=112 of=21 from=1794633480 to=1794633600 rows=672 interrupted=false ms=39
+2026-11-21T12:30:30.241Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=113 of=21 from=1794633660 to=1794633780 rows=672 interrupted=false ms=58
+2026-11-21T12:30:30.291Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=114 of=21 from=1794633840 to=1794633960 rows=672 interrupted=false ms=50
+2026-11-21T12:30:30.335Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=115 of=21 from=1794634020 to=1794634140 rows=672 interrupted=false ms=44
+2026-11-21T12:30:30.389Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=116 of=21 from=1794634200 to=1794634320 rows=672 interrupted=false ms=54
+2026-11-21T12:30:30.444Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=117 of=21 from=1794634380 to=1794634500 rows=672 interrupted=false ms=54
+2026-11-21T12:30:30.500Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=118 of=21 from=1794634560 to=1794634680 rows=672 interrupted=false ms=56
+2026-11-21T12:30:30.554Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=119 of=21 from=1794634740 to=1794634860 rows=672 interrupted=false ms=54
+2026-11-21T12:30:30.615Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=120 of=21 from=1794634920 to=1794635040 rows=672 interrupted=false ms=61
+2026-11-21T12:30:30.669Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=121 of=21 from=1794635100 to=1794635220 rows=672 interrupted=false ms=54
+2026-11-21T12:30:30.717Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=122 of=21 from=1794635280 to=1794635400 rows=672 interrupted=false ms=48
+2026-11-21T12:30:30.768Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=123 of=21 from=1794635460 to=1794635580 rows=672 interrupted=false ms=50
+2026-11-21T12:30:30.823Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=124 of=21 from=1794635640 to=1794635760 rows=672 interrupted=false ms=54
+2026-11-21T12:30:30.867Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=125 of=21 from=1794635820 to=1794635940 rows=672 interrupted=false ms=44
+2026-11-21T12:30:30.883Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=126 of=21 from=1794636000 to=1794636000 rows=224 interrupted=false ms=16
+2026-11-21T12:30:30.884Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=6 committedMax=1794636000
+2026-11-21T12:30:30.884Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=7 start=1794636000 end=1794639600
+2026-11-21T12:30:30.895Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794636000 end=1794639600 step=60s series=224 points=13664 bytes=494204 ms=11
+2026-11-21T12:30:30.906Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794636000 end=1794639600 step=60s series=224 points=13664 bytes=491966 ms=11
+2026-11-21T12:30:30.917Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794636000 end=1794639600 step=60s series=224 points=13664 bytes=480773 ms=10
+2026-11-21T12:30:30.923Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794636000 end=1794639600 step=600s series=224 points=1568 bytes=54046 ms=6
+2026-11-21T12:30:30.927Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794636000 end=1794639600 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-21T12:30:30.948Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794636000 end=1794639600 rows=13664
+2026-11-21T12:30:30.987Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=127 of=21 from=1794636000 to=1794636120 rows=672 interrupted=false ms=39
+2026-11-21T12:30:31.057Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=128 of=21 from=1794636180 to=1794636300 rows=672 interrupted=false ms=69
+2026-11-21T12:30:31.126Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=129 of=21 from=1794636360 to=1794636480 rows=672 interrupted=false ms=68
+2026-11-21T12:30:31.181Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=130 of=21 from=1794636540 to=1794636660 rows=672 interrupted=false ms=55
+2026-11-21T12:30:31.218Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=131 of=21 from=1794636720 to=1794636840 rows=672 interrupted=false ms=37
+2026-11-21T12:30:31.256Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=132 of=21 from=1794636900 to=1794637020 rows=672 interrupted=false ms=37
+2026-11-21T12:30:31.297Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=133 of=21 from=1794637080 to=1794637200 rows=672 interrupted=false ms=41
+2026-11-21T12:30:31.343Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=134 of=21 from=1794637260 to=1794637380 rows=672 interrupted=false ms=46
+2026-11-21T12:30:31.388Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=135 of=21 from=1794637440 to=1794637560 rows=672 interrupted=false ms=45
+2026-11-21T12:30:31.434Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=136 of=21 from=1794637620 to=1794637740 rows=672 interrupted=false ms=46
+2026-11-21T12:30:31.478Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=137 of=21 from=1794637800 to=1794637920 rows=672 interrupted=false ms=44
+2026-11-21T12:30:31.521Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=138 of=21 from=1794637980 to=1794638100 rows=672 interrupted=false ms=43
+2026-11-21T12:30:31.572Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=139 of=21 from=1794638160 to=1794638280 rows=672 interrupted=false ms=50
+2026-11-21T12:30:31.621Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=140 of=21 from=1794638340 to=1794638460 rows=672 interrupted=false ms=49
+2026-11-21T12:30:31.669Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=141 of=21 from=1794638520 to=1794638640 rows=672 interrupted=false ms=48
+2026-11-21T12:30:31.713Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=142 of=21 from=1794638700 to=1794638820 rows=672 interrupted=false ms=44
+2026-11-21T12:30:31.757Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=143 of=21 from=1794638880 to=1794639000 rows=672 interrupted=false ms=44
+2026-11-21T12:30:31.801Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=144 of=21 from=1794639060 to=1794639180 rows=672 interrupted=false ms=44
+2026-11-21T12:30:31.845Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=145 of=21 from=1794639240 to=1794639360 rows=672 interrupted=false ms=44
+2026-11-21T12:30:31.889Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=146 of=21 from=1794639420 to=1794639540 rows=672 interrupted=false ms=44
+2026-11-21T12:30:31.906Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=147 of=21 from=1794639600 to=1794639600 rows=224 interrupted=false ms=17
+2026-11-21T12:30:31.906Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=7 committedMax=1794639600
+2026-11-21T12:30:31.906Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=8 start=1794639600 end=1794643200
+2026-11-21T12:30:31.914Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794639600 end=1794643200 step=60s series=224 points=13664 bytes=494389 ms=6
+2026-11-21T12:30:31.924Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794639600 end=1794643200 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-21T12:30:31.932Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794639600 end=1794643200 step=60s series=224 points=13664 bytes=480769 ms=7
+2026-11-21T12:30:31.934Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794639600 end=1794643200 step=600s series=224 points=1568 bytes=54046 ms=2
+2026-11-21T12:30:31.936Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794639600 end=1794643200 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-21T12:30:31.951Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794639600 end=1794643200 rows=13664
+2026-11-21T12:30:32.008Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=148 of=21 from=1794639600 to=1794639720 rows=672 interrupted=false ms=55
+2026-11-21T12:30:32.052Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=149 of=21 from=1794639780 to=1794639900 rows=672 interrupted=false ms=44
+2026-11-21T12:30:32.111Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=150 of=21 from=1794639960 to=1794640080 rows=672 interrupted=false ms=59
+2026-11-21T12:30:32.165Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=151 of=21 from=1794640140 to=1794640260 rows=672 interrupted=false ms=54
+2026-11-21T12:30:32.214Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=152 of=21 from=1794640320 to=1794640440 rows=672 interrupted=false ms=49
+2026-11-21T12:30:32.257Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=153 of=21 from=1794640500 to=1794640620 rows=672 interrupted=false ms=43
+2026-11-21T12:30:32.301Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=154 of=21 from=1794640680 to=1794640800 rows=672 interrupted=false ms=43
+2026-11-21T12:30:32.346Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=155 of=21 from=1794640860 to=1794640980 rows=672 interrupted=false ms=45
+2026-11-21T12:30:32.395Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=156 of=21 from=1794641040 to=1794641160 rows=672 interrupted=false ms=49
+2026-11-21T12:30:32.435Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=157 of=21 from=1794641220 to=1794641340 rows=672 interrupted=false ms=40
+2026-11-21T12:30:32.479Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=158 of=21 from=1794641400 to=1794641520 rows=672 interrupted=false ms=44
+2026-11-21T12:30:32.525Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=159 of=21 from=1794641580 to=1794641700 rows=672 interrupted=false ms=46
+2026-11-21T12:30:32.567Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=160 of=21 from=1794641760 to=1794641880 rows=672 interrupted=false ms=42
+2026-11-21T12:30:32.614Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=161 of=21 from=1794641940 to=1794642060 rows=672 interrupted=false ms=47
+2026-11-21T12:30:32.658Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=162 of=21 from=1794642120 to=1794642240 rows=672 interrupted=false ms=44
+2026-11-21T12:30:32.700Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=163 of=21 from=1794642300 to=1794642420 rows=672 interrupted=false ms=42
+2026-11-21T12:30:32.748Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=164 of=21 from=1794642480 to=1794642600 rows=672 interrupted=false ms=48
+2026-11-21T12:30:32.784Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=165 of=21 from=1794642660 to=1794642780 rows=672 interrupted=false ms=36
+2026-11-21T12:30:32.819Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=166 of=21 from=1794642840 to=1794642960 rows=672 interrupted=false ms=35
+2026-11-21T12:30:32.863Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=167 of=21 from=1794643020 to=1794643140 rows=672 interrupted=false ms=44
+2026-11-21T12:30:32.878Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=168 of=21 from=1794643200 to=1794643200 rows=224 interrupted=false ms=15
+2026-11-21T12:30:32.879Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=8 committedMax=1794643200
+2026-11-21T12:30:32.879Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=9 start=1794643200 end=1794646800
+2026-11-21T12:30:32.886Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794643200 end=1794646800 step=60s series=224 points=13664 bytes=494151 ms=7
+2026-11-21T12:30:32.896Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794643200 end=1794646800 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-21T12:30:32.905Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794643200 end=1794646800 step=60s series=224 points=13664 bytes=480765 ms=8
+2026-11-21T12:30:32.907Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794643200 end=1794646800 step=600s series=224 points=1568 bytes=54046 ms=2
+2026-11-21T12:30:32.909Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794643200 end=1794646800 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-21T12:30:32.919Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794643200 end=1794646800 rows=13664
+2026-11-21T12:30:32.960Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=169 of=21 from=1794643200 to=1794643320 rows=672 interrupted=false ms=41
+2026-11-21T12:30:33.011Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=170 of=21 from=1794643380 to=1794643500 rows=672 interrupted=false ms=51
+2026-11-21T12:30:33.054Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=171 of=21 from=1794643560 to=1794643680 rows=672 interrupted=false ms=43
+2026-11-21T12:30:33.107Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=172 of=21 from=1794643740 to=1794643860 rows=672 interrupted=false ms=53
+2026-11-21T12:30:33.159Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=173 of=21 from=1794643920 to=1794644040 rows=672 interrupted=false ms=52
+2026-11-21T12:30:33.211Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=174 of=21 from=1794644100 to=1794644220 rows=672 interrupted=false ms=51
+2026-11-21T12:30:33.246Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=175 of=21 from=1794644280 to=1794644400 rows=672 interrupted=false ms=35
+2026-11-21T12:30:33.289Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=176 of=21 from=1794644460 to=1794644580 rows=672 interrupted=false ms=43
+2026-11-21T12:30:33.334Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=177 of=21 from=1794644640 to=1794644760 rows=672 interrupted=false ms=45
+2026-11-21T12:30:33.384Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=178 of=21 from=1794644820 to=1794644940 rows=672 interrupted=false ms=49
+2026-11-21T12:30:33.433Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=179 of=21 from=1794645000 to=1794645120 rows=672 interrupted=false ms=49
+2026-11-21T12:30:33.475Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=180 of=21 from=1794645180 to=1794645300 rows=672 interrupted=false ms=42
+2026-11-21T12:30:33.520Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=181 of=21 from=1794645360 to=1794645480 rows=672 interrupted=false ms=45
+2026-11-21T12:30:33.566Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=182 of=21 from=1794645540 to=1794645660 rows=672 interrupted=false ms=45
+2026-11-21T12:30:33.612Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=183 of=21 from=1794645720 to=1794645840 rows=672 interrupted=false ms=45
+2026-11-21T12:30:33.658Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=184 of=21 from=1794645900 to=1794646020 rows=672 interrupted=false ms=46
+2026-11-21T12:30:33.707Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=185 of=21 from=1794646080 to=1794646200 rows=672 interrupted=false ms=49
+2026-11-21T12:30:33.753Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=186 of=21 from=1794646260 to=1794646380 rows=672 interrupted=false ms=45
+2026-11-21T12:30:33.818Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=187 of=21 from=1794646440 to=1794646560 rows=672 interrupted=false ms=65
+2026-11-21T12:30:33.860Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=188 of=21 from=1794646620 to=1794646740 rows=672 interrupted=false ms=42
+2026-11-21T12:30:33.875Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=189 of=21 from=1794646800 to=1794646800 rows=224 interrupted=false ms=15
+2026-11-21T12:30:33.875Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=9 committedMax=1794646800
+2026-11-21T12:30:33.875Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=10 start=1794646800 end=1794650400
+2026-11-21T12:30:33.891Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794646800 end=1794650400 step=60s series=224 points=13664 bytes=494321 ms=16
+2026-11-21T12:30:33.898Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794646800 end=1794650400 step=60s series=224 points=13664 bytes=491966 ms=7
+2026-11-21T12:30:33.905Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794646800 end=1794650400 step=60s series=224 points=13664 bytes=480804 ms=7
+2026-11-21T12:30:33.908Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794646800 end=1794650400 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-21T12:30:33.910Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794646800 end=1794650400 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-21T12:30:33.925Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794646800 end=1794650400 rows=13664
+2026-11-21T12:30:33.977Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=190 of=21 from=1794646800 to=1794646920 rows=672 interrupted=false ms=51
+2026-11-21T12:30:34.027Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=191 of=21 from=1794646980 to=1794647100 rows=672 interrupted=false ms=50
+2026-11-21T12:30:34.073Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=192 of=21 from=1794647160 to=1794647280 rows=672 interrupted=false ms=45
+2026-11-21T12:30:34.136Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=193 of=21 from=1794647340 to=1794647460 rows=672 interrupted=false ms=63
+2026-11-21T12:30:34.179Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=194 of=21 from=1794647520 to=1794647640 rows=672 interrupted=false ms=43
+2026-11-21T12:30:34.227Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=195 of=21 from=1794647700 to=1794647820 rows=672 interrupted=false ms=47
+2026-11-21T12:30:34.271Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=196 of=21 from=1794647880 to=1794648000 rows=672 interrupted=false ms=43
+2026-11-21T12:30:34.318Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=197 of=21 from=1794648060 to=1794648180 rows=672 interrupted=false ms=47
+2026-11-21T12:30:34.365Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=198 of=21 from=1794648240 to=1794648360 rows=672 interrupted=false ms=47
+2026-11-21T12:30:34.408Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=199 of=21 from=1794648420 to=1794648540 rows=672 interrupted=false ms=43
+2026-11-21T12:30:34.452Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=200 of=21 from=1794648600 to=1794648720 rows=672 interrupted=false ms=44
+2026-11-21T12:30:34.491Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=201 of=21 from=1794648780 to=1794648900 rows=672 interrupted=false ms=38
+2026-11-21T12:30:34.526Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=202 of=21 from=1794648960 to=1794649080 rows=672 interrupted=false ms=35
+2026-11-21T12:30:34.565Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=203 of=21 from=1794649140 to=1794649260 rows=672 interrupted=false ms=39
+2026-11-21T12:30:34.609Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=204 of=21 from=1794649320 to=1794649440 rows=672 interrupted=false ms=43
+2026-11-21T12:30:34.651Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=205 of=21 from=1794649500 to=1794649620 rows=672 interrupted=false ms=42
+2026-11-21T12:30:34.695Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=206 of=21 from=1794649680 to=1794649800 rows=672 interrupted=false ms=44
+2026-11-21T12:30:34.738Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=207 of=21 from=1794649860 to=1794649980 rows=672 interrupted=false ms=43
+2026-11-21T12:30:34.778Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=208 of=21 from=1794650040 to=1794650160 rows=672 interrupted=false ms=40
+2026-11-21T12:30:34.818Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=209 of=21 from=1794650220 to=1794650340 rows=672 interrupted=false ms=40
+2026-11-21T12:30:34.833Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=210 of=21 from=1794650400 to=1794650400 rows=224 interrupted=false ms=15
+2026-11-21T12:30:34.834Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=10 committedMax=1794650400
+2026-11-21T12:30:34.834Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=11 start=1794650400 end=1794654000
+2026-11-21T12:30:34.841Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794650400 end=1794654000 step=60s series=224 points=13664 bytes=494188 ms=6
+2026-11-21T12:30:34.848Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794650400 end=1794654000 step=60s series=224 points=13664 bytes=491966 ms=7
+2026-11-21T12:30:34.855Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794650400 end=1794654000 step=60s series=224 points=13664 bytes=480768 ms=7
+2026-11-21T12:30:34.859Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794650400 end=1794654000 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-21T12:30:34.868Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794650400 end=1794654000 step=600s series=224 points=1568 bytes=68158 ms=8
+2026-11-21T12:30:34.878Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794650400 end=1794654000 rows=13664
+2026-11-21T12:30:34.926Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=211 of=21 from=1794650400 to=1794650520 rows=672 interrupted=false ms=48
+2026-11-21T12:30:34.977Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=212 of=21 from=1794650580 to=1794650700 rows=672 interrupted=false ms=51
+2026-11-21T12:30:35.040Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=213 of=21 from=1794650760 to=1794650880 rows=672 interrupted=false ms=63
+2026-11-21T12:30:35.088Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=214 of=21 from=1794650940 to=1794651060 rows=672 interrupted=false ms=48
+2026-11-21T12:30:35.141Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=215 of=21 from=1794651120 to=1794651240 rows=672 interrupted=false ms=53
+2026-11-21T12:30:35.184Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=216 of=21 from=1794651300 to=1794651420 rows=672 interrupted=false ms=43
+2026-11-21T12:30:35.233Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=217 of=21 from=1794651480 to=1794651600 rows=672 interrupted=false ms=49
+2026-11-21T12:30:35.277Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=218 of=21 from=1794651660 to=1794651780 rows=672 interrupted=false ms=44
+2026-11-21T12:30:35.320Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=219 of=21 from=1794651840 to=1794651960 rows=672 interrupted=false ms=42
+2026-11-21T12:30:35.361Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=220 of=21 from=1794652020 to=1794652140 rows=672 interrupted=false ms=41
+2026-11-21T12:30:35.409Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=221 of=21 from=1794652200 to=1794652320 rows=672 interrupted=false ms=47
+2026-11-21T12:30:35.455Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=222 of=21 from=1794652380 to=1794652500 rows=672 interrupted=false ms=46
+2026-11-21T12:30:35.497Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=223 of=21 from=1794652560 to=1794652680 rows=672 interrupted=false ms=42
+2026-11-21T12:30:35.540Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=224 of=21 from=1794652740 to=1794652860 rows=672 interrupted=false ms=42
+2026-11-21T12:30:35.605Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=225 of=21 from=1794652920 to=1794653040 rows=672 interrupted=false ms=65
+2026-11-21T12:30:35.648Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=226 of=21 from=1794653100 to=1794653220 rows=672 interrupted=false ms=43
+2026-11-21T12:30:35.691Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=227 of=21 from=1794653280 to=1794653400 rows=672 interrupted=false ms=43
+2026-11-21T12:30:35.733Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=228 of=21 from=1794653460 to=1794653580 rows=672 interrupted=false ms=42
+2026-11-21T12:30:35.775Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=229 of=21 from=1794653640 to=1794653760 rows=672 interrupted=false ms=42
+2026-11-21T12:30:35.817Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=230 of=21 from=1794653820 to=1794653940 rows=672 interrupted=false ms=42
+2026-11-21T12:30:35.833Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=231 of=21 from=1794654000 to=1794654000 rows=224 interrupted=false ms=16
+2026-11-21T12:30:35.834Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=11 committedMax=1794654000
+2026-11-21T12:30:35.834Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=12 start=1794654000 end=1794657600
+2026-11-21T12:30:35.845Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794654000 end=1794657600 step=60s series=224 points=13664 bytes=494242 ms=10
+2026-11-21T12:30:35.853Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794654000 end=1794657600 step=60s series=224 points=13664 bytes=491966 ms=8
+2026-11-21T12:30:35.861Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794654000 end=1794657600 step=60s series=224 points=13664 bytes=480791 ms=8
+2026-11-21T12:30:35.864Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794654000 end=1794657600 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-21T12:30:35.866Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794654000 end=1794657600 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-21T12:30:35.884Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794654000 end=1794657600 rows=13664
+2026-11-21T12:30:35.927Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=232 of=21 from=1794654000 to=1794654120 rows=672 interrupted=false ms=43
+2026-11-21T12:30:35.965Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=233 of=21 from=1794654180 to=1794654300 rows=672 interrupted=false ms=38
+2026-11-21T12:30:36.006Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=234 of=21 from=1794654360 to=1794654480 rows=672 interrupted=false ms=41
+2026-11-21T12:30:36.048Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=235 of=21 from=1794654540 to=1794654660 rows=672 interrupted=false ms=42
+2026-11-21T12:30:36.094Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=236 of=21 from=1794654720 to=1794654840 rows=672 interrupted=false ms=46
+2026-11-21T12:30:36.147Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=237 of=21 from=1794654900 to=1794655020 rows=672 interrupted=false ms=53
+2026-11-21T12:30:36.190Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=238 of=21 from=1794655080 to=1794655200 rows=672 interrupted=false ms=43
+2026-11-21T12:30:36.234Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=239 of=21 from=1794655260 to=1794655380 rows=672 interrupted=false ms=44
+2026-11-21T12:30:36.278Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=240 of=21 from=1794655440 to=1794655560 rows=672 interrupted=false ms=44
+2026-11-21T12:30:36.320Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=241 of=21 from=1794655620 to=1794655740 rows=672 interrupted=false ms=42
+2026-11-21T12:30:36.363Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=242 of=21 from=1794655800 to=1794655920 rows=672 interrupted=false ms=43
+2026-11-21T12:30:36.409Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=243 of=21 from=1794655980 to=1794656100 rows=672 interrupted=false ms=46
+2026-11-21T12:30:36.459Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=244 of=21 from=1794656160 to=1794656280 rows=672 interrupted=false ms=50
+2026-11-21T12:30:36.505Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=245 of=21 from=1794656340 to=1794656460 rows=672 interrupted=false ms=46
+2026-11-21T12:30:36.569Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=246 of=21 from=1794656520 to=1794656640 rows=672 interrupted=false ms=63
+2026-11-21T12:30:36.629Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=247 of=21 from=1794656700 to=1794656820 rows=672 interrupted=false ms=59
+2026-11-21T12:30:36.665Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=248 of=21 from=1794656880 to=1794657000 rows=672 interrupted=false ms=36
+2026-11-21T12:30:36.703Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=249 of=21 from=1794657060 to=1794657180 rows=672 interrupted=false ms=38
+2026-11-21T12:30:36.741Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=250 of=21 from=1794657240 to=1794657360 rows=672 interrupted=false ms=38
+2026-11-21T12:30:36.781Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=251 of=21 from=1794657420 to=1794657540 rows=672 interrupted=false ms=40
+2026-11-21T12:30:36.797Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=252 of=21 from=1794657600 to=1794657600 rows=224 interrupted=false ms=16
+2026-11-21T12:30:36.797Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=12 committedMax=1794657600
+2026-11-21T12:30:36.797Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=13 start=1794657600 end=1794661200
+2026-11-21T12:30:36.805Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794657600 end=1794661200 step=60s series=224 points=13664 bytes=494353 ms=8
+2026-11-21T12:30:36.812Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794657600 end=1794661200 step=60s series=224 points=13664 bytes=491966 ms=7
+2026-11-21T12:30:36.818Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794657600 end=1794661200 step=60s series=224 points=13664 bytes=480800 ms=6
+2026-11-21T12:30:36.823Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794657600 end=1794661200 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-21T12:30:36.826Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794657600 end=1794661200 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-21T12:30:36.835Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794657600 end=1794661200 rows=13664
+2026-11-21T12:30:36.878Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=253 of=21 from=1794657600 to=1794657720 rows=672 interrupted=false ms=41
+2026-11-21T12:30:36.920Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=254 of=21 from=1794657780 to=1794657900 rows=672 interrupted=false ms=42
+2026-11-21T12:30:36.960Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=255 of=21 from=1794657960 to=1794658080 rows=672 interrupted=false ms=40
+2026-11-21T12:30:36.997Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=256 of=21 from=1794658140 to=1794658260 rows=672 interrupted=false ms=36
+2026-11-21T12:30:37.034Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=257 of=21 from=1794658320 to=1794658440 rows=672 interrupted=false ms=37
+2026-11-21T12:30:37.079Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=258 of=21 from=1794658500 to=1794658620 rows=672 interrupted=false ms=45
+2026-11-21T12:30:37.133Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=259 of=21 from=1794658680 to=1794658800 rows=672 interrupted=false ms=54
+2026-11-21T12:30:37.177Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=260 of=21 from=1794658860 to=1794658980 rows=672 interrupted=false ms=44
+2026-11-21T12:30:37.233Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=261 of=21 from=1794659040 to=1794659160 rows=672 interrupted=false ms=56
+2026-11-21T12:30:37.267Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=262 of=21 from=1794659220 to=1794659340 rows=672 interrupted=false ms=34
+2026-11-21T12:30:37.308Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=263 of=21 from=1794659400 to=1794659520 rows=672 interrupted=false ms=41
+2026-11-21T12:30:37.352Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=264 of=21 from=1794659580 to=1794659700 rows=672 interrupted=false ms=44
+2026-11-21T12:30:37.398Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=265 of=21 from=1794659760 to=1794659880 rows=672 interrupted=false ms=46
+2026-11-21T12:30:37.440Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=266 of=21 from=1794659940 to=1794660060 rows=672 interrupted=false ms=42
+2026-11-21T12:30:37.493Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=267 of=21 from=1794660120 to=1794660240 rows=672 interrupted=false ms=53
+2026-11-21T12:30:37.533Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=268 of=21 from=1794660300 to=1794660420 rows=672 interrupted=false ms=40
+2026-11-21T12:30:37.582Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=269 of=21 from=1794660480 to=1794660600 rows=672 interrupted=false ms=49
+2026-11-21T12:30:37.620Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=270 of=21 from=1794660660 to=1794660780 rows=672 interrupted=false ms=38
+2026-11-21T12:30:37.663Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=271 of=21 from=1794660840 to=1794660960 rows=672 interrupted=false ms=43
+2026-11-21T12:30:37.706Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=272 of=21 from=1794661020 to=1794661140 rows=672 interrupted=false ms=43
+2026-11-21T12:30:37.724Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=273 of=21 from=1794661200 to=1794661200 rows=224 interrupted=false ms=18
+2026-11-21T12:30:37.725Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=13 committedMax=1794661200
+2026-11-21T12:30:37.725Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=14 start=1794661200 end=1794664800
+2026-11-21T12:30:37.734Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794661200 end=1794664800 step=60s series=224 points=13664 bytes=494116 ms=9
+2026-11-21T12:30:37.742Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794661200 end=1794664800 step=60s series=224 points=13664 bytes=491966 ms=8
+2026-11-21T12:30:37.748Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794661200 end=1794664800 step=60s series=224 points=13664 bytes=480823 ms=6
+2026-11-21T12:30:37.751Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794661200 end=1794664800 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-21T12:30:37.753Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794661200 end=1794664800 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-21T12:30:37.769Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794661200 end=1794664800 rows=13664
+2026-11-21T12:30:37.826Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=274 of=21 from=1794661200 to=1794661320 rows=672 interrupted=false ms=56
+2026-11-21T12:30:37.870Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=275 of=21 from=1794661380 to=1794661500 rows=672 interrupted=false ms=43
+2026-11-21T12:30:37.914Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=276 of=21 from=1794661560 to=1794661680 rows=672 interrupted=false ms=44
+2026-11-21T12:30:37.956Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=277 of=21 from=1794661740 to=1794661860 rows=672 interrupted=false ms=42
+2026-11-21T12:30:38.008Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=278 of=21 from=1794661920 to=1794662040 rows=672 interrupted=false ms=52
+2026-11-21T12:30:38.047Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=279 of=21 from=1794662100 to=1794662220 rows=672 interrupted=false ms=39
+2026-11-21T12:30:38.093Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=280 of=21 from=1794662280 to=1794662400 rows=672 interrupted=false ms=46
+2026-11-21T12:30:38.150Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=281 of=21 from=1794662460 to=1794662580 rows=672 interrupted=false ms=57
+2026-11-21T12:30:38.194Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=282 of=21 from=1794662640 to=1794662760 rows=672 interrupted=false ms=43
+2026-11-21T12:30:38.240Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=283 of=21 from=1794662820 to=1794662940 rows=672 interrupted=false ms=46
+2026-11-21T12:30:38.288Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=284 of=21 from=1794663000 to=1794663120 rows=672 interrupted=false ms=48
+2026-11-21T12:30:38.336Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=285 of=21 from=1794663180 to=1794663300 rows=672 interrupted=false ms=48
+2026-11-21T12:30:38.379Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=286 of=21 from=1794663360 to=1794663480 rows=672 interrupted=false ms=43
+2026-11-21T12:30:38.429Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=287 of=21 from=1794663540 to=1794663660 rows=672 interrupted=false ms=50
+2026-11-21T12:30:38.471Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=288 of=21 from=1794663720 to=1794663840 rows=672 interrupted=false ms=42
+2026-11-21T12:30:38.513Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=289 of=21 from=1794663900 to=1794664020 rows=672 interrupted=false ms=42
+2026-11-21T12:30:38.555Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=290 of=21 from=1794664080 to=1794664200 rows=672 interrupted=false ms=42
+2026-11-21T12:30:38.601Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=291 of=21 from=1794664260 to=1794664380 rows=672 interrupted=false ms=46
+2026-11-21T12:30:38.648Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=292 of=21 from=1794664440 to=1794664560 rows=672 interrupted=false ms=47
+2026-11-21T12:30:38.712Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=293 of=21 from=1794664620 to=1794664740 rows=672 interrupted=false ms=64
+2026-11-21T12:30:38.733Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=294 of=21 from=1794664800 to=1794664800 rows=224 interrupted=false ms=21
+2026-11-21T12:30:38.733Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=14 committedMax=1794664800
+2026-11-21T12:30:38.733Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=15 start=1794664800 end=1794668400
+2026-11-21T12:30:38.745Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794664800 end=1794668400 step=60s series=224 points=13664 bytes=494349 ms=12
+2026-11-21T12:30:38.759Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794664800 end=1794668400 step=60s series=224 points=13664 bytes=491966 ms=12
+2026-11-21T12:30:38.765Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794664800 end=1794668400 step=60s series=224 points=13664 bytes=480764 ms=6
+2026-11-21T12:30:38.767Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794664800 end=1794668400 step=600s series=224 points=1568 bytes=54046 ms=2
+2026-11-21T12:30:38.769Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794664800 end=1794668400 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-21T12:30:38.787Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794664800 end=1794668400 rows=13664
+2026-11-21T12:30:38.834Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=295 of=21 from=1794664800 to=1794664920 rows=672 interrupted=false ms=47
+2026-11-21T12:30:38.879Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=296 of=21 from=1794664980 to=1794665100 rows=672 interrupted=false ms=45
+2026-11-21T12:30:38.921Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=297 of=21 from=1794665160 to=1794665280 rows=672 interrupted=false ms=42
+2026-11-21T12:30:38.964Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=298 of=21 from=1794665340 to=1794665460 rows=672 interrupted=false ms=43
+2026-11-21T12:30:39.014Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=299 of=21 from=1794665520 to=1794665640 rows=672 interrupted=false ms=50
+2026-11-21T12:30:39.056Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=300 of=21 from=1794665700 to=1794665820 rows=672 interrupted=false ms=42
+2026-11-21T12:30:39.103Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=301 of=21 from=1794665880 to=1794666000 rows=672 interrupted=false ms=47
+2026-11-21T12:30:39.154Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=302 of=21 from=1794666060 to=1794666180 rows=672 interrupted=false ms=50
+2026-11-21T12:30:39.197Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=303 of=21 from=1794666240 to=1794666360 rows=672 interrupted=false ms=43
+2026-11-21T12:30:39.239Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=304 of=21 from=1794666420 to=1794666540 rows=672 interrupted=false ms=42
+2026-11-21T12:30:39.286Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=305 of=21 from=1794666600 to=1794666720 rows=672 interrupted=false ms=47
+2026-11-21T12:30:39.327Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=306 of=21 from=1794666780 to=1794666900 rows=672 interrupted=false ms=41
+2026-11-21T12:30:39.368Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=307 of=21 from=1794666960 to=1794667080 rows=672 interrupted=false ms=41
+2026-11-21T12:30:39.410Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=308 of=21 from=1794667140 to=1794667260 rows=672 interrupted=false ms=42
+2026-11-21T12:30:39.450Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=309 of=21 from=1794667320 to=1794667440 rows=672 interrupted=false ms=40
+2026-11-21T12:30:39.495Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=310 of=21 from=1794667500 to=1794667620 rows=672 interrupted=false ms=45
+2026-11-21T12:30:39.537Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=311 of=21 from=1794667680 to=1794667800 rows=672 interrupted=false ms=42
+2026-11-21T12:30:39.579Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=312 of=21 from=1794667860 to=1794667980 rows=672 interrupted=false ms=42
+2026-11-21T12:30:39.622Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=313 of=21 from=1794668040 to=1794668160 rows=672 interrupted=false ms=43
+2026-11-21T12:30:39.665Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=314 of=21 from=1794668220 to=1794668340 rows=672 interrupted=false ms=43
+2026-11-21T12:30:39.681Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=315 of=21 from=1794668400 to=1794668400 rows=224 interrupted=false ms=16
+2026-11-21T12:30:39.681Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=15 committedMax=1794668400
+2026-11-21T12:30:39.681Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=16 start=1794668400 end=1794672000
+2026-11-21T12:30:39.688Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794668400 end=1794672000 step=60s series=224 points=13664 bytes=494181 ms=7
+2026-11-21T12:30:39.698Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794668400 end=1794672000 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-21T12:30:39.704Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794668400 end=1794672000 step=60s series=224 points=13664 bytes=480820 ms=6
+2026-11-21T12:30:39.706Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794668400 end=1794672000 step=600s series=224 points=1568 bytes=54046 ms=2
+2026-11-21T12:30:39.708Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794668400 end=1794672000 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-21T12:30:39.722Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794668400 end=1794672000 rows=13664
+2026-11-21T12:30:39.770Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=316 of=21 from=1794668400 to=1794668520 rows=672 interrupted=false ms=47
+2026-11-21T12:30:39.815Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=317 of=21 from=1794668580 to=1794668700 rows=672 interrupted=false ms=45
+2026-11-21T12:30:39.857Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=318 of=21 from=1794668760 to=1794668880 rows=672 interrupted=false ms=42
+2026-11-21T12:30:39.906Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=319 of=21 from=1794668940 to=1794669060 rows=672 interrupted=false ms=49
+2026-11-21T12:30:39.950Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=320 of=21 from=1794669120 to=1794669240 rows=672 interrupted=false ms=44
+2026-11-21T12:30:39.998Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=321 of=21 from=1794669300 to=1794669420 rows=672 interrupted=false ms=48
+2026-11-21T12:30:40.044Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=322 of=21 from=1794669480 to=1794669600 rows=672 interrupted=false ms=46
+2026-11-21T12:30:40.087Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=323 of=21 from=1794669660 to=1794669780 rows=672 interrupted=false ms=43
+2026-11-21T12:30:40.143Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=324 of=21 from=1794669840 to=1794669960 rows=672 interrupted=false ms=56
+2026-11-21T12:30:40.188Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=325 of=21 from=1794670020 to=1794670140 rows=672 interrupted=false ms=45
+2026-11-21T12:30:40.230Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=326 of=21 from=1794670200 to=1794670320 rows=672 interrupted=false ms=42
+2026-11-21T12:30:40.273Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=327 of=21 from=1794670380 to=1794670500 rows=672 interrupted=false ms=43
+2026-11-21T12:30:40.316Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=328 of=21 from=1794670560 to=1794670680 rows=672 interrupted=false ms=43
+2026-11-21T12:30:40.352Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=329 of=21 from=1794670740 to=1794670860 rows=672 interrupted=false ms=36
+2026-11-21T12:30:40.397Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=330 of=21 from=1794670920 to=1794671040 rows=672 interrupted=false ms=45
+2026-11-21T12:30:40.439Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=331 of=21 from=1794671100 to=1794671220 rows=672 interrupted=false ms=42
+2026-11-21T12:30:40.482Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=332 of=21 from=1794671280 to=1794671400 rows=672 interrupted=false ms=43
+2026-11-21T12:30:40.525Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=333 of=21 from=1794671460 to=1794671580 rows=672 interrupted=false ms=43
+2026-11-21T12:30:40.567Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=334 of=21 from=1794671640 to=1794671760 rows=672 interrupted=false ms=42
+2026-11-21T12:30:40.618Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=335 of=21 from=1794671820 to=1794671940 rows=672 interrupted=false ms=51
+2026-11-21T12:30:40.633Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=336 of=21 from=1794672000 to=1794672000 rows=224 interrupted=false ms=15
+2026-11-21T12:30:40.633Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=16 committedMax=1794672000
+2026-11-21T12:30:40.633Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=17 start=1794672000 end=1794675600
+2026-11-21T12:30:40.639Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794672000 end=1794675600 step=60s series=224 points=13664 bytes=494148 ms=6
+2026-11-21T12:30:40.646Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794672000 end=1794675600 step=60s series=224 points=13664 bytes=491966 ms=6
+2026-11-21T12:30:40.652Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794672000 end=1794675600 step=60s series=224 points=13664 bytes=480815 ms=5
+2026-11-21T12:30:40.654Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794672000 end=1794675600 step=600s series=224 points=1568 bytes=54046 ms=2
+2026-11-21T12:30:40.656Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794672000 end=1794675600 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-21T12:30:40.667Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794672000 end=1794675600 rows=13664
+2026-11-21T12:30:40.704Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=337 of=21 from=1794672000 to=1794672120 rows=672 interrupted=false ms=37
+2026-11-21T12:30:40.746Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=338 of=21 from=1794672180 to=1794672300 rows=672 interrupted=false ms=42
+2026-11-21T12:30:40.793Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=339 of=21 from=1794672360 to=1794672480 rows=672 interrupted=false ms=47
+2026-11-21T12:30:40.837Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=340 of=21 from=1794672540 to=1794672660 rows=672 interrupted=false ms=44
+2026-11-21T12:30:40.916Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=341 of=21 from=1794672720 to=1794672840 rows=672 interrupted=false ms=79
+2026-11-21T12:30:40.980Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=342 of=21 from=1794672900 to=1794673020 rows=672 interrupted=false ms=64
+2026-11-21T12:30:41.024Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=343 of=21 from=1794673080 to=1794673200 rows=672 interrupted=false ms=44
+2026-11-21T12:30:41.065Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=344 of=21 from=1794673260 to=1794673380 rows=672 interrupted=false ms=41
+2026-11-21T12:30:41.118Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=345 of=21 from=1794673440 to=1794673560 rows=672 interrupted=false ms=53
+2026-11-21T12:30:41.159Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=346 of=21 from=1794673620 to=1794673740 rows=672 interrupted=false ms=40
+2026-11-21T12:30:41.202Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=347 of=21 from=1794673800 to=1794673920 rows=672 interrupted=false ms=43
+2026-11-21T12:30:41.243Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=348 of=21 from=1794673980 to=1794674100 rows=672 interrupted=false ms=41
+2026-11-21T12:30:41.286Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=349 of=21 from=1794674160 to=1794674280 rows=672 interrupted=false ms=42
+2026-11-21T12:30:41.322Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=350 of=21 from=1794674340 to=1794674460 rows=672 interrupted=false ms=36
+2026-11-21T12:30:41.364Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=351 of=21 from=1794674520 to=1794674640 rows=672 interrupted=false ms=42
+2026-11-21T12:30:41.407Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=352 of=21 from=1794674700 to=1794674820 rows=672 interrupted=false ms=43
+2026-11-21T12:30:41.452Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=353 of=21 from=1794674880 to=1794675000 rows=672 interrupted=false ms=45
+2026-11-21T12:30:41.492Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=354 of=21 from=1794675060 to=1794675180 rows=672 interrupted=false ms=40
+2026-11-21T12:30:41.534Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=355 of=21 from=1794675240 to=1794675360 rows=672 interrupted=false ms=42
+2026-11-21T12:30:41.578Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=356 of=21 from=1794675420 to=1794675540 rows=672 interrupted=false ms=43
+2026-11-21T12:30:41.593Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=357 of=21 from=1794675600 to=1794675600 rows=224 interrupted=false ms=15
+2026-11-21T12:30:41.593Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=17 committedMax=1794675600
+2026-11-21T12:30:41.593Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=18 start=1794675600 end=1794679200
+2026-11-21T12:30:41.603Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794675600 end=1794679200 step=60s series=224 points=13664 bytes=494346 ms=10
+2026-11-21T12:30:41.612Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794675600 end=1794679200 step=60s series=224 points=13664 bytes=491966 ms=9
+2026-11-21T12:30:41.618Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794675600 end=1794679200 step=60s series=224 points=13664 bytes=480766 ms=6
+2026-11-21T12:30:41.621Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794675600 end=1794679200 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-21T12:30:41.625Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794675600 end=1794679200 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-21T12:30:41.635Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794675600 end=1794679200 rows=13664
+2026-11-21T12:30:41.671Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=358 of=21 from=1794675600 to=1794675720 rows=672 interrupted=false ms=36
+2026-11-21T12:30:41.711Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=359 of=21 from=1794675780 to=1794675900 rows=672 interrupted=false ms=40
+2026-11-21T12:30:41.747Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=360 of=21 from=1794675960 to=1794676080 rows=672 interrupted=false ms=36
+2026-11-21T12:30:41.790Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=361 of=21 from=1794676140 to=1794676260 rows=672 interrupted=false ms=42
+2026-11-21T12:30:41.831Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=362 of=21 from=1794676320 to=1794676440 rows=672 interrupted=false ms=41
+2026-11-21T12:30:41.873Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=363 of=21 from=1794676500 to=1794676620 rows=672 interrupted=false ms=42
+2026-11-21T12:30:41.919Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=364 of=21 from=1794676680 to=1794676800 rows=672 interrupted=false ms=46
+2026-11-21T12:30:41.961Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=365 of=21 from=1794676860 to=1794676980 rows=672 interrupted=false ms=42
+2026-11-21T12:30:42.005Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=366 of=21 from=1794677040 to=1794677160 rows=672 interrupted=false ms=44
+2026-11-21T12:30:42.049Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=367 of=21 from=1794677220 to=1794677340 rows=672 interrupted=false ms=44
+2026-11-21T12:30:42.096Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=368 of=21 from=1794677400 to=1794677520 rows=672 interrupted=false ms=47
+2026-11-21T12:30:42.146Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=369 of=21 from=1794677580 to=1794677700 rows=672 interrupted=false ms=50
+2026-11-21T12:30:42.190Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=370 of=21 from=1794677760 to=1794677880 rows=672 interrupted=false ms=44
+2026-11-21T12:30:42.231Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=371 of=21 from=1794677940 to=1794678060 rows=672 interrupted=false ms=41
+2026-11-21T12:30:42.270Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=372 of=21 from=1794678120 to=1794678240 rows=672 interrupted=false ms=39
+2026-11-21T12:30:42.313Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=373 of=21 from=1794678300 to=1794678420 rows=672 interrupted=false ms=42
+2026-11-21T12:30:42.356Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=374 of=21 from=1794678480 to=1794678600 rows=672 interrupted=false ms=43
+2026-11-21T12:30:42.404Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=375 of=21 from=1794678660 to=1794678780 rows=672 interrupted=false ms=48
+2026-11-21T12:30:42.447Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=376 of=21 from=1794678840 to=1794678960 rows=672 interrupted=false ms=43
+2026-11-21T12:30:42.489Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=377 of=21 from=1794679020 to=1794679140 rows=672 interrupted=false ms=42
+2026-11-21T12:30:42.503Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=378 of=21 from=1794679200 to=1794679200 rows=224 interrupted=false ms=14
+2026-11-21T12:30:42.504Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_END no=18 committedMax=1794679200
+2026-11-21T12:30:42.504Z  INFO 1 --- [pool-3-thread-1] lab.core.CollectService                  : WINDOW_START no=19 start=1794679200 end=1794682800
+2026-11-21T12:30:42.511Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=gpu start=1794679200 end=1794682800 step=60s series=224 points=13664 bytes=494079 ms=7
+2026-11-21T12:30:42.518Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=cpu start=1794679200 end=1794682800 step=60s series=224 points=13664 bytes=491966 ms=7
+2026-11-21T12:30:42.527Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=mem start=1794679200 end=1794682800 step=60s series=224 points=13664 bytes=480796 ms=9
+2026-11-21T12:30:42.531Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=status start=1794679200 end=1794682800 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-21T12:30:42.534Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : QUERY name=created start=1794679200 end=1794682800 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-21T12:30:42.547Z  INFO 1 --- [pool-3-thread-1] lab.core.Collector                       : ROWS start=1794679200 end=1794682800 rows=13664
+2026-11-21T12:30:42.595Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=379 of=21 from=1794679200 to=1794679320 rows=672 interrupted=false ms=47
+2026-11-21T12:30:42.638Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=380 of=21 from=1794679380 to=1794679500 rows=672 interrupted=false ms=43
+2026-11-21T12:30:42.679Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=381 of=21 from=1794679560 to=1794679680 rows=672 interrupted=false ms=41
+2026-11-21T12:30:42.726Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=382 of=21 from=1794679740 to=1794679860 rows=672 interrupted=false ms=47
+2026-11-21T12:30:42.774Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=383 of=21 from=1794679920 to=1794680040 rows=672 interrupted=false ms=48
+2026-11-21T12:30:42.824Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=384 of=21 from=1794680100 to=1794680220 rows=672 interrupted=false ms=50
+2026-11-21T12:30:42.868Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=385 of=21 from=1794680280 to=1794680400 rows=672 interrupted=false ms=44
+2026-11-21T12:30:42.914Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=386 of=21 from=1794680460 to=1794680580 rows=672 interrupted=false ms=46
+2026-11-21T12:30:42.958Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=387 of=21 from=1794680640 to=1794680760 rows=672 interrupted=false ms=44
+2026-11-21T12:30:43.002Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=388 of=21 from=1794680820 to=1794680940 rows=672 interrupted=false ms=44
+2026-11-21T12:30:43.044Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=389 of=21 from=1794681000 to=1794681120 rows=672 interrupted=false ms=42
+2026-11-21T12:30:43.091Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=390 of=21 from=1794681180 to=1794681300 rows=672 interrupted=false ms=47
+2026-11-21T12:30:43.143Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=391 of=21 from=1794681360 to=1794681480 rows=672 interrupted=false ms=52
+2026-11-21T12:30:43.185Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=392 of=21 from=1794681540 to=1794681660 rows=672 interrupted=false ms=42
+2026-11-21T12:30:43.228Z  INFO 1 --- [pool-3-thread-1] lab.core.store.ChunkSaver                : CHUNK_COMMIT no=393 of=21 from=1794681720 to=1794681840 rows=672 interrupted=false ms=43
+[Kapp-1 exited with code 137
