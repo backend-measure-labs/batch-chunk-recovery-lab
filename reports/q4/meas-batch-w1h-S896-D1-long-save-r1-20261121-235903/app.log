@@ -1,0 +1,95 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.9)
+
+2026-11-21T14:59:05.675Z  INFO 46394 --- [           main] lab.batch.BatchLabApp                    : Starting BatchLabApp v0.1.0 using Java 17.0.15 with PID 46394 (~/git-project/idean3885/batch-chunk-recovery-lab/app-batch/build/libs/app-batch.jar started by user in ~/git-project/idean3885/batch-chunk-recovery-lab)
+2026-11-21T14:59:05.678Z  INFO 46394 --- [           main] lab.batch.BatchLabApp                    : No active profile set, falling back to 1 default profile: "default"
+2026-11-21T14:59:06.784Z  INFO 46394 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-21T14:59:06.813Z  INFO 46394 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2026-11-21T14:59:07.312Z  INFO 46394 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 18081 (http)
+2026-11-21T14:59:07.323Z  INFO 46394 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-21T14:59:07.323Z  INFO 46394 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-11-21T14:59:07.344Z  INFO 46394 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-21T14:59:07.345Z  INFO 46394 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1622 ms
+2026-11-21T14:59:07.510Z  INFO 46394 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: source]
+2026-11-21T14:59:07.550Z  INFO 46394 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-11-21T14:59:07.571Z  INFO 46394 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-21T14:59:07.789Z  INFO 46394 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-21T14:59:07.808Z  INFO 46394 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Starting...
+2026-11-21T14:59:08.028Z  INFO 46394 --- [           main] com.zaxxer.hikari.pool.HikariPool        : source - Added connection com.mysql.cj.jdbc.ConnectionImpl@3835d3fd
+2026-11-21T14:59:08.030Z  INFO 46394 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Start completed.
+2026-11-21T14:59:08.083Z  INFO 46394 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (source)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-21T14:59:08.586Z  INFO 46394 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-21T14:59:08.587Z  INFO 46394 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'source'
+2026-11-21T14:59:09.045Z  INFO 46394 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-21T15:00:00.935Z  INFO 46394 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 18081 (http) with context path '/'
+2026-11-21T15:00:00.952Z  INFO 46394 --- [           main] lab.batch.BatchLabApp                    : Started BatchLabApp in 55.664 seconds (process running for 4.477)
+2026-11-21T15:00:01.725Z  INFO 46394 --- [io-18081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-21T15:00:01.726Z  INFO 46394 --- [io-18081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-21T15:00:01.727Z  INFO 46394 --- [io-18081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-21T15:00:01.770Z  INFO 46394 --- [io-18081-exec-1] com.zaxxer.hikari.HikariDataSource       : primary - Starting...
+2026-11-21T15:00:01.794Z  INFO 46394 --- [io-18081-exec-1] com.zaxxer.hikari.pool.HikariPool        : primary - Added connection com.mysql.cj.jdbc.ConnectionImpl@489b818c
+2026-11-21T15:00:01.794Z  INFO 46394 --- [io-18081-exec-1] com.zaxxer.hikari.HikariDataSource       : primary - Start completed.
+2026-11-21T15:00:01.955Z  INFO 46394 --- [   scheduling-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=gpuUsageCollectJob]] launched with the following parameters: [{'end':'{value=1794700800, type=class java.lang.Long, identifying=true}'}]
+2026-11-21T15:00:01.983Z  INFO 46394 --- [   scheduling-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [collectStep]
+2026-11-21T15:00:01.996Z  INFO 46394 --- [   scheduling-1] lab.batch.WindowedGroupReader            : READER_OPEN restart=false start=1794614400 end=1794700800
+2026-11-21T15:00:01.996Z  INFO 46394 --- [   scheduling-1] lab.batch.WindowedGroupReader            : RUN_START mode=batch window_h=1 series=896 digits=long start=1794614400 end=1794700800
+2026-11-21T15:00:02.006Z  INFO 46394 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=1 start=1794614400 end=1794618000
+2026-11-21T15:00:02.043Z  INFO 46394 --- [   scheduling-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c0 rows=0 heapUsed=30563288 heapCommitted=125829120
+2026-11-21T15:00:02.316Z  INFO 46394 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794614400 end=1794618000 step=60s series=896 points=54656 bytes=1976780 ms=224
+2026-11-21T15:00:02.369Z  INFO 46394 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794614400 end=1794618000 step=60s series=896 points=54656 bytes=1967678 ms=52
+2026-11-21T15:00:02.439Z  INFO 46394 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794614400 end=1794618000 step=60s series=896 points=54656 bytes=1922926 ms=69
+2026-11-21T15:00:02.452Z  INFO 46394 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794614400 end=1794618000 step=600s series=896 points=6272 bytes=215998 ms=12
+2026-11-21T15:00:02.476Z  INFO 46394 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794614400 end=1794618000 step=600s series=896 points=6272 bytes=272446 ms=24
+2026-11-21T15:00:02.525Z  INFO 46394 --- [   scheduling-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c2 rows=0 heapUsed=63823808 heapCommitted=134217728
+2026-11-21T15:00:02.768Z  INFO 46394 --- [   scheduling-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c2b rows=54595 heapUsed=86958392 heapCommitted=322961408
+2026-11-21T15:00:02.868Z  INFO 46394 --- [   scheduling-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c3a rows=54655 heapUsed=59002752 heapCommitted=239075328
+2026-11-21T15:00:02.974Z  INFO 46394 --- [   scheduling-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c3 rows=54656 heapUsed=55403192 heapCommitted=226492416
+2026-11-21T15:00:03.023Z  INFO 46394 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794614400 end=1794618000 rows=54656
+2026-11-21T15:00:03.900Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=1 of=? from=1794614400 to=1794614400 rows=896 interrupted=false ms=1895
+2026-11-21T15:00:04.473Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=2 of=? from=1794614460 to=1794614460 rows=896 interrupted=false ms=572
+2026-11-21T15:00:04.957Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=3 of=? from=1794614520 to=1794614520 rows=896 interrupted=false ms=483
+2026-11-21T15:00:05.495Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=4 of=? from=1794614580 to=1794614580 rows=896 interrupted=false ms=537
+2026-11-21T15:00:05.928Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=5 of=? from=1794614640 to=1794614640 rows=896 interrupted=false ms=433
+2026-11-21T15:00:06.376Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=6 of=? from=1794614700 to=1794614700 rows=896 interrupted=false ms=447
+2026-11-21T15:00:06.802Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=7 of=? from=1794614760 to=1794614760 rows=896 interrupted=false ms=426
+2026-11-21T15:00:07.216Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=8 of=? from=1794614820 to=1794614820 rows=896 interrupted=false ms=413
+2026-11-21T15:00:07.618Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=9 of=? from=1794614880 to=1794614880 rows=896 interrupted=false ms=402
+2026-11-21T15:00:07.999Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=10 of=? from=1794614940 to=1794614940 rows=896 interrupted=false ms=380
+2026-11-21T15:00:08.512Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=11 of=? from=1794615000 to=1794615000 rows=896 interrupted=false ms=512
+2026-11-21T15:00:09.040Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=12 of=? from=1794615060 to=1794615060 rows=896 interrupted=false ms=528
+2026-11-21T15:00:09.467Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=13 of=? from=1794615120 to=1794615120 rows=896 interrupted=false ms=427
+2026-11-21T15:00:09.954Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=14 of=? from=1794615180 to=1794615180 rows=896 interrupted=false ms=487
+2026-11-21T15:00:10.450Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=15 of=? from=1794615240 to=1794615240 rows=896 interrupted=false ms=495
+2026-11-21T15:08:13.325Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=16 of=? from=1794615300 to=1794615300 rows=896 interrupted=false ms=482871
+2026-11-21T15:08:13.984Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=17 of=? from=1794615360 to=1794615360 rows=896 interrupted=false ms=657
+2026-11-21T15:08:14.478Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=18 of=? from=1794615420 to=1794615420 rows=896 interrupted=false ms=493
+2026-11-21T15:08:14.928Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=19 of=? from=1794615480 to=1794615480 rows=896 interrupted=false ms=449
+2026-11-21T15:08:15.395Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=20 of=? from=1794615540 to=1794615540 rows=896 interrupted=false ms=464
+2026-11-21T15:08:15.917Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=21 of=? from=1794615600 to=1794615600 rows=896 interrupted=false ms=521
+2026-11-21T15:08:16.356Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=22 of=? from=1794615660 to=1794615660 rows=896 interrupted=false ms=438
+2026-11-21T15:08:16.835Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=23 of=? from=1794615720 to=1794615720 rows=896 interrupted=false ms=478
+2026-11-21T15:08:17.222Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=24 of=? from=1794615780 to=1794615780 rows=896 interrupted=false ms=386
+2026-11-21T15:08:17.591Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=25 of=? from=1794615840 to=1794615840 rows=896 interrupted=false ms=368
+2026-11-21T15:08:18.025Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=26 of=? from=1794615900 to=1794615900 rows=896 interrupted=false ms=433
+2026-11-21T15:08:18.514Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=27 of=? from=1794615960 to=1794615960 rows=896 interrupted=false ms=488
+2026-11-21T15:08:19.086Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=28 of=? from=1794616020 to=1794616020 rows=896 interrupted=false ms=571
+2026-11-21T15:08:19.785Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=29 of=? from=1794616080 to=1794616080 rows=896 interrupted=false ms=698
+2026-11-21T15:08:19.837Z  INFO 46394 --- [   scheduling-1] lab.core.Checkpoints                     : CHECKPOINT window=1 point=c4 rows=61 heapUsed=56957296 heapCommitted=226492416
+2026-11-21T15:08:20.343Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=30 of=? from=1794616140 to=1794616140 rows=896 interrupted=false ms=557
+2026-11-21T15:08:20.826Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=31 of=? from=1794616200 to=1794616200 rows=896 interrupted=false ms=482
+2026-11-21T15:08:21.284Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=32 of=? from=1794616260 to=1794616260 rows=896 interrupted=false ms=458
+2026-11-21T15:08:21.757Z  INFO 46394 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=33 of=? from=1794616320 to=1794616320 rows=896 interrupted=false ms=472

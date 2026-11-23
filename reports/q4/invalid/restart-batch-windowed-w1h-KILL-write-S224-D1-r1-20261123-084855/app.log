@@ -1,0 +1,713 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.9)
+
+2026-11-22T23:48:57.936Z  INFO 1 --- [           main] lab.batch.BatchLabApp                    : Starting BatchLabApp v0.1.0 using Java 17.0.21 with PID 1 (/app/app.jar started by root in /)
+2026-11-22T23:48:57.938Z  INFO 1 --- [           main] lab.batch.BatchLabApp                    : No active profile set, falling back to 1 default profile: "default"
+2026-11-22T23:48:59.460Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-22T23:48:59.480Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-11-22T23:49:00.162Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-22T23:49:00.170Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-22T23:49:00.171Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-11-22T23:49:00.338Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-22T23:49:00.339Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2366 ms
+2026-11-22T23:49:00.860Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: source]
+2026-11-22T23:49:00.944Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-11-22T23:49:00.965Z  INFO 1 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-22T23:49:01.528Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-22T23:49:01.545Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Starting...
+2026-11-22T23:49:01.927Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : source - Added connection com.mysql.cj.jdbc.ConnectionImpl@5444f1c3
+2026-11-22T23:49:01.928Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : source - Start completed.
+2026-11-22T23:49:01.979Z  INFO 1 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (source)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-22T23:49:02.958Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-22T23:49:02.960Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'source'
+2026-11-22T23:49:03.850Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-22T23:49:03.940Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-22T23:49:03.956Z  INFO 1 --- [           main] lab.batch.BatchLabApp                    : Started BatchLabApp in 6.608 seconds (process running for 7.191)
+2026-11-22T23:49:04.056Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-22T23:49:04.056Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-22T23:49:04.058Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-22T23:49:04.154Z  INFO 1 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : primary - Starting...
+2026-11-22T23:49:04.223Z  INFO 1 --- [nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : primary - Added connection com.mysql.cj.jdbc.ConnectionImpl@7edea9aa
+2026-11-22T23:49:04.223Z  INFO 1 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : primary - Start completed.
+2026-11-22T23:49:04.686Z  INFO 1 --- [   scheduling-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=gpuUsageCollectJob]] launched with the following parameters: [{'end':'{value=1794700800, type=class java.lang.Long, identifying=true}'}]
+2026-11-22T23:49:04.752Z  INFO 1 --- [   scheduling-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [collectStep]
+2026-11-22T23:49:04.767Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : READER_OPEN restart=false start=1794614400 end=1794700800
+2026-11-22T23:49:04.767Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : RUN_START mode=batch window_h=1 series=224 digits=long start=1794614400 end=1794700800
+2026-11-22T23:49:04.780Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=1 start=1794614400 end=1794618000
+2026-11-22T23:49:05.060Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794614400 end=1794618000 step=60s series=224 points=13664 bytes=494138 ms=278
+2026-11-22T23:49:05.126Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794614400 end=1794618000 step=60s series=224 points=13664 bytes=491966 ms=65
+2026-11-22T23:49:05.148Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794614400 end=1794618000 step=60s series=224 points=13664 bytes=480809 ms=22
+2026-11-22T23:49:05.155Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794614400 end=1794618000 step=600s series=224 points=1568 bytes=54046 ms=7
+2026-11-22T23:49:05.160Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794614400 end=1794618000 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-22T23:49:05.337Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794614400 end=1794618000 rows=13664
+2026-11-22T23:49:06.240Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=1 of=? from=1794614400 to=1794614520 rows=672 interrupted=false ms=1460
+2026-11-22T23:49:06.487Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=2 of=? from=1794614580 to=1794614700 rows=672 interrupted=false ms=246
+2026-11-22T23:49:06.639Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=3 of=? from=1794614760 to=1794614880 rows=672 interrupted=false ms=152
+2026-11-22T23:49:06.764Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=4 of=? from=1794614940 to=1794615060 rows=672 interrupted=false ms=125
+2026-11-22T23:49:06.853Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=5 of=? from=1794615120 to=1794615240 rows=672 interrupted=false ms=89
+2026-11-22T23:49:06.952Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=6 of=? from=1794615300 to=1794615420 rows=672 interrupted=false ms=99
+2026-11-22T23:49:07.038Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=7 of=? from=1794615480 to=1794615600 rows=672 interrupted=false ms=85
+2026-11-22T23:49:07.094Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=8 of=? from=1794615660 to=1794615780 rows=672 interrupted=false ms=55
+2026-11-22T23:49:07.182Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=9 of=? from=1794615840 to=1794615960 rows=672 interrupted=false ms=60
+2026-11-22T23:49:07.273Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=10 of=? from=1794616020 to=1794616140 rows=672 interrupted=false ms=91
+2026-11-22T23:49:07.360Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=11 of=? from=1794616200 to=1794616320 rows=672 interrupted=false ms=87
+2026-11-22T23:49:07.441Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=12 of=? from=1794616380 to=1794616500 rows=672 interrupted=false ms=80
+2026-11-22T23:49:07.533Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=13 of=? from=1794616560 to=1794616680 rows=672 interrupted=false ms=92
+2026-11-22T23:49:07.580Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=14 of=? from=1794616740 to=1794616860 rows=672 interrupted=false ms=46
+2026-11-22T23:49:07.663Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=15 of=? from=1794616920 to=1794617040 rows=672 interrupted=false ms=82
+2026-11-22T23:49:07.747Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=16 of=? from=1794617100 to=1794617220 rows=672 interrupted=false ms=83
+2026-11-22T23:49:07.826Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=17 of=? from=1794617280 to=1794617400 rows=672 interrupted=false ms=78
+2026-11-22T23:49:07.879Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=18 of=? from=1794617460 to=1794617580 rows=672 interrupted=false ms=53
+2026-11-22T23:49:07.960Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=19 of=? from=1794617640 to=1794617760 rows=672 interrupted=false ms=80
+2026-11-22T23:49:08.025Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=20 of=? from=1794617820 to=1794617940 rows=672 interrupted=false ms=64
+2026-11-22T23:49:08.026Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=2 start=1794618000 end=1794621600
+2026-11-22T23:49:08.048Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794618000 end=1794621600 step=60s series=224 points=13664 bytes=494269 ms=22
+2026-11-22T23:49:08.059Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794618000 end=1794621600 step=60s series=224 points=13664 bytes=491966 ms=11
+2026-11-22T23:49:08.080Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794618000 end=1794621600 step=60s series=224 points=13664 bytes=480722 ms=21
+2026-11-22T23:49:08.085Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794618000 end=1794621600 step=600s series=224 points=1568 bytes=54046 ms=5
+2026-11-22T23:49:08.092Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794618000 end=1794621600 step=600s series=224 points=1568 bytes=68158 ms=7
+2026-11-22T23:49:08.157Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794618000 end=1794621600 rows=13664
+2026-11-22T23:49:08.273Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=21 of=? from=1794618000 to=1794618060 rows=672 interrupted=false ms=247
+2026-11-22T23:49:08.343Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=22 of=? from=1794618120 to=1794618240 rows=672 interrupted=false ms=70
+2026-11-22T23:49:08.393Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=23 of=? from=1794618300 to=1794618420 rows=672 interrupted=false ms=48
+2026-11-22T23:49:08.473Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=24 of=? from=1794618480 to=1794618600 rows=672 interrupted=false ms=80
+2026-11-22T23:49:08.543Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=25 of=? from=1794618660 to=1794618780 rows=672 interrupted=false ms=70
+2026-11-22T23:49:08.591Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=26 of=? from=1794618840 to=1794618960 rows=672 interrupted=false ms=47
+2026-11-22T23:49:08.668Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=27 of=? from=1794619020 to=1794619140 rows=672 interrupted=false ms=77
+2026-11-22T23:49:08.742Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=28 of=? from=1794619200 to=1794619320 rows=672 interrupted=false ms=74
+2026-11-22T23:49:08.784Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=29 of=? from=1794619380 to=1794619500 rows=672 interrupted=false ms=42
+2026-11-22T23:49:08.863Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=30 of=? from=1794619560 to=1794619680 rows=672 interrupted=false ms=79
+2026-11-22T23:49:08.933Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=31 of=? from=1794619740 to=1794619860 rows=672 interrupted=false ms=70
+2026-11-22T23:49:08.980Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=32 of=? from=1794619920 to=1794620040 rows=672 interrupted=false ms=46
+2026-11-22T23:49:09.055Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=33 of=? from=1794620100 to=1794620220 rows=672 interrupted=false ms=74
+2026-11-22T23:49:09.137Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=34 of=? from=1794620280 to=1794620400 rows=672 interrupted=false ms=82
+2026-11-22T23:49:09.182Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=35 of=? from=1794620460 to=1794620580 rows=672 interrupted=false ms=45
+2026-11-22T23:49:09.265Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=36 of=? from=1794620640 to=1794620760 rows=672 interrupted=false ms=83
+2026-11-22T23:49:09.376Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=37 of=? from=1794620820 to=1794620940 rows=672 interrupted=false ms=110
+2026-11-22T23:49:09.421Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=38 of=? from=1794621000 to=1794621120 rows=672 interrupted=false ms=44
+2026-11-22T23:49:09.464Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=39 of=? from=1794621180 to=1794621300 rows=672 interrupted=false ms=42
+2026-11-22T23:49:09.531Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=40 of=? from=1794621360 to=1794621480 rows=672 interrupted=false ms=67
+2026-11-22T23:49:09.532Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=3 start=1794621600 end=1794625200
+2026-11-22T23:49:09.548Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794621600 end=1794625200 step=60s series=224 points=13664 bytes=494291 ms=16
+2026-11-22T23:49:09.562Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794621600 end=1794625200 step=60s series=224 points=13664 bytes=491966 ms=14
+2026-11-22T23:49:09.571Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794621600 end=1794625200 step=60s series=224 points=13664 bytes=480766 ms=9
+2026-11-22T23:49:09.576Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794621600 end=1794625200 step=600s series=224 points=1568 bytes=54046 ms=5
+2026-11-22T23:49:09.581Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794621600 end=1794625200 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-22T23:49:09.627Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794621600 end=1794625200 rows=13664
+2026-11-22T23:49:09.684Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=41 of=? from=1794621540 to=1794621600 rows=672 interrupted=false ms=152
+2026-11-22T23:49:09.723Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=42 of=? from=1794621660 to=1794621780 rows=672 interrupted=false ms=38
+2026-11-22T23:49:09.770Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=43 of=? from=1794621840 to=1794621960 rows=672 interrupted=false ms=47
+2026-11-22T23:49:09.836Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=44 of=? from=1794622020 to=1794622140 rows=672 interrupted=false ms=66
+2026-11-22T23:49:09.882Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=45 of=? from=1794622200 to=1794622320 rows=672 interrupted=false ms=45
+2026-11-22T23:49:09.936Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=46 of=? from=1794622380 to=1794622500 rows=672 interrupted=false ms=54
+2026-11-22T23:49:09.999Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=47 of=? from=1794622560 to=1794622680 rows=672 interrupted=false ms=63
+2026-11-22T23:49:10.043Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=48 of=? from=1794622740 to=1794622860 rows=672 interrupted=false ms=43
+2026-11-22T23:49:10.088Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=49 of=? from=1794622920 to=1794623040 rows=672 interrupted=false ms=45
+2026-11-22T23:49:10.145Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=50 of=? from=1794623100 to=1794623220 rows=672 interrupted=false ms=56
+2026-11-22T23:49:10.187Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=51 of=? from=1794623280 to=1794623400 rows=672 interrupted=false ms=41
+2026-11-22T23:49:10.228Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=52 of=? from=1794623460 to=1794623580 rows=672 interrupted=false ms=40
+2026-11-22T23:49:10.279Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=53 of=? from=1794623640 to=1794623760 rows=672 interrupted=false ms=51
+2026-11-22T23:49:10.332Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=54 of=? from=1794623820 to=1794623940 rows=672 interrupted=false ms=53
+2026-11-22T23:49:10.379Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=55 of=? from=1794624000 to=1794624120 rows=672 interrupted=false ms=46
+2026-11-22T23:49:10.417Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=56 of=? from=1794624180 to=1794624300 rows=672 interrupted=false ms=37
+2026-11-22T23:49:10.469Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=57 of=? from=1794624360 to=1794624480 rows=672 interrupted=false ms=51
+2026-11-22T23:49:10.519Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=58 of=? from=1794624540 to=1794624660 rows=672 interrupted=false ms=49
+2026-11-22T23:49:10.569Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=59 of=? from=1794624720 to=1794624840 rows=672 interrupted=false ms=49
+2026-11-22T23:49:10.620Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=60 of=? from=1794624900 to=1794625020 rows=672 interrupted=false ms=51
+2026-11-22T23:49:10.671Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=61 of=? from=1794625080 to=1794625200 rows=672 interrupted=false ms=50
+2026-11-22T23:49:10.672Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=4 start=1794625200 end=1794628800
+2026-11-22T23:49:10.690Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794625200 end=1794628800 step=60s series=224 points=13664 bytes=494077 ms=18
+2026-11-22T23:49:10.700Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794625200 end=1794628800 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-22T23:49:10.709Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794625200 end=1794628800 step=60s series=224 points=13664 bytes=480812 ms=9
+2026-11-22T23:49:10.713Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794625200 end=1794628800 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-22T23:49:10.717Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794625200 end=1794628800 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-22T23:49:10.738Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794625200 end=1794628800 rows=13664
+2026-11-22T23:49:10.782Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=62 of=? from=1794625200 to=1794625320 rows=672 interrupted=false ms=110
+2026-11-22T23:49:10.819Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=63 of=? from=1794625380 to=1794625500 rows=672 interrupted=false ms=36
+2026-11-22T23:49:10.864Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=64 of=? from=1794625560 to=1794625680 rows=672 interrupted=false ms=44
+2026-11-22T23:49:10.905Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=65 of=? from=1794625740 to=1794625860 rows=672 interrupted=false ms=41
+2026-11-22T23:49:10.956Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=66 of=? from=1794625920 to=1794626040 rows=672 interrupted=false ms=50
+2026-11-22T23:49:11.009Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=67 of=? from=1794626100 to=1794626220 rows=672 interrupted=false ms=53
+2026-11-22T23:49:11.061Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=68 of=? from=1794626280 to=1794626400 rows=672 interrupted=false ms=52
+2026-11-22T23:49:11.111Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=69 of=? from=1794626460 to=1794626580 rows=672 interrupted=false ms=49
+2026-11-22T23:49:11.158Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=70 of=? from=1794626640 to=1794626760 rows=672 interrupted=false ms=47
+2026-11-22T23:49:11.207Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=71 of=? from=1794626820 to=1794626940 rows=672 interrupted=false ms=49
+2026-11-22T23:49:11.257Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=72 of=? from=1794627000 to=1794627120 rows=672 interrupted=false ms=48
+2026-11-22T23:49:11.308Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=73 of=? from=1794627180 to=1794627300 rows=672 interrupted=false ms=51
+2026-11-22T23:49:11.363Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=74 of=? from=1794627360 to=1794627480 rows=672 interrupted=false ms=54
+2026-11-22T23:49:11.415Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=75 of=? from=1794627540 to=1794627660 rows=672 interrupted=false ms=52
+2026-11-22T23:49:11.457Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=76 of=? from=1794627720 to=1794627840 rows=672 interrupted=false ms=42
+2026-11-22T23:49:11.501Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=77 of=? from=1794627900 to=1794628020 rows=672 interrupted=false ms=43
+2026-11-22T23:49:11.553Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=78 of=? from=1794628080 to=1794628200 rows=672 interrupted=false ms=51
+2026-11-22T23:49:11.596Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=79 of=? from=1794628260 to=1794628380 rows=672 interrupted=false ms=43
+2026-11-22T23:49:11.636Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=80 of=? from=1794628440 to=1794628560 rows=672 interrupted=false ms=39
+2026-11-22T23:49:11.679Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=81 of=? from=1794628620 to=1794628740 rows=672 interrupted=false ms=43
+2026-11-22T23:49:11.679Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=5 start=1794628800 end=1794632400
+2026-11-22T23:49:11.690Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794628800 end=1794632400 step=60s series=224 points=13664 bytes=494356 ms=11
+2026-11-22T23:49:11.705Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794628800 end=1794632400 step=60s series=224 points=13664 bytes=491966 ms=15
+2026-11-22T23:49:11.721Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794628800 end=1794632400 step=60s series=224 points=13664 bytes=480786 ms=15
+2026-11-22T23:49:11.729Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794628800 end=1794632400 step=600s series=224 points=1568 bytes=54046 ms=7
+2026-11-22T23:49:11.734Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794628800 end=1794632400 step=600s series=224 points=1568 bytes=68158 ms=5
+2026-11-22T23:49:11.755Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794628800 end=1794632400 rows=13664
+2026-11-22T23:49:11.801Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=82 of=? from=1794628800 to=1794628860 rows=672 interrupted=false ms=122
+2026-11-22T23:49:11.885Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=83 of=? from=1794628920 to=1794629040 rows=672 interrupted=false ms=84
+2026-11-22T23:49:11.944Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=84 of=? from=1794629100 to=1794629220 rows=672 interrupted=false ms=59
+2026-11-22T23:49:11.992Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=85 of=? from=1794629280 to=1794629400 rows=672 interrupted=false ms=47
+2026-11-22T23:49:12.043Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=86 of=? from=1794629460 to=1794629580 rows=672 interrupted=false ms=50
+2026-11-22T23:49:12.088Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=87 of=? from=1794629640 to=1794629760 rows=672 interrupted=false ms=45
+2026-11-22T23:49:12.135Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=88 of=? from=1794629820 to=1794629940 rows=672 interrupted=false ms=47
+2026-11-22T23:49:12.179Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=89 of=? from=1794630000 to=1794630120 rows=672 interrupted=false ms=43
+2026-11-22T23:49:12.240Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=90 of=? from=1794630180 to=1794630300 rows=672 interrupted=false ms=61
+2026-11-22T23:49:12.279Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=91 of=? from=1794630360 to=1794630480 rows=672 interrupted=false ms=38
+2026-11-22T23:49:12.318Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=92 of=? from=1794630540 to=1794630660 rows=672 interrupted=false ms=39
+2026-11-22T23:49:12.356Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=93 of=? from=1794630720 to=1794630840 rows=672 interrupted=false ms=38
+2026-11-22T23:49:12.399Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=94 of=? from=1794630900 to=1794631020 rows=672 interrupted=false ms=43
+2026-11-22T23:49:12.444Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=95 of=? from=1794631080 to=1794631200 rows=672 interrupted=false ms=45
+2026-11-22T23:49:12.488Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=96 of=? from=1794631260 to=1794631380 rows=672 interrupted=false ms=44
+2026-11-22T23:49:12.533Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=97 of=? from=1794631440 to=1794631560 rows=672 interrupted=false ms=44
+2026-11-22T23:49:12.577Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=98 of=? from=1794631620 to=1794631740 rows=672 interrupted=false ms=44
+2026-11-22T23:49:12.623Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=99 of=? from=1794631800 to=1794631920 rows=672 interrupted=false ms=45
+2026-11-22T23:49:12.669Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=100 of=? from=1794631980 to=1794632100 rows=672 interrupted=false ms=45
+2026-11-22T23:49:12.714Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=101 of=? from=1794632160 to=1794632280 rows=672 interrupted=false ms=44
+2026-11-22T23:49:12.714Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=6 start=1794632400 end=1794636000
+2026-11-22T23:49:12.723Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794632400 end=1794636000 step=60s series=224 points=13664 bytes=494115 ms=9
+2026-11-22T23:49:12.730Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794632400 end=1794636000 step=60s series=224 points=13664 bytes=491966 ms=7
+2026-11-22T23:49:12.739Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794632400 end=1794636000 step=60s series=224 points=13664 bytes=480816 ms=9
+2026-11-22T23:49:12.744Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794632400 end=1794636000 step=600s series=224 points=1568 bytes=54046 ms=5
+2026-11-22T23:49:12.748Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794632400 end=1794636000 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-22T23:49:12.765Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794632400 end=1794636000 rows=13664
+2026-11-22T23:49:12.802Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=102 of=? from=1794632340 to=1794632400 rows=672 interrupted=false ms=88
+2026-11-22T23:49:12.863Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=103 of=? from=1794632460 to=1794632580 rows=672 interrupted=false ms=61
+2026-11-22T23:49:12.925Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=104 of=? from=1794632640 to=1794632760 rows=672 interrupted=false ms=62
+2026-11-22T23:49:12.968Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=105 of=? from=1794632820 to=1794632940 rows=672 interrupted=false ms=42
+2026-11-22T23:49:13.012Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=106 of=? from=1794633000 to=1794633120 rows=672 interrupted=false ms=43
+2026-11-22T23:49:13.054Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=107 of=? from=1794633180 to=1794633300 rows=672 interrupted=false ms=42
+2026-11-22T23:49:13.105Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=108 of=? from=1794633360 to=1794633480 rows=672 interrupted=false ms=50
+2026-11-22T23:49:13.154Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=109 of=? from=1794633540 to=1794633660 rows=672 interrupted=false ms=48
+2026-11-22T23:49:13.200Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=110 of=? from=1794633720 to=1794633840 rows=672 interrupted=false ms=46
+2026-11-22T23:49:13.264Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=111 of=? from=1794633900 to=1794634020 rows=672 interrupted=false ms=63
+2026-11-22T23:49:13.316Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=112 of=? from=1794634080 to=1794634200 rows=672 interrupted=false ms=52
+2026-11-22T23:49:13.364Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=113 of=? from=1794634260 to=1794634380 rows=672 interrupted=false ms=47
+2026-11-22T23:49:13.403Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=114 of=? from=1794634440 to=1794634560 rows=672 interrupted=false ms=39
+2026-11-22T23:49:13.450Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=115 of=? from=1794634620 to=1794634740 rows=672 interrupted=false ms=46
+2026-11-22T23:49:13.494Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=116 of=? from=1794634800 to=1794634920 rows=672 interrupted=false ms=44
+2026-11-22T23:49:13.551Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=117 of=? from=1794634980 to=1794635100 rows=672 interrupted=false ms=57
+2026-11-22T23:49:13.596Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=118 of=? from=1794635160 to=1794635280 rows=672 interrupted=false ms=45
+2026-11-22T23:49:13.640Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=119 of=? from=1794635340 to=1794635460 rows=672 interrupted=false ms=44
+2026-11-22T23:49:13.690Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=120 of=? from=1794635520 to=1794635640 rows=672 interrupted=false ms=49
+2026-11-22T23:49:13.746Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=121 of=? from=1794635700 to=1794635820 rows=672 interrupted=false ms=56
+2026-11-22T23:49:13.794Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=122 of=? from=1794635880 to=1794636000 rows=672 interrupted=false ms=47
+2026-11-22T23:49:13.795Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=7 start=1794636000 end=1794639600
+2026-11-22T23:49:13.806Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794636000 end=1794639600 step=60s series=224 points=13664 bytes=494204 ms=11
+2026-11-22T23:49:13.822Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794636000 end=1794639600 step=60s series=224 points=13664 bytes=491966 ms=16
+2026-11-22T23:49:13.831Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794636000 end=1794639600 step=60s series=224 points=13664 bytes=480773 ms=9
+2026-11-22T23:49:13.836Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794636000 end=1794639600 step=600s series=224 points=1568 bytes=54046 ms=5
+2026-11-22T23:49:13.841Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794636000 end=1794639600 step=600s series=224 points=1568 bytes=68158 ms=5
+2026-11-22T23:49:13.852Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794636000 end=1794639600 rows=13664
+2026-11-22T23:49:13.898Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=123 of=? from=1794636000 to=1794636120 rows=672 interrupted=false ms=104
+2026-11-22T23:49:13.944Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=124 of=? from=1794636180 to=1794636300 rows=672 interrupted=false ms=46
+2026-11-22T23:49:13.984Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=125 of=? from=1794636360 to=1794636480 rows=672 interrupted=false ms=39
+2026-11-22T23:49:14.035Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=126 of=? from=1794636540 to=1794636660 rows=672 interrupted=false ms=51
+2026-11-22T23:49:14.081Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=127 of=? from=1794636720 to=1794636840 rows=672 interrupted=false ms=46
+2026-11-22T23:49:14.128Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=128 of=? from=1794636900 to=1794637020 rows=672 interrupted=false ms=47
+2026-11-22T23:49:14.176Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=129 of=? from=1794637080 to=1794637200 rows=672 interrupted=false ms=47
+2026-11-22T23:49:14.219Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=130 of=? from=1794637260 to=1794637380 rows=672 interrupted=false ms=43
+2026-11-22T23:49:14.266Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=131 of=? from=1794637440 to=1794637560 rows=672 interrupted=false ms=47
+2026-11-22T23:49:14.313Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=132 of=? from=1794637620 to=1794637740 rows=672 interrupted=false ms=47
+2026-11-22T23:49:14.367Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=133 of=? from=1794637800 to=1794637920 rows=672 interrupted=false ms=54
+2026-11-22T23:49:14.413Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=134 of=? from=1794637980 to=1794638100 rows=672 interrupted=false ms=46
+2026-11-22T23:49:14.459Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=135 of=? from=1794638160 to=1794638280 rows=672 interrupted=false ms=44
+2026-11-22T23:49:14.506Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=136 of=? from=1794638340 to=1794638460 rows=672 interrupted=false ms=47
+2026-11-22T23:49:14.569Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=137 of=? from=1794638520 to=1794638640 rows=672 interrupted=false ms=62
+2026-11-22T23:49:14.625Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=138 of=? from=1794638700 to=1794638820 rows=672 interrupted=false ms=56
+2026-11-22T23:49:14.682Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=139 of=? from=1794638880 to=1794639000 rows=672 interrupted=false ms=56
+2026-11-22T23:49:14.736Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=140 of=? from=1794639060 to=1794639180 rows=672 interrupted=false ms=54
+2026-11-22T23:49:14.807Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=141 of=? from=1794639240 to=1794639360 rows=672 interrupted=false ms=71
+2026-11-22T23:49:14.863Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=142 of=? from=1794639420 to=1794639540 rows=672 interrupted=false ms=56
+2026-11-22T23:49:14.863Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=8 start=1794639600 end=1794643200
+2026-11-22T23:49:14.872Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794639600 end=1794643200 step=60s series=224 points=13664 bytes=494389 ms=8
+2026-11-22T23:49:14.882Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794639600 end=1794643200 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-22T23:49:14.891Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794639600 end=1794643200 step=60s series=224 points=13664 bytes=480769 ms=9
+2026-11-22T23:49:14.894Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794639600 end=1794643200 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-22T23:49:14.901Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794639600 end=1794643200 step=600s series=224 points=1568 bytes=68158 ms=6
+2026-11-22T23:49:14.912Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794639600 end=1794643200 rows=13664
+2026-11-22T23:49:14.960Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=143 of=? from=1794639600 to=1794639660 rows=672 interrupted=false ms=97
+2026-11-22T23:49:14.995Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=144 of=? from=1794639720 to=1794639840 rows=672 interrupted=false ms=35
+2026-11-22T23:49:15.051Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=145 of=? from=1794639900 to=1794640020 rows=672 interrupted=false ms=56
+2026-11-22T23:49:15.100Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=146 of=? from=1794640080 to=1794640200 rows=672 interrupted=false ms=48
+2026-11-22T23:49:15.147Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=147 of=? from=1794640260 to=1794640380 rows=672 interrupted=false ms=46
+2026-11-22T23:49:15.196Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=148 of=? from=1794640440 to=1794640560 rows=672 interrupted=false ms=49
+2026-11-22T23:49:15.251Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=149 of=? from=1794640620 to=1794640740 rows=672 interrupted=false ms=55
+2026-11-22T23:49:15.296Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=150 of=? from=1794640800 to=1794640920 rows=672 interrupted=false ms=45
+2026-11-22T23:49:15.346Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=151 of=? from=1794640980 to=1794641100 rows=672 interrupted=false ms=49
+2026-11-22T23:49:15.393Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=152 of=? from=1794641160 to=1794641280 rows=672 interrupted=false ms=46
+2026-11-22T23:49:15.434Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=153 of=? from=1794641340 to=1794641460 rows=672 interrupted=false ms=41
+2026-11-22T23:49:15.473Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=154 of=? from=1794641520 to=1794641640 rows=672 interrupted=false ms=39
+2026-11-22T23:49:15.527Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=155 of=? from=1794641700 to=1794641820 rows=672 interrupted=false ms=53
+2026-11-22T23:49:15.569Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=156 of=? from=1794641880 to=1794642000 rows=672 interrupted=false ms=42
+2026-11-22T23:49:15.620Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=157 of=? from=1794642060 to=1794642180 rows=672 interrupted=false ms=51
+2026-11-22T23:49:15.665Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=158 of=? from=1794642240 to=1794642360 rows=672 interrupted=false ms=45
+2026-11-22T23:49:15.718Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=159 of=? from=1794642420 to=1794642540 rows=672 interrupted=false ms=52
+2026-11-22T23:49:15.768Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=160 of=? from=1794642600 to=1794642720 rows=672 interrupted=false ms=50
+2026-11-22T23:49:15.818Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=161 of=? from=1794642780 to=1794642900 rows=672 interrupted=false ms=50
+2026-11-22T23:49:15.871Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=162 of=? from=1794642960 to=1794643080 rows=672 interrupted=false ms=52
+2026-11-22T23:49:15.871Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=9 start=1794643200 end=1794646800
+2026-11-22T23:49:15.881Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794643200 end=1794646800 step=60s series=224 points=13664 bytes=494151 ms=9
+2026-11-22T23:49:15.891Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794643200 end=1794646800 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-22T23:49:15.902Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794643200 end=1794646800 step=60s series=224 points=13664 bytes=480765 ms=10
+2026-11-22T23:49:15.907Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794643200 end=1794646800 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-22T23:49:15.911Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794643200 end=1794646800 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-22T23:49:15.922Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794643200 end=1794646800 rows=13664
+2026-11-22T23:49:15.964Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=163 of=? from=1794643140 to=1794643200 rows=672 interrupted=false ms=93
+2026-11-22T23:49:16.024Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=164 of=? from=1794643260 to=1794643380 rows=672 interrupted=false ms=59
+2026-11-22T23:49:16.077Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=165 of=? from=1794643440 to=1794643560 rows=672 interrupted=false ms=52
+2026-11-22T23:49:16.127Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=166 of=? from=1794643620 to=1794643740 rows=672 interrupted=false ms=50
+2026-11-22T23:49:16.186Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=167 of=? from=1794643800 to=1794643920 rows=672 interrupted=false ms=58
+2026-11-22T23:49:16.223Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=168 of=? from=1794643980 to=1794644100 rows=672 interrupted=false ms=37
+2026-11-22T23:49:16.259Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=169 of=? from=1794644160 to=1794644280 rows=672 interrupted=false ms=36
+2026-11-22T23:49:16.306Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=170 of=? from=1794644340 to=1794644460 rows=672 interrupted=false ms=46
+2026-11-22T23:49:16.362Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=171 of=? from=1794644520 to=1794644640 rows=672 interrupted=false ms=56
+2026-11-22T23:49:16.410Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=172 of=? from=1794644700 to=1794644820 rows=672 interrupted=false ms=46
+2026-11-22T23:49:16.460Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=173 of=? from=1794644880 to=1794645000 rows=672 interrupted=false ms=50
+2026-11-22T23:49:16.509Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=174 of=? from=1794645060 to=1794645180 rows=672 interrupted=false ms=49
+2026-11-22T23:49:16.554Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=175 of=? from=1794645240 to=1794645360 rows=672 interrupted=false ms=44
+2026-11-22T23:49:16.609Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=176 of=? from=1794645420 to=1794645540 rows=672 interrupted=false ms=54
+2026-11-22T23:49:16.666Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=177 of=? from=1794645600 to=1794645720 rows=672 interrupted=false ms=56
+2026-11-22T23:49:16.712Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=178 of=? from=1794645780 to=1794645900 rows=672 interrupted=false ms=45
+2026-11-22T23:49:16.771Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=179 of=? from=1794645960 to=1794646080 rows=672 interrupted=false ms=58
+2026-11-22T23:49:16.822Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=180 of=? from=1794646140 to=1794646260 rows=672 interrupted=false ms=51
+2026-11-22T23:49:16.872Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=181 of=? from=1794646320 to=1794646440 rows=672 interrupted=false ms=49
+2026-11-22T23:49:16.920Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=182 of=? from=1794646500 to=1794646620 rows=672 interrupted=false ms=47
+2026-11-22T23:49:16.965Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=183 of=? from=1794646680 to=1794646800 rows=672 interrupted=false ms=44
+2026-11-22T23:49:16.966Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=10 start=1794646800 end=1794650400
+2026-11-22T23:49:16.973Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794646800 end=1794650400 step=60s series=224 points=13664 bytes=494321 ms=7
+2026-11-22T23:49:16.982Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794646800 end=1794650400 step=60s series=224 points=13664 bytes=491966 ms=9
+2026-11-22T23:49:16.991Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794646800 end=1794650400 step=60s series=224 points=13664 bytes=480804 ms=9
+2026-11-22T23:49:16.993Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794646800 end=1794650400 step=600s series=224 points=1568 bytes=54046 ms=2
+2026-11-22T23:49:17.000Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794646800 end=1794650400 step=600s series=224 points=1568 bytes=68158 ms=7
+2026-11-22T23:49:17.011Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794646800 end=1794650400 rows=13664
+2026-11-22T23:49:17.068Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=184 of=? from=1794646800 to=1794646920 rows=672 interrupted=false ms=102
+2026-11-22T23:49:17.128Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=185 of=? from=1794646980 to=1794647100 rows=672 interrupted=false ms=59
+2026-11-22T23:49:17.176Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=186 of=? from=1794647160 to=1794647280 rows=672 interrupted=false ms=48
+2026-11-22T23:49:17.239Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=187 of=? from=1794647340 to=1794647460 rows=672 interrupted=false ms=63
+2026-11-22T23:49:17.297Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=188 of=? from=1794647520 to=1794647640 rows=672 interrupted=false ms=58
+2026-11-22T23:49:17.360Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=189 of=? from=1794647700 to=1794647820 rows=672 interrupted=false ms=63
+2026-11-22T23:49:17.449Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=190 of=? from=1794647880 to=1794648000 rows=672 interrupted=false ms=89
+2026-11-22T23:49:17.509Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=191 of=? from=1794648060 to=1794648180 rows=672 interrupted=false ms=59
+2026-11-22T23:49:17.566Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=192 of=? from=1794648240 to=1794648360 rows=672 interrupted=false ms=56
+2026-11-22T23:49:17.627Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=193 of=? from=1794648420 to=1794648540 rows=672 interrupted=false ms=60
+2026-11-22T23:49:17.692Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=194 of=? from=1794648600 to=1794648720 rows=672 interrupted=false ms=64
+2026-11-22T23:49:17.755Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=195 of=? from=1794648780 to=1794648900 rows=672 interrupted=false ms=63
+2026-11-22T23:49:17.809Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=196 of=? from=1794648960 to=1794649080 rows=672 interrupted=false ms=54
+2026-11-22T23:49:17.858Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=197 of=? from=1794649140 to=1794649260 rows=672 interrupted=false ms=49
+2026-11-22T23:49:17.906Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=198 of=? from=1794649320 to=1794649440 rows=672 interrupted=false ms=48
+2026-11-22T23:49:17.959Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=199 of=? from=1794649500 to=1794649620 rows=672 interrupted=false ms=53
+2026-11-22T23:49:18.010Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=200 of=? from=1794649680 to=1794649800 rows=672 interrupted=false ms=50
+2026-11-22T23:49:18.068Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=201 of=? from=1794649860 to=1794649980 rows=672 interrupted=false ms=57
+2026-11-22T23:49:18.118Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=202 of=? from=1794650040 to=1794650160 rows=672 interrupted=false ms=50
+2026-11-22T23:49:18.169Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=203 of=? from=1794650220 to=1794650340 rows=672 interrupted=false ms=51
+2026-11-22T23:49:18.170Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=11 start=1794650400 end=1794654000
+2026-11-22T23:49:18.180Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794650400 end=1794654000 step=60s series=224 points=13664 bytes=494188 ms=10
+2026-11-22T23:49:18.189Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794650400 end=1794654000 step=60s series=224 points=13664 bytes=491966 ms=9
+2026-11-22T23:49:18.198Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794650400 end=1794654000 step=60s series=224 points=13664 bytes=480768 ms=8
+2026-11-22T23:49:18.202Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794650400 end=1794654000 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-22T23:49:18.208Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794650400 end=1794654000 step=600s series=224 points=1568 bytes=68158 ms=6
+2026-11-22T23:49:18.230Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794650400 end=1794654000 rows=13664
+2026-11-22T23:49:18.295Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=204 of=? from=1794650400 to=1794650460 rows=672 interrupted=false ms=125
+2026-11-22T23:49:18.350Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=205 of=? from=1794650520 to=1794650640 rows=672 interrupted=false ms=54
+2026-11-22T23:49:18.403Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=206 of=? from=1794650700 to=1794650820 rows=672 interrupted=false ms=53
+2026-11-22T23:49:18.446Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=207 of=? from=1794650880 to=1794651000 rows=672 interrupted=false ms=42
+2026-11-22T23:49:18.498Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=208 of=? from=1794651060 to=1794651180 rows=672 interrupted=false ms=52
+2026-11-22T23:49:18.551Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=209 of=? from=1794651240 to=1794651360 rows=672 interrupted=false ms=53
+2026-11-22T23:49:18.603Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=210 of=? from=1794651420 to=1794651540 rows=672 interrupted=false ms=51
+2026-11-22T23:49:18.650Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=211 of=? from=1794651600 to=1794651720 rows=672 interrupted=false ms=47
+2026-11-22T23:49:18.710Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=212 of=? from=1794651780 to=1794651900 rows=672 interrupted=false ms=60
+2026-11-22T23:49:18.763Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=213 of=? from=1794651960 to=1794652080 rows=672 interrupted=false ms=52
+2026-11-22T23:49:18.817Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=214 of=? from=1794652140 to=1794652260 rows=672 interrupted=false ms=54
+2026-11-22T23:49:18.862Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=215 of=? from=1794652320 to=1794652440 rows=672 interrupted=false ms=45
+2026-11-22T23:49:18.911Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=216 of=? from=1794652500 to=1794652620 rows=672 interrupted=false ms=48
+2026-11-22T23:49:18.960Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=217 of=? from=1794652680 to=1794652800 rows=672 interrupted=false ms=48
+2026-11-22T23:49:19.006Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=218 of=? from=1794652860 to=1794652980 rows=672 interrupted=false ms=46
+2026-11-22T23:49:19.055Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=219 of=? from=1794653040 to=1794653160 rows=672 interrupted=false ms=49
+2026-11-22T23:49:19.105Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=220 of=? from=1794653220 to=1794653340 rows=672 interrupted=false ms=49
+2026-11-22T23:49:19.153Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=221 of=? from=1794653400 to=1794653520 rows=672 interrupted=false ms=48
+2026-11-22T23:49:19.200Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=222 of=? from=1794653580 to=1794653700 rows=672 interrupted=false ms=47
+2026-11-22T23:49:19.249Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=223 of=? from=1794653760 to=1794653880 rows=672 interrupted=false ms=48
+2026-11-22T23:49:19.249Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=12 start=1794654000 end=1794657600
+2026-11-22T23:49:19.262Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794654000 end=1794657600 step=60s series=224 points=13664 bytes=494242 ms=13
+2026-11-22T23:49:19.270Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794654000 end=1794657600 step=60s series=224 points=13664 bytes=491966 ms=8
+2026-11-22T23:49:19.281Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794654000 end=1794657600 step=60s series=224 points=13664 bytes=480791 ms=11
+2026-11-22T23:49:19.284Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794654000 end=1794657600 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-22T23:49:19.287Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794654000 end=1794657600 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-22T23:49:19.298Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794654000 end=1794657600 rows=13664
+2026-11-22T23:49:19.351Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=224 of=? from=1794653940 to=1794654000 rows=672 interrupted=false ms=102
+2026-11-22T23:49:19.402Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=225 of=? from=1794654060 to=1794654180 rows=672 interrupted=false ms=50
+2026-11-22T23:49:19.449Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=226 of=? from=1794654240 to=1794654360 rows=672 interrupted=false ms=47
+2026-11-22T23:49:19.500Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=227 of=? from=1794654420 to=1794654540 rows=672 interrupted=false ms=51
+2026-11-22T23:49:19.541Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=228 of=? from=1794654600 to=1794654720 rows=672 interrupted=false ms=40
+2026-11-22T23:49:19.587Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=229 of=? from=1794654780 to=1794654900 rows=672 interrupted=false ms=46
+2026-11-22T23:49:19.632Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=230 of=? from=1794654960 to=1794655080 rows=672 interrupted=false ms=45
+2026-11-22T23:49:19.678Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=231 of=? from=1794655140 to=1794655260 rows=672 interrupted=false ms=46
+2026-11-22T23:49:19.731Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=232 of=? from=1794655320 to=1794655440 rows=672 interrupted=false ms=52
+2026-11-22T23:49:19.778Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=233 of=? from=1794655500 to=1794655620 rows=672 interrupted=false ms=47
+2026-11-22T23:49:19.831Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=234 of=? from=1794655680 to=1794655800 rows=672 interrupted=false ms=52
+2026-11-22T23:49:19.877Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=235 of=? from=1794655860 to=1794655980 rows=672 interrupted=false ms=45
+2026-11-22T23:49:19.926Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=236 of=? from=1794656040 to=1794656160 rows=672 interrupted=false ms=48
+2026-11-22T23:49:19.975Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=237 of=? from=1794656220 to=1794656340 rows=672 interrupted=false ms=48
+2026-11-22T23:49:20.021Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=238 of=? from=1794656400 to=1794656520 rows=672 interrupted=false ms=46
+2026-11-22T23:49:20.066Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=239 of=? from=1794656580 to=1794656700 rows=672 interrupted=false ms=45
+2026-11-22T23:49:20.100Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=240 of=? from=1794656760 to=1794656880 rows=672 interrupted=false ms=34
+2026-11-22T23:49:20.145Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=241 of=? from=1794656940 to=1794657060 rows=672 interrupted=false ms=45
+2026-11-22T23:49:20.196Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=242 of=? from=1794657120 to=1794657240 rows=672 interrupted=false ms=51
+2026-11-22T23:49:20.258Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=243 of=? from=1794657300 to=1794657420 rows=672 interrupted=false ms=61
+2026-11-22T23:49:20.317Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=244 of=? from=1794657480 to=1794657600 rows=672 interrupted=false ms=59
+2026-11-22T23:49:20.317Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=13 start=1794657600 end=1794661200
+2026-11-22T23:49:20.346Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794657600 end=1794661200 step=60s series=224 points=13664 bytes=494353 ms=29
+2026-11-22T23:49:20.356Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794657600 end=1794661200 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-22T23:49:20.366Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794657600 end=1794661200 step=60s series=224 points=13664 bytes=480800 ms=10
+2026-11-22T23:49:20.371Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794657600 end=1794661200 step=600s series=224 points=1568 bytes=54046 ms=5
+2026-11-22T23:49:20.375Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794657600 end=1794661200 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-22T23:49:20.388Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794657600 end=1794661200 rows=13664
+2026-11-22T23:49:20.433Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=245 of=? from=1794657600 to=1794657720 rows=672 interrupted=false ms=116
+2026-11-22T23:49:20.481Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=246 of=? from=1794657780 to=1794657900 rows=672 interrupted=false ms=48
+2026-11-22T23:49:20.530Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=247 of=? from=1794657960 to=1794658080 rows=672 interrupted=false ms=49
+2026-11-22T23:49:20.582Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=248 of=? from=1794658140 to=1794658260 rows=672 interrupted=false ms=51
+2026-11-22T23:49:20.634Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=249 of=? from=1794658320 to=1794658440 rows=672 interrupted=false ms=50
+2026-11-22T23:49:20.684Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=250 of=? from=1794658500 to=1794658620 rows=672 interrupted=false ms=50
+2026-11-22T23:49:20.741Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=251 of=? from=1794658680 to=1794658800 rows=672 interrupted=false ms=57
+2026-11-22T23:49:20.791Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=252 of=? from=1794658860 to=1794658980 rows=672 interrupted=false ms=50
+2026-11-22T23:49:20.843Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=253 of=? from=1794659040 to=1794659160 rows=672 interrupted=false ms=52
+2026-11-22T23:49:20.895Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=254 of=? from=1794659220 to=1794659340 rows=672 interrupted=false ms=52
+2026-11-22T23:49:20.944Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=255 of=? from=1794659400 to=1794659520 rows=672 interrupted=false ms=49
+2026-11-22T23:49:20.996Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=256 of=? from=1794659580 to=1794659700 rows=672 interrupted=false ms=52
+2026-11-22T23:49:21.044Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=257 of=? from=1794659760 to=1794659880 rows=672 interrupted=false ms=48
+2026-11-22T23:49:21.093Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=258 of=? from=1794659940 to=1794660060 rows=672 interrupted=false ms=49
+2026-11-22T23:49:21.143Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=259 of=? from=1794660120 to=1794660240 rows=672 interrupted=false ms=50
+2026-11-22T23:49:21.205Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=260 of=? from=1794660300 to=1794660420 rows=672 interrupted=false ms=61
+2026-11-22T23:49:21.254Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=261 of=? from=1794660480 to=1794660600 rows=672 interrupted=false ms=49
+2026-11-22T23:49:21.304Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=262 of=? from=1794660660 to=1794660780 rows=672 interrupted=false ms=50
+2026-11-22T23:49:21.354Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=263 of=? from=1794660840 to=1794660960 rows=672 interrupted=false ms=50
+2026-11-22T23:49:21.395Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=264 of=? from=1794661020 to=1794661140 rows=672 interrupted=false ms=40
+2026-11-22T23:49:21.395Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=14 start=1794661200 end=1794664800
+2026-11-22T23:49:21.407Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794661200 end=1794664800 step=60s series=224 points=13664 bytes=494116 ms=12
+2026-11-22T23:49:21.417Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794661200 end=1794664800 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-22T23:49:21.423Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794661200 end=1794664800 step=60s series=224 points=13664 bytes=480823 ms=5
+2026-11-22T23:49:21.425Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794661200 end=1794664800 step=600s series=224 points=1568 bytes=54046 ms=2
+2026-11-22T23:49:21.427Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794661200 end=1794664800 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-22T23:49:21.438Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794661200 end=1794664800 rows=13664
+2026-11-22T23:49:21.499Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=265 of=? from=1794661200 to=1794661260 rows=672 interrupted=false ms=104
+2026-11-22T23:49:21.546Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=266 of=? from=1794661320 to=1794661440 rows=672 interrupted=false ms=46
+2026-11-22T23:49:21.595Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=267 of=? from=1794661500 to=1794661620 rows=672 interrupted=false ms=49
+2026-11-22T23:49:21.641Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=268 of=? from=1794661680 to=1794661800 rows=672 interrupted=false ms=46
+2026-11-22T23:49:21.690Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=269 of=? from=1794661860 to=1794661980 rows=672 interrupted=false ms=49
+2026-11-22T23:49:21.748Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=270 of=? from=1794662040 to=1794662160 rows=672 interrupted=false ms=57
+2026-11-22T23:49:21.797Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=271 of=? from=1794662220 to=1794662340 rows=672 interrupted=false ms=48
+2026-11-22T23:49:21.848Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=272 of=? from=1794662400 to=1794662520 rows=672 interrupted=false ms=51
+2026-11-22T23:49:21.891Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=273 of=? from=1794662580 to=1794662700 rows=672 interrupted=false ms=42
+2026-11-22T23:49:21.935Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=274 of=? from=1794662760 to=1794662880 rows=672 interrupted=false ms=44
+2026-11-22T23:49:21.983Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=275 of=? from=1794662940 to=1794663060 rows=672 interrupted=false ms=48
+2026-11-22T23:49:22.023Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=276 of=? from=1794663120 to=1794663240 rows=672 interrupted=false ms=40
+2026-11-22T23:49:22.069Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=277 of=? from=1794663300 to=1794663420 rows=672 interrupted=false ms=46
+2026-11-22T23:49:22.117Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=278 of=? from=1794663480 to=1794663600 rows=672 interrupted=false ms=47
+2026-11-22T23:49:22.165Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=279 of=? from=1794663660 to=1794663780 rows=672 interrupted=false ms=48
+2026-11-22T23:49:22.218Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=280 of=? from=1794663840 to=1794663960 rows=672 interrupted=false ms=53
+2026-11-22T23:49:22.267Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=281 of=? from=1794664020 to=1794664140 rows=672 interrupted=false ms=48
+2026-11-22T23:49:22.309Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=282 of=? from=1794664200 to=1794664320 rows=672 interrupted=false ms=42
+2026-11-22T23:49:22.350Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=283 of=? from=1794664380 to=1794664500 rows=672 interrupted=false ms=41
+2026-11-22T23:49:22.388Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=284 of=? from=1794664560 to=1794664680 rows=672 interrupted=false ms=37
+2026-11-22T23:49:22.389Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=15 start=1794664800 end=1794668400
+2026-11-22T23:49:22.416Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794664800 end=1794668400 step=60s series=224 points=13664 bytes=494349 ms=27
+2026-11-22T23:49:22.428Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794664800 end=1794668400 step=60s series=224 points=13664 bytes=491966 ms=11
+2026-11-22T23:49:22.434Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794664800 end=1794668400 step=60s series=224 points=13664 bytes=480764 ms=6
+2026-11-22T23:49:22.440Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794664800 end=1794668400 step=600s series=224 points=1568 bytes=54046 ms=6
+2026-11-22T23:49:22.443Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794664800 end=1794668400 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-22T23:49:22.454Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794664800 end=1794668400 rows=13664
+2026-11-22T23:49:22.509Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=285 of=? from=1794664740 to=1794664800 rows=672 interrupted=false ms=120
+2026-11-22T23:49:22.557Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=286 of=? from=1794664860 to=1794664980 rows=672 interrupted=false ms=48
+2026-11-22T23:49:22.606Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=287 of=? from=1794665040 to=1794665160 rows=672 interrupted=false ms=49
+2026-11-22T23:49:22.669Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=288 of=? from=1794665220 to=1794665340 rows=672 interrupted=false ms=62
+2026-11-22T23:49:22.717Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=289 of=? from=1794665400 to=1794665520 rows=672 interrupted=false ms=48
+2026-11-22T23:49:22.766Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=290 of=? from=1794665580 to=1794665700 rows=672 interrupted=false ms=48
+2026-11-22T23:49:22.813Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=291 of=? from=1794665760 to=1794665880 rows=672 interrupted=false ms=47
+2026-11-22T23:49:22.863Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=292 of=? from=1794665940 to=1794666060 rows=672 interrupted=false ms=50
+2026-11-22T23:49:22.918Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=293 of=? from=1794666120 to=1794666240 rows=672 interrupted=false ms=54
+2026-11-22T23:49:22.963Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=294 of=? from=1794666300 to=1794666420 rows=672 interrupted=false ms=45
+2026-11-22T23:49:23.011Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=295 of=? from=1794666480 to=1794666600 rows=672 interrupted=false ms=47
+2026-11-22T23:49:23.054Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=296 of=? from=1794666660 to=1794666780 rows=672 interrupted=false ms=43
+2026-11-22T23:49:23.100Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=297 of=? from=1794666840 to=1794666960 rows=672 interrupted=false ms=46
+2026-11-22T23:49:23.144Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=298 of=? from=1794667020 to=1794667140 rows=672 interrupted=false ms=44
+2026-11-22T23:49:23.190Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=299 of=? from=1794667200 to=1794667320 rows=672 interrupted=false ms=45
+2026-11-22T23:49:23.239Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=300 of=? from=1794667380 to=1794667500 rows=672 interrupted=false ms=48
+2026-11-22T23:49:23.285Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=301 of=? from=1794667560 to=1794667680 rows=672 interrupted=false ms=46
+2026-11-22T23:49:23.335Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=302 of=? from=1794667740 to=1794667860 rows=672 interrupted=false ms=50
+2026-11-22T23:49:23.383Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=303 of=? from=1794667920 to=1794668040 rows=672 interrupted=false ms=47
+2026-11-22T23:49:23.426Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=304 of=? from=1794668100 to=1794668220 rows=672 interrupted=false ms=43
+2026-11-22T23:49:23.471Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=305 of=? from=1794668280 to=1794668400 rows=672 interrupted=false ms=44
+2026-11-22T23:49:23.472Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=16 start=1794668400 end=1794672000
+2026-11-22T23:49:23.495Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794668400 end=1794672000 step=60s series=224 points=13664 bytes=494181 ms=23
+2026-11-22T23:49:23.511Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794668400 end=1794672000 step=60s series=224 points=13664 bytes=491966 ms=16
+2026-11-22T23:49:23.525Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794668400 end=1794672000 step=60s series=224 points=13664 bytes=480820 ms=13
+2026-11-22T23:49:23.528Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794668400 end=1794672000 step=600s series=224 points=1568 bytes=54046 ms=2
+2026-11-22T23:49:23.530Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794668400 end=1794672000 step=600s series=224 points=1568 bytes=68158 ms=2
+2026-11-22T23:49:23.540Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794668400 end=1794672000 rows=13664
+2026-11-22T23:49:23.595Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=306 of=? from=1794668400 to=1794668520 rows=672 interrupted=false ms=123
+2026-11-22T23:49:23.643Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=307 of=? from=1794668580 to=1794668700 rows=672 interrupted=false ms=48
+2026-11-22T23:49:23.694Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=308 of=? from=1794668760 to=1794668880 rows=672 interrupted=false ms=51
+2026-11-22T23:49:23.744Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=309 of=? from=1794668940 to=1794669060 rows=672 interrupted=false ms=50
+2026-11-22T23:49:23.790Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=310 of=? from=1794669120 to=1794669240 rows=672 interrupted=false ms=45
+2026-11-22T23:49:23.833Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=311 of=? from=1794669300 to=1794669420 rows=672 interrupted=false ms=43
+2026-11-22T23:49:23.887Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=312 of=? from=1794669480 to=1794669600 rows=672 interrupted=false ms=54
+2026-11-22T23:49:23.932Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=313 of=? from=1794669660 to=1794669780 rows=672 interrupted=false ms=44
+2026-11-22T23:49:23.994Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=314 of=? from=1794669840 to=1794669960 rows=672 interrupted=false ms=62
+2026-11-22T23:49:24.040Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=315 of=? from=1794670020 to=1794670140 rows=672 interrupted=false ms=46
+2026-11-22T23:49:24.086Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=316 of=? from=1794670200 to=1794670320 rows=672 interrupted=false ms=46
+2026-11-22T23:49:24.130Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=317 of=? from=1794670380 to=1794670500 rows=672 interrupted=false ms=44
+2026-11-22T23:49:24.174Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=318 of=? from=1794670560 to=1794670680 rows=672 interrupted=false ms=44
+2026-11-22T23:49:24.219Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=319 of=? from=1794670740 to=1794670860 rows=672 interrupted=false ms=45
+2026-11-22T23:49:24.268Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=320 of=? from=1794670920 to=1794671040 rows=672 interrupted=false ms=49
+2026-11-22T23:49:24.312Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=321 of=? from=1794671100 to=1794671220 rows=672 interrupted=false ms=44
+2026-11-22T23:49:24.368Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=322 of=? from=1794671280 to=1794671400 rows=672 interrupted=false ms=55
+2026-11-22T23:49:24.412Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=323 of=? from=1794671460 to=1794671580 rows=672 interrupted=false ms=44
+2026-11-22T23:49:24.457Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=324 of=? from=1794671640 to=1794671760 rows=672 interrupted=false ms=45
+2026-11-22T23:49:24.501Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=325 of=? from=1794671820 to=1794671940 rows=672 interrupted=false ms=44
+2026-11-22T23:49:24.501Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=17 start=1794672000 end=1794675600
+2026-11-22T23:49:24.511Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794672000 end=1794675600 step=60s series=224 points=13664 bytes=494148 ms=10
+2026-11-22T23:49:24.522Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794672000 end=1794675600 step=60s series=224 points=13664 bytes=491966 ms=11
+2026-11-22T23:49:24.528Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794672000 end=1794675600 step=60s series=224 points=13664 bytes=480815 ms=6
+2026-11-22T23:49:24.532Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794672000 end=1794675600 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-22T23:49:24.535Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794672000 end=1794675600 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-22T23:49:24.546Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794672000 end=1794675600 rows=13664
+2026-11-22T23:49:24.600Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=326 of=? from=1794672000 to=1794672060 rows=672 interrupted=false ms=99
+2026-11-22T23:49:24.658Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=327 of=? from=1794672120 to=1794672240 rows=672 interrupted=false ms=58
+2026-11-22T23:49:24.706Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=328 of=? from=1794672300 to=1794672420 rows=672 interrupted=false ms=48
+2026-11-22T23:49:24.763Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=329 of=? from=1794672480 to=1794672600 rows=672 interrupted=false ms=56
+2026-11-22T23:49:24.814Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=330 of=? from=1794672660 to=1794672780 rows=672 interrupted=false ms=51
+2026-11-22T23:49:24.860Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=331 of=? from=1794672840 to=1794672960 rows=672 interrupted=false ms=46
+2026-11-22T23:49:24.909Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=332 of=? from=1794673020 to=1794673140 rows=672 interrupted=false ms=49
+2026-11-22T23:49:24.952Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=333 of=? from=1794673200 to=1794673320 rows=672 interrupted=false ms=43
+2026-11-22T23:49:24.999Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=334 of=? from=1794673380 to=1794673500 rows=672 interrupted=false ms=47
+2026-11-22T23:49:25.046Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=335 of=? from=1794673560 to=1794673680 rows=672 interrupted=false ms=47
+2026-11-22T23:49:25.092Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=336 of=? from=1794673740 to=1794673860 rows=672 interrupted=false ms=46
+2026-11-22T23:49:25.138Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=337 of=? from=1794673920 to=1794674040 rows=672 interrupted=false ms=46
+2026-11-22T23:49:25.196Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=338 of=? from=1794674100 to=1794674220 rows=672 interrupted=false ms=58
+2026-11-22T23:49:25.239Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=339 of=? from=1794674280 to=1794674400 rows=672 interrupted=false ms=43
+2026-11-22T23:49:25.295Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=340 of=? from=1794674460 to=1794674580 rows=672 interrupted=false ms=56
+2026-11-22T23:49:25.355Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=341 of=? from=1794674640 to=1794674760 rows=672 interrupted=false ms=60
+2026-11-22T23:49:25.414Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=342 of=? from=1794674820 to=1794674940 rows=672 interrupted=false ms=59
+2026-11-22T23:49:25.475Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=343 of=? from=1794675000 to=1794675120 rows=672 interrupted=false ms=61
+2026-11-22T23:49:25.533Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=344 of=? from=1794675180 to=1794675300 rows=672 interrupted=false ms=58
+2026-11-22T23:49:25.583Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=345 of=? from=1794675360 to=1794675480 rows=672 interrupted=false ms=50
+2026-11-22T23:49:25.583Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=18 start=1794675600 end=1794679200
+2026-11-22T23:49:25.599Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794675600 end=1794679200 step=60s series=224 points=13664 bytes=494346 ms=16
+2026-11-22T23:49:25.613Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794675600 end=1794679200 step=60s series=224 points=13664 bytes=491966 ms=14
+2026-11-22T23:49:25.622Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794675600 end=1794679200 step=60s series=224 points=13664 bytes=480766 ms=8
+2026-11-22T23:49:25.626Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794675600 end=1794679200 step=600s series=224 points=1568 bytes=54046 ms=4
+2026-11-22T23:49:25.629Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794675600 end=1794679200 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-22T23:49:25.652Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794675600 end=1794679200 rows=13664
+2026-11-22T23:49:25.714Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=346 of=? from=1794675540 to=1794675600 rows=672 interrupted=false ms=131
+2026-11-22T23:49:25.777Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=347 of=? from=1794675660 to=1794675780 rows=672 interrupted=false ms=63
+2026-11-22T23:49:25.832Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=348 of=? from=1794675840 to=1794675960 rows=672 interrupted=false ms=55
+2026-11-22T23:49:25.878Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=349 of=? from=1794676020 to=1794676140 rows=672 interrupted=false ms=45
+2026-11-22T23:49:25.935Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=350 of=? from=1794676200 to=1794676320 rows=672 interrupted=false ms=57
+2026-11-22T23:49:25.984Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=351 of=? from=1794676380 to=1794676500 rows=672 interrupted=false ms=49
+2026-11-22T23:49:26.030Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=352 of=? from=1794676560 to=1794676680 rows=672 interrupted=false ms=45
+2026-11-22T23:49:26.079Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=353 of=? from=1794676740 to=1794676860 rows=672 interrupted=false ms=48
+2026-11-22T23:49:26.131Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=354 of=? from=1794676920 to=1794677040 rows=672 interrupted=false ms=51
+2026-11-22T23:49:26.184Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=355 of=? from=1794677100 to=1794677220 rows=672 interrupted=false ms=52
+2026-11-22T23:49:26.244Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=356 of=? from=1794677280 to=1794677400 rows=672 interrupted=false ms=60
+2026-11-22T23:49:26.291Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=357 of=? from=1794677460 to=1794677580 rows=672 interrupted=false ms=46
+2026-11-22T23:49:26.334Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=358 of=? from=1794677640 to=1794677760 rows=672 interrupted=false ms=43
+2026-11-22T23:49:26.374Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=359 of=? from=1794677820 to=1794677940 rows=672 interrupted=false ms=39
+2026-11-22T23:49:26.412Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=360 of=? from=1794678000 to=1794678120 rows=672 interrupted=false ms=38
+2026-11-22T23:49:26.462Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=361 of=? from=1794678180 to=1794678300 rows=672 interrupted=false ms=50
+2026-11-22T23:49:26.506Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=362 of=? from=1794678360 to=1794678480 rows=672 interrupted=false ms=44
+2026-11-22T23:49:26.548Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=363 of=? from=1794678540 to=1794678660 rows=672 interrupted=false ms=42
+2026-11-22T23:49:26.602Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=364 of=? from=1794678720 to=1794678840 rows=672 interrupted=false ms=54
+2026-11-22T23:49:26.649Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=365 of=? from=1794678900 to=1794679020 rows=672 interrupted=false ms=47
+2026-11-22T23:49:26.694Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=366 of=? from=1794679080 to=1794679200 rows=672 interrupted=false ms=45
+2026-11-22T23:49:26.695Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=19 start=1794679200 end=1794682800
+2026-11-22T23:49:26.707Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794679200 end=1794682800 step=60s series=224 points=13664 bytes=494079 ms=12
+2026-11-22T23:49:26.714Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794679200 end=1794682800 step=60s series=224 points=13664 bytes=491966 ms=7
+2026-11-22T23:49:26.724Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794679200 end=1794682800 step=60s series=224 points=13664 bytes=480796 ms=10
+2026-11-22T23:49:26.731Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794679200 end=1794682800 step=600s series=224 points=1568 bytes=54046 ms=6
+2026-11-22T23:49:26.735Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794679200 end=1794682800 step=600s series=224 points=1568 bytes=68158 ms=4
+2026-11-22T23:49:26.763Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794679200 end=1794682800 rows=13664
+2026-11-22T23:49:26.814Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=367 of=? from=1794679200 to=1794679320 rows=672 interrupted=false ms=119
+2026-11-22T23:49:26.876Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=368 of=? from=1794679380 to=1794679500 rows=672 interrupted=false ms=62
+2026-11-22T23:49:26.927Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=369 of=? from=1794679560 to=1794679680 rows=672 interrupted=false ms=50
+2026-11-22T23:49:26.978Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=370 of=? from=1794679740 to=1794679860 rows=672 interrupted=false ms=51
+2026-11-22T23:49:27.036Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=371 of=? from=1794679920 to=1794680040 rows=672 interrupted=false ms=58
+2026-11-22T23:49:27.086Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=372 of=? from=1794680100 to=1794680220 rows=672 interrupted=false ms=50
+2026-11-22T23:49:27.139Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=373 of=? from=1794680280 to=1794680400 rows=672 interrupted=false ms=53
+2026-11-22T23:49:27.186Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=374 of=? from=1794680460 to=1794680580 rows=672 interrupted=false ms=46
+2026-11-22T23:49:27.230Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=375 of=? from=1794680640 to=1794680760 rows=672 interrupted=false ms=44
+2026-11-22T23:49:27.278Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=376 of=? from=1794680820 to=1794680940 rows=672 interrupted=false ms=47
+2026-11-22T23:49:27.329Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=377 of=? from=1794681000 to=1794681120 rows=672 interrupted=false ms=51
+2026-11-22T23:49:27.373Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=378 of=? from=1794681180 to=1794681300 rows=672 interrupted=false ms=44
+2026-11-22T23:49:27.414Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=379 of=? from=1794681360 to=1794681480 rows=672 interrupted=false ms=41
+2026-11-22T23:49:27.458Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=380 of=? from=1794681540 to=1794681660 rows=672 interrupted=false ms=44
+2026-11-22T23:49:27.503Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=381 of=? from=1794681720 to=1794681840 rows=672 interrupted=false ms=45
+2026-11-22T23:49:27.546Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=382 of=? from=1794681900 to=1794682020 rows=672 interrupted=false ms=43
+2026-11-22T23:49:27.608Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=383 of=? from=1794682080 to=1794682200 rows=672 interrupted=false ms=61
+2026-11-22T23:49:27.661Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=384 of=? from=1794682260 to=1794682380 rows=672 interrupted=false ms=53
+2026-11-22T23:49:27.700Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=385 of=? from=1794682440 to=1794682560 rows=672 interrupted=false ms=39
+2026-11-22T23:49:27.745Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=386 of=? from=1794682620 to=1794682740 rows=672 interrupted=false ms=45
+2026-11-22T23:49:27.745Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=20 start=1794682800 end=1794686400
+2026-11-22T23:49:27.762Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794682800 end=1794686400 step=60s series=224 points=13664 bytes=494277 ms=17
+2026-11-22T23:49:27.772Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794682800 end=1794686400 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-22T23:49:27.779Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794682800 end=1794686400 step=60s series=224 points=13664 bytes=480801 ms=7
+2026-11-22T23:49:27.784Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794682800 end=1794686400 step=600s series=224 points=1568 bytes=54046 ms=5
+2026-11-22T23:49:27.789Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794682800 end=1794686400 step=600s series=224 points=1568 bytes=68158 ms=5
+2026-11-22T23:49:27.803Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794682800 end=1794686400 rows=13664
+2026-11-22T23:49:27.849Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=387 of=? from=1794682800 to=1794682860 rows=672 interrupted=false ms=104
+2026-11-22T23:49:27.888Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=388 of=? from=1794682920 to=1794683040 rows=672 interrupted=false ms=39
+2026-11-22T23:49:27.941Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=389 of=? from=1794683100 to=1794683220 rows=672 interrupted=false ms=53
+2026-11-22T23:49:27.984Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=390 of=? from=1794683280 to=1794683400 rows=672 interrupted=false ms=43
+2026-11-22T23:49:28.019Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=391 of=? from=1794683460 to=1794683580 rows=672 interrupted=false ms=35
+2026-11-22T23:49:28.070Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=392 of=? from=1794683640 to=1794683760 rows=672 interrupted=false ms=51
+2026-11-22T23:49:28.123Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=393 of=? from=1794683820 to=1794683940 rows=672 interrupted=false ms=53
+2026-11-22T23:49:28.175Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=394 of=? from=1794684000 to=1794684120 rows=672 interrupted=false ms=52
+2026-11-22T23:49:28.227Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=395 of=? from=1794684180 to=1794684300 rows=672 interrupted=false ms=52
+2026-11-22T23:49:28.275Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=396 of=? from=1794684360 to=1794684480 rows=672 interrupted=false ms=48
+2026-11-22T23:49:28.332Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=397 of=? from=1794684540 to=1794684660 rows=672 interrupted=false ms=57
+2026-11-22T23:49:28.381Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=398 of=? from=1794684720 to=1794684840 rows=672 interrupted=false ms=48
+2026-11-22T23:49:28.435Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=399 of=? from=1794684900 to=1794685020 rows=672 interrupted=false ms=52
+2026-11-22T23:49:28.483Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=400 of=? from=1794685080 to=1794685200 rows=672 interrupted=false ms=48
+2026-11-22T23:49:28.534Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=401 of=? from=1794685260 to=1794685380 rows=672 interrupted=false ms=51
+2026-11-22T23:49:28.594Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=402 of=? from=1794685440 to=1794685560 rows=672 interrupted=false ms=60
+2026-11-22T23:49:28.642Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=403 of=? from=1794685620 to=1794685740 rows=672 interrupted=false ms=48
+2026-11-22T23:49:28.677Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=404 of=? from=1794685800 to=1794685920 rows=672 interrupted=false ms=35
+2026-11-22T23:49:28.727Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=405 of=? from=1794685980 to=1794686100 rows=672 interrupted=false ms=49
+2026-11-22T23:49:28.778Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=406 of=? from=1794686160 to=1794686280 rows=672 interrupted=false ms=50
+2026-11-22T23:49:28.778Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=21 start=1794686400 end=1794690000
+2026-11-22T23:49:28.791Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794686400 end=1794690000 step=60s series=224 points=13664 bytes=494207 ms=13
+2026-11-22T23:49:28.800Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794686400 end=1794690000 step=60s series=224 points=13664 bytes=491966 ms=8
+2026-11-22T23:49:28.807Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794686400 end=1794690000 step=60s series=224 points=13664 bytes=480821 ms=7
+2026-11-22T23:49:28.813Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794686400 end=1794690000 step=600s series=224 points=1568 bytes=54046 ms=5
+2026-11-22T23:49:28.816Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794686400 end=1794690000 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-22T23:49:28.827Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794686400 end=1794690000 rows=13664
+2026-11-22T23:49:28.870Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=407 of=? from=1794686340 to=1794686400 rows=672 interrupted=false ms=92
+2026-11-22T23:49:28.917Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=408 of=? from=1794686460 to=1794686580 rows=672 interrupted=false ms=47
+2026-11-22T23:49:28.970Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=409 of=? from=1794686640 to=1794686760 rows=672 interrupted=false ms=53
+2026-11-22T23:49:29.018Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=410 of=? from=1794686820 to=1794686940 rows=672 interrupted=false ms=48
+2026-11-22T23:49:29.067Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=411 of=? from=1794687000 to=1794687120 rows=672 interrupted=false ms=48
+2026-11-22T23:49:29.114Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=412 of=? from=1794687180 to=1794687300 rows=672 interrupted=false ms=46
+2026-11-22T23:49:29.165Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=413 of=? from=1794687360 to=1794687480 rows=672 interrupted=false ms=51
+2026-11-22T23:49:29.216Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=414 of=? from=1794687540 to=1794687660 rows=672 interrupted=false ms=51
+2026-11-22T23:49:29.261Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=415 of=? from=1794687720 to=1794687840 rows=672 interrupted=false ms=44
+2026-11-22T23:49:29.313Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=416 of=? from=1794687900 to=1794688020 rows=672 interrupted=false ms=51
+2026-11-22T23:49:29.368Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=417 of=? from=1794688080 to=1794688200 rows=672 interrupted=false ms=55
+2026-11-22T23:49:29.414Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=418 of=? from=1794688260 to=1794688380 rows=672 interrupted=false ms=46
+2026-11-22T23:49:29.462Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=419 of=? from=1794688440 to=1794688560 rows=672 interrupted=false ms=48
+2026-11-22T23:49:29.505Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=420 of=? from=1794688620 to=1794688740 rows=672 interrupted=false ms=43
+2026-11-22T23:49:29.556Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=421 of=? from=1794688800 to=1794688920 rows=672 interrupted=false ms=51
+2026-11-22T23:49:29.608Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=422 of=? from=1794688980 to=1794689100 rows=672 interrupted=false ms=52
+2026-11-22T23:49:29.657Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=423 of=? from=1794689160 to=1794689280 rows=672 interrupted=false ms=48
+2026-11-22T23:49:29.711Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=424 of=? from=1794689340 to=1794689460 rows=672 interrupted=false ms=54
+2026-11-22T23:49:29.764Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=425 of=? from=1794689520 to=1794689640 rows=672 interrupted=false ms=53
+2026-11-22T23:49:29.811Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=426 of=? from=1794689700 to=1794689820 rows=672 interrupted=false ms=47
+2026-11-22T23:49:29.857Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=427 of=? from=1794689880 to=1794690000 rows=672 interrupted=false ms=46
+2026-11-22T23:49:29.857Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=22 start=1794690000 end=1794693600
+2026-11-22T23:49:29.871Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794690000 end=1794693600 step=60s series=224 points=13664 bytes=494159 ms=14
+2026-11-22T23:49:29.879Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794690000 end=1794693600 step=60s series=224 points=13664 bytes=491966 ms=8
+2026-11-22T23:49:29.887Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794690000 end=1794693600 step=60s series=224 points=13664 bytes=480829 ms=8
+2026-11-22T23:49:29.891Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794690000 end=1794693600 step=600s series=224 points=1568 bytes=54046 ms=3
+2026-11-22T23:49:29.896Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794690000 end=1794693600 step=600s series=224 points=1568 bytes=68158 ms=5
+2026-11-22T23:49:29.915Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794690000 end=1794693600 rows=13664
+2026-11-22T23:49:29.965Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=428 of=? from=1794690000 to=1794690120 rows=672 interrupted=false ms=108
+2026-11-22T23:49:30.039Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=429 of=? from=1794690180 to=1794690300 rows=672 interrupted=false ms=74
+2026-11-22T23:49:30.096Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=430 of=? from=1794690360 to=1794690480 rows=672 interrupted=false ms=56
+2026-11-22T23:49:30.143Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=431 of=? from=1794690540 to=1794690660 rows=672 interrupted=false ms=46
+2026-11-22T23:49:30.184Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=432 of=? from=1794690720 to=1794690840 rows=672 interrupted=false ms=41
+2026-11-22T23:49:30.229Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=433 of=? from=1794690900 to=1794691020 rows=672 interrupted=false ms=44
+2026-11-22T23:49:30.274Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=434 of=? from=1794691080 to=1794691200 rows=672 interrupted=false ms=45
+2026-11-22T23:49:30.324Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=435 of=? from=1794691260 to=1794691380 rows=672 interrupted=false ms=50
+2026-11-22T23:49:30.370Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=436 of=? from=1794691440 to=1794691560 rows=672 interrupted=false ms=45
+2026-11-22T23:49:30.417Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=437 of=? from=1794691620 to=1794691740 rows=672 interrupted=false ms=47
+2026-11-22T23:49:30.470Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=438 of=? from=1794691800 to=1794691920 rows=672 interrupted=false ms=53
+2026-11-22T23:49:30.512Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=439 of=? from=1794691980 to=1794692100 rows=672 interrupted=false ms=42
+2026-11-22T23:49:30.555Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=440 of=? from=1794692160 to=1794692280 rows=672 interrupted=false ms=42
+2026-11-22T23:49:30.614Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=441 of=? from=1794692340 to=1794692460 rows=672 interrupted=false ms=59
+2026-11-22T23:49:30.665Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=442 of=? from=1794692520 to=1794692640 rows=672 interrupted=false ms=50
+2026-11-22T23:49:30.714Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=443 of=? from=1794692700 to=1794692820 rows=672 interrupted=false ms=49
+2026-11-22T23:49:30.766Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=444 of=? from=1794692880 to=1794693000 rows=672 interrupted=false ms=52
+2026-11-22T23:49:30.811Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=445 of=? from=1794693060 to=1794693180 rows=672 interrupted=false ms=45
+2026-11-22T23:49:30.858Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=446 of=? from=1794693240 to=1794693360 rows=672 interrupted=false ms=47
+2026-11-22T23:49:30.918Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=447 of=? from=1794693420 to=1794693540 rows=672 interrupted=false ms=60
+2026-11-22T23:49:30.919Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=23 start=1794693600 end=1794697200
+2026-11-22T23:49:30.929Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794693600 end=1794697200 step=60s series=224 points=13664 bytes=494322 ms=10
+2026-11-22T23:49:30.939Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794693600 end=1794697200 step=60s series=224 points=13664 bytes=491966 ms=10
+2026-11-22T23:49:30.946Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794693600 end=1794697200 step=60s series=224 points=13664 bytes=480803 ms=7
+2026-11-22T23:49:30.952Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794693600 end=1794697200 step=600s series=224 points=1568 bytes=54046 ms=6
+2026-11-22T23:49:30.955Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794693600 end=1794697200 step=600s series=224 points=1568 bytes=68158 ms=3
+2026-11-22T23:49:30.969Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794693600 end=1794697200 rows=13664
+2026-11-22T23:49:31.027Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=448 of=? from=1794693600 to=1794693660 rows=672 interrupted=false ms=108
+2026-11-22T23:49:31.085Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=449 of=? from=1794693720 to=1794693840 rows=672 interrupted=false ms=57
+2026-11-22T23:49:31.146Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=450 of=? from=1794693900 to=1794694020 rows=672 interrupted=false ms=61
+2026-11-22T23:49:31.215Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=451 of=? from=1794694080 to=1794694200 rows=672 interrupted=false ms=68
+2026-11-22T23:49:31.283Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=452 of=? from=1794694260 to=1794694380 rows=672 interrupted=false ms=67
+2026-11-22T23:49:31.450Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=453 of=? from=1794694440 to=1794694560 rows=672 interrupted=false ms=167
+2026-11-22T23:49:31.541Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=454 of=? from=1794694620 to=1794694740 rows=672 interrupted=false ms=91
+2026-11-22T23:49:31.620Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=455 of=? from=1794694800 to=1794694920 rows=672 interrupted=false ms=78
+2026-11-22T23:49:31.670Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=456 of=? from=1794694980 to=1794695100 rows=672 interrupted=false ms=50
+2026-11-22T23:49:31.731Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=457 of=? from=1794695160 to=1794695280 rows=672 interrupted=false ms=61
+2026-11-22T23:49:31.804Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=458 of=? from=1794695340 to=1794695460 rows=672 interrupted=false ms=72
+2026-11-22T23:49:31.859Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=459 of=? from=1794695520 to=1794695640 rows=672 interrupted=false ms=55
+2026-11-22T23:49:31.922Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=460 of=? from=1794695700 to=1794695820 rows=672 interrupted=false ms=63
+2026-11-22T23:49:31.983Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=461 of=? from=1794695880 to=1794696000 rows=672 interrupted=false ms=60
+2026-11-22T23:49:32.047Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=462 of=? from=1794696060 to=1794696180 rows=672 interrupted=false ms=64
+2026-11-22T23:49:32.093Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=463 of=? from=1794696240 to=1794696360 rows=672 interrupted=false ms=46
+2026-11-22T23:49:32.139Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=464 of=? from=1794696420 to=1794696540 rows=672 interrupted=false ms=46
+2026-11-22T23:49:32.200Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=465 of=? from=1794696600 to=1794696720 rows=672 interrupted=false ms=61
+2026-11-22T23:49:32.262Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=466 of=? from=1794696780 to=1794696900 rows=672 interrupted=false ms=62
+2026-11-22T23:49:32.314Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=467 of=? from=1794696960 to=1794697080 rows=672 interrupted=false ms=50
+2026-11-22T23:49:32.314Z  INFO 1 --- [   scheduling-1] lab.batch.WindowedGroupReader            : WINDOW_START no=24 start=1794697200 end=1794700800
+2026-11-22T23:49:32.332Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=gpu start=1794697200 end=1794700800 step=60s series=224 points=13664 bytes=494107 ms=18
+2026-11-22T23:49:32.343Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=cpu start=1794697200 end=1794700800 step=60s series=224 points=13664 bytes=491966 ms=11
+2026-11-22T23:49:32.353Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=mem start=1794697200 end=1794700800 step=60s series=224 points=13664 bytes=480792 ms=10
+2026-11-22T23:49:32.359Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=status start=1794697200 end=1794700800 step=600s series=224 points=1568 bytes=54046 ms=6
+2026-11-22T23:49:32.364Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : QUERY name=created start=1794697200 end=1794700800 step=600s series=224 points=1568 bytes=68158 ms=5
+2026-11-22T23:49:32.386Z  INFO 1 --- [   scheduling-1] lab.core.Collector                       : ROWS start=1794697200 end=1794700800 rows=13664
+2026-11-22T23:49:32.432Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=468 of=? from=1794697140 to=1794697200 rows=672 interrupted=false ms=118
+2026-11-22T23:49:32.479Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=469 of=? from=1794697260 to=1794697380 rows=672 interrupted=false ms=47
+2026-11-22T23:49:32.525Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=470 of=? from=1794697440 to=1794697560 rows=672 interrupted=false ms=46
+2026-11-22T23:49:32.572Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=471 of=? from=1794697620 to=1794697740 rows=672 interrupted=false ms=46
+2026-11-22T23:49:32.619Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=472 of=? from=1794697800 to=1794697920 rows=672 interrupted=false ms=47
+2026-11-22T23:49:32.674Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=473 of=? from=1794697980 to=1794698100 rows=672 interrupted=false ms=53
+2026-11-22T23:49:32.732Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=474 of=? from=1794698160 to=1794698280 rows=672 interrupted=false ms=57
+2026-11-22T23:49:32.825Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=475 of=? from=1794698340 to=1794698460 rows=672 interrupted=false ms=91
+2026-11-22T23:49:32.878Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=476 of=? from=1794698520 to=1794698640 rows=672 interrupted=false ms=53
+2026-11-22T23:49:32.933Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=477 of=? from=1794698700 to=1794698820 rows=672 interrupted=false ms=55
+2026-11-22T23:49:32.996Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=478 of=? from=1794698880 to=1794699000 rows=672 interrupted=false ms=62
+2026-11-22T23:49:33.052Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=479 of=? from=1794699060 to=1794699180 rows=672 interrupted=false ms=55
+2026-11-22T23:49:33.106Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=480 of=? from=1794699240 to=1794699360 rows=672 interrupted=false ms=54
+2026-11-22T23:49:33.166Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=481 of=? from=1794699420 to=1794699540 rows=672 interrupted=false ms=59
+2026-11-22T23:49:33.204Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=482 of=? from=1794699600 to=1794699720 rows=672 interrupted=false ms=38
+2026-11-22T23:49:33.262Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=483 of=? from=1794699780 to=1794699900 rows=672 interrupted=false ms=58
+2026-11-22T23:49:33.307Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=484 of=? from=1794699960 to=1794700080 rows=672 interrupted=false ms=45
+2026-11-22T23:49:33.373Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=485 of=? from=1794700140 to=1794700260 rows=672 interrupted=false ms=65
+2026-11-22T23:49:33.435Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=486 of=? from=1794700320 to=1794700440 rows=672 interrupted=false ms=62
+2026-11-22T23:49:33.472Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=487 of=? from=1794700500 to=1794700620 rows=672 interrupted=false ms=37
+2026-11-22T23:49:33.521Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=488 of=? from=1794700680 to=1794700800 rows=672 interrupted=false ms=48
+2026-11-22T23:49:33.522Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=489 of=? from=1794700680 to=1794700800 rows=0 interrupted=false ms=1
+2026-11-22T23:49:33.524Z  INFO 1 --- [   scheduling-1] o.s.batch.core.step.AbstractStep         : Step: [collectStep] executed in 28s770ms
+2026-11-22T23:49:33.533Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : RUN_END status=ok ms=28795
+2026-11-22T23:49:33.536Z  INFO 1 --- [   scheduling-1] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=gpuUsageCollectJob]] completed with the following parameters: [{'end':'{value=1794700800, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 28s801ms
+2026-11-22T23:49:33.536Z  INFO 1 --- [   scheduling-1] lab.batch.Launcher                       : LAUNCH_DONE by=trigger executionId=8 status=COMPLETED
+2026-11-22T23:50:00.110Z  WARN 1 --- [   scheduling-1] lab.batch.Launcher                       : LAUNCH_REJECTED by=schedule error=org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException: A job instance already exists and is complete for identifying parameters={'end':'{value=1794700800, type=class java.lang.Long, identifying=true}'}.  If you want to run this job again, change the parameters.
+2026-11-22T23:55:00.022Z  WARN 1 --- [   scheduling-1] lab.batch.Launcher                       : LAUNCH_REJECTED by=schedule error=org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException: A job instance already exists and is complete for identifying parameters={'end':'{value=1794700800, type=class java.lang.Long, identifying=true}'}.  If you want to run this job again, change the parameters.
+[Kapp-1 exited with code 137
