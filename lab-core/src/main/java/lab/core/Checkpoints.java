@@ -35,7 +35,7 @@ public class Checkpoints {
 
     public int window() { return window; }
 
-    /** 히스토그램은 창 1 과 마지막으로 표시된 창에서만 남긴다(1시간 창이면 168개라서). */
+    /** 히스토그램은 윈도우 1 과 마지막으로 표시된 윈도우에서만 남긴다(1시간 윈도우면 168개라서). */
     public void mark(String name, long rows) {
         if (!props.isCheckpoints()) return;
         try {

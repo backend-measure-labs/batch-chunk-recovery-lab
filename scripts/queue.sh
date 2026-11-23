@@ -11,7 +11,7 @@ case $1 in
   q2-rest2) "$R/scripts/q2-limit-rest.sh" 2 ;;
   q2-fill) "$R/scripts/with-deadline.sh" 1200 "$R/scripts/run-q2.sh" limit 448 4 long 1 768 0 > /dev/null 2>&1 ;;
   q2-boundary) "$R/scripts/q2-boundary.sh" ;;
-  # ③ 창 24 · 6 · 1시간: 작은 칸 묶음, 그리고 S896 · 7일 회차 하나씩
+  # ③ 윈도우 24 · 6 · 1시간: 작은 칸 묶음, 그리고 S896 · 7일 회차 하나씩
   q3-24-small) for c in "224 1" "224 7" "896 1"; do "$R/scripts/q3-run.sh" 24 $c all; done ;;
   q3-6-small)  for c in "224 1" "224 7" "896 1"; do "$R/scripts/q3-run.sh" 6 $c all; done ;;
   q3-1-small)  for c in "224 1" "224 7" "896 1"; do "$R/scripts/q3-run.sh" 1 $c all; done ;;
@@ -22,9 +22,9 @@ case $1 in
   q3-24-redo) "$R/scripts/q3-run.sh" 24 896 1 meas1 ;;
   # ③ 대가 수용: ② 에서 A 가 완료한 셀(S224 · 1일 · 768MB)을 저장 포함으로 1회
   q3-a-save) "$R/scripts/with-deadline.sh" "$(deadline_for 224 1 1)" "$R/scripts/run-q2.sh" limit 224 1 long 1 768 1 > /dev/null 2>&1 ;;
-  # ③ B 재시작: SIGKILL · 쓰기 중 × 3 (S224 · 1일, 창 = Q3_WINDOW)
+  # ③ B 재시작: SIGKILL · 쓰기 중 × 3 (S224 · 1일, 윈도우 = Q3_WINDOW)
   q3-kill) for rep in 1 2 3; do q1 1500 KILL write $rep jobrunr windowed $W 224 1; done ;;
-  # ④ C(Spring Batch) 측정 모드 2회: 창 = Q3_WINDOW. S896 · 7일은 회차 하나씩
+  # ④ C(Spring Batch) 측정 모드 2회: 윈도우 = Q3_WINDOW. S896 · 7일은 회차 하나씩
   q4-small) for c in "224 1" "224 7" "896 1"; do for rep in 1 2; do
       "$R/scripts/with-deadline.sh" "$(deadline_for ${c% *} ${c#* } 1)" "$R/scripts/run-q2.sh" meas $c long $rep 256 1 windowed $W batch > /dev/null 2>&1
     done; done ;;

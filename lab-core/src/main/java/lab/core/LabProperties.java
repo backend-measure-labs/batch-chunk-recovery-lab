@@ -17,7 +17,7 @@ public class LabProperties {
     private long t0 = 1761955200L;
     /** full(A) · windowed(B) */
     private String mode = "full";
-    /** B · C 의 창 크기(시간) */
+    /** B · C 의 윈도우 크기(시간) */
     private int windowHours = 24;
     /** 재개 지점 하한 (일) */
     private int lowerBoundDays = 7;

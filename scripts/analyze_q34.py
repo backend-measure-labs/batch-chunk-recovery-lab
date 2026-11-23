@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""③ · ④ 분석: 창 방식 B 와 Spring Batch C 의 피크 · 상한 결과 · 소요 · 정확성.
+"""③ · ④ 분석: 윈도우 방식 B 와 Spring Batch C 의 피크 · 상한 결과 · 소요 · 정확성.
 
 사용: analyze_q34.py <reports/q3/summary.csv> [<reports/q4/summary.csv>] [<reports/q2/summary.csv>] > docs/results/q34.md
 판정 기준은 README 1.3 (실행 전 고정)을 그대로 쓴다. 이 스크립트는 표만 만든다.
@@ -41,7 +41,7 @@ def meas_secs(rows, w, s, d):
 
 
 p("### ③ 측정 모드 피크 라이브셋 (MB, 회차 평균 · 회차 수)\n")
-p("| 창 | S224 · 1일 | S224 · 7일 | 7일 ÷ 1일 | S896 · 1일 | S896 · 7일 | 7일 ÷ 1일 |")
+p("| 윈도우 | S224 · 1일 | S224 · 7일 | 7일 ÷ 1일 | S896 · 1일 | S896 · 7일 | 7일 ÷ 1일 |")
 p("|---|---|---|---|---|---|---|")
 for w in windows:
     row = [f"{w}시간"]
@@ -52,7 +52,7 @@ for w in windows:
     p("| " + " | ".join(row) + " |")
 
 p("\n### ③ 상한 모드 결과 (힙 256MB → 실패 시 768MB, 1회)\n")
-p("| 창 | " + " | ".join(f"S{s} · {d}일" for s, d in cells) + " |")
+p("| 윈도우 | " + " | ".join(f"S{s} · {d}일" for s, d in cells) + " |")
 p("|---|" + "---|" * len(cells))
 for w in windows:
     row = [f"{w}시간"]
@@ -69,7 +69,7 @@ for w in windows:
     p("| " + " | ".join(row) + " |")
 
 p("\n### ③ 측정 모드 총 소요 (초, 회차 평균, 저장 포함, 호스트 JVM)\n")
-p("| 창 | " + " | ".join(f"S{s} · {d}일" for s, d in cells) + " |")
+p("| 윈도우 | " + " | ".join(f"S{s} · {d}일" for s, d in cells) + " |")
 p("|---|" + "---|" * len(cells))
 a_meas = {}
 for s, d in cells:
@@ -103,7 +103,7 @@ p(f"\n- 정확성(완료 회차의 검증): 회차 {nver}개, 중복 합 {dup}, 
 if q4:
     p("\n### ④ C ↔ B 측정 모드 피크 라이브셋 (MB, 회차 평균 · 회차 수)\n")
     w4 = sorted({int(r["window_h"]) for r in q4})
-    p("| 창 | 셀 | B | C | C ÷ B | B 소요(초) | C 소요(초) |")
+    p("| 윈도우 | 셀 | B | C | C ÷ B | B 소요(초) | C 소요(초) |")
     p("|---|---|---|---|---|---|---|")
     for w in w4:
         for s, d in cells:
