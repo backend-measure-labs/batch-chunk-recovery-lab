@@ -17,6 +17,6 @@ for line in open(sys.argv[1], encoding="utf-8"):
     for h in job.get("jobHistory", []):
         state = h.get("state", "")
         at = h.get("createdAt", "")
-        reason = h.get("reason") or h.get("exceptionType") or h.get("exceptionMessage") or ""
+        reason = " | ".join(str(x) for x in (h.get("message"), h.get("exceptionType"), h.get("exceptionMessage")) if x)
         reason = str(reason).replace(",", ";").replace("\n", " ")[:160]
         print(f"{job.get('id')},{state},{at},{reason}")
