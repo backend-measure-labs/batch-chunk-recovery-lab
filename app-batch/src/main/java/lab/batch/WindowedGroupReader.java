@@ -20,6 +20,8 @@ import lab.core.store.Watermark;
 /**
  * B 와 같은 창 단위로 읽는다. 아이템 = 수집 시각 하나의 행 묶음.
  * 재시작 위치는 ExecutionContext 의 마지막 커밋된 청크의 마지막 수집 시각.
+ * 창 조회는 양 끝을 포함하므로, 앞 창에서 이미 내보낸 경계 시각은 다음 창에서 다시 내보내지 않는다.
+ * 재시작 직후 첫 창의 시작 시각은 이 실행에서 처음 내보내는 것이라 다시 넣는다(A · B 와 같은 DELETE 후 INSERT).
  */
 public class WindowedGroupReader implements ItemStreamReader<List<AuditedRow>> {
 
@@ -41,6 +43,7 @@ public class WindowedGroupReader implements ItemStreamReader<List<AuditedRow>> {
     private int groupsEmitted = 0;
     private long lastReadTs = -1;
     private long firstReadTs = -1;
+    private long lastBufferedTs = -1;
     private int rowsInChunk = 0;
 
     public WindowedGroupReader(Collector collector, Watermark watermark, LabProperties props, Clock clock,
@@ -81,7 +84,11 @@ public class WindowedGroupReader implements ItemStreamReader<List<AuditedRow>> {
             int from = 0;
             for (int i = 1; i <= rows.size(); i++) {
                 if (i == rows.size() || !rows.get(i).collectedAt().equals(rows.get(from).collectedAt())) {
-                    buffer.add(rows.subList(from, i));
+                    long ts = rows.get(from).collectedAt().toEpochSecond();
+                    if (ts > lastBufferedTs) {
+                        buffer.add(rows.subList(from, i));
+                        lastBufferedTs = ts;
+                    }
                     from = i;
                 }
             }
