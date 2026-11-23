@@ -1,0 +1,3 @@
+signal=TERM phase=write rep=1 app=jobrunr mode=full window_h=24 series=224 days=3 grace=60 mem=2g
+total_chunks=1441 target=720
+signal_line=1795395564364,1,672,2026-11-23 00:59:24 hit=1

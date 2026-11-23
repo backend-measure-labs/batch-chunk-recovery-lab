@@ -1,0 +1,5 @@
+committed_chunks_logged=782
+last_committed_to=1794582300
+rows_after_signal=525504
+rows_beyond_last_commit=0
+rows_within_committed=525504
