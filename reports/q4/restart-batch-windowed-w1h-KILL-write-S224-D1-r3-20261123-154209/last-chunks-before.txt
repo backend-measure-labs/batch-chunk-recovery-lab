@@ -1,0 +1,3 @@
+2026-11-23T06:42:38.568Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=372 of=? from=1794681180 to=1794681300 rows=672 interrupted=false ms=46
+2026-11-23T06:42:38.612Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=373 of=? from=1794681360 to=1794681480 rows=672 interrupted=false ms=44
+2026-11-23T06:42:38.668Z  INFO 1 --- [   scheduling-1] lab.batch.BatchJobConfig                 : CHUNK_COMMIT no=374 of=? from=1794681540 to=1794681660 rows=672 interrupted=false ms=55

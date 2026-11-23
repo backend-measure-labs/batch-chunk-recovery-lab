@@ -1,8 +1,8 @@
 run,kind,series,days,digits,rep,heap,save,mode,window_h,app,outcome,rows,c0_mb,peak_mb,peak_point,c3_mb,c5_mb,peak_per_row_b,c5_minus_c3_per_row_b,run_ms,gc_pause_ratio,docker_mem_max_mb,exit,duplicates,missing,lab_frame,error
-meas-batch-w1h-S224-D1-long-save-r1-20261121-214236,meas,224,1,long,1,256,1,windowed,1,batch,ok,13664,29.2,51.4,c3,51.4,,1697,,120369,0.037,,host,3584,0,,
-meas-batch-w1h-S224-D1-long-save-r2-20261121-214450,meas,224,1,long,2,256,1,windowed,1,batch,ok,13664,29.0,51.1,c3,51.1,,1700,,118782,0.040,,host,3584,0,,
-meas-batch-w1h-S224-D7-long-save-r1-20261121-214701,meas,224,7,long,1,256,1,windowed,1,batch,ok,13664,28.8,51.0,c3,51.0,,1699,,826019,0.039,,host,25088,0,,
-meas-batch-w1h-S224-D7-long-save-r2-20261123-083549,meas,224,7,long,2,256,1,windowed,1,batch,ok,13664,29.1,51.0,c3,51.0,,1683,,737120,0.045,,host,25088,0,,
+meas-batch-w1h-S224-D1-long-save-r1-20261123-151507,meas,224,1,long,1,256,1,windowed,1,batch,ok,13664,29.1,51.1,c3,51.1,,1690,,102933,0.037,,host,0,0,,
+meas-batch-w1h-S224-D1-long-save-r2-20261123-151706,meas,224,1,long,2,256,1,windowed,1,batch,ok,13664,29.2,51.3,c3,51.3,,1701,,101207,0.037,,host,0,0,,
+meas-batch-w1h-S224-D7-long-save-r1-20261123-151901,meas,224,7,long,1,256,1,windowed,1,batch,ok,13664,29.0,51.1,c3,51.1,,1695,,757940,0.038,,host,0,0,,
+meas-batch-w1h-S224-D7-long-save-r2-20261123-153206,meas,224,7,long,2,256,1,windowed,1,batch,ok,13664,28.9,51.0,c3,51.0,,1697,,576119,0.051,,host,0,0,,
 meas-batch-w1h-S896-D1-long-save-r1-20261121-235903,meas,896,1,long,1,256,1,windowed,1,batch,timeout,54656,29.1,82.9,c2b,52.8,,1032,,,,,,,,,
 meas-batch-w1h-S896-D1-long-save-r2-20261122-022540,meas,896,1,long,2,256,1,windowed,1,batch,timeout,54656,29.1,82.6,c2b,52.7,,1026,,,,,,,,,
-restart-batch-windowed-w1h-KILL-write-S224-D1-r2-20261123-091137,,,,,,,,,,,none,,,,,,,,,,,,,3584,0,,
+restart-batch-windowed-w1h-KILL-write-S224-D1-r3-20261123-154209,,,,,,,,,,,none,,,,,,,,,,,,,0,0,,
