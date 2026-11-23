@@ -21,15 +21,15 @@ import lab.core.RunPhase;
 import lab.core.row.AuditedRow;
 import lab.core.store.Watermark;
 
-/** 창 조회가 양 끝을 포함해도 경계 시각을 한 번만 내보내는지 (batch-chunk-recovery-lab#2). */
+/** 윈도우 조회가 양 끝을 포함해도 경계 시각을 한 번만 내보내는지 (batch-chunk-recovery-lab#2). */
 class WindowedGroupReaderTest {
 
     static final long START = 1_794_614_400L;      // T0 − 1일
-    static final long END = START + 3 * 3600;      // 1시간 창 3개
+    static final long END = START + 3 * 3600;      // 1시간 윈도우 3개
     static final int SERIES = 2;
 
     @Test
-    void 창_경계_시각을_한_번만_내보낸다() {
+    void 윈도우_경계_시각을_한_번만_내보낸다() {
         List<Long> ts = readAll(new ExecutionContext());
         assertThat(ts).doesNotHaveDuplicates();
         assertThat(ts).hasSize(3 * 60 + 1);         // [START, END] 의 분 수

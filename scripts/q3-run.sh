@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ③ 창 방식 B 한 칸: 사용 q3-run.sh <window_h> <S> <days> [meas1|meas2|limit|all]
+# ③ 윈도우 방식 B 한 칸: 사용 q3-run.sh <window_h> <S> <days> [meas1|meas2|limit|all]
 #   all = 측정 모드 2회 + 상한 모드(256MB) 1회, 256MB 에서 실패하면 768MB 1회. 모두 저장 포함.
 #   백그라운드 상한(2시간)에 맞추려고 큰 칸(S896 · 7일)은 회차 하나씩 부른다.
 set -uo pipefail

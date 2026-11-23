@@ -15,7 +15,7 @@ import lab.core.store.Watermark;
 
 /**
  * A(full): 재개 지점~지금을 한 번 조회해 힙에 행 목록 하나를 만든 뒤 청크 저장.
- * B(windowed): 같은 일을 시간 창마다. 창마다 커밋된 MAX(수집 시각)가 다음 창의 시작.
+ * B(windowed): 같은 일을 시간 윈도우마다. 윈도우마다 커밋된 MAX(수집 시각)가 다음 윈도우의 시작.
  */
 @Service
 public class CollectService {
